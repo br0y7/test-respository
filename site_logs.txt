@@ -1,0 +1,71 @@
+[2025-09-25T14:39:16.487466] Visitor: bdccbb24 | Session: 2bcbc855 | Action: page_visit | User visited Basketball Analytics Dashboard
+[2025-09-25T14:39:16.641960] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Efficiency Distribution (box_plot)
+[2025-09-25T14:39:16.843717] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
+[2025-09-25T14:39:17.006394] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
+[2025-09-25T14:39:23.803428] Visitor: bdccbb24 | Session: 2bcbc855 | Action: page_visit | User visited Basketball Analytics Dashboard
+[2025-09-25T14:39:23.808517] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Changed Your Team from 'All Teams' to 'Black'
+[2025-09-25T14:39:23.895669] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Efficiency Distribution (box_plot)
+[2025-09-25T14:39:24.052761] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
+[2025-09-25T14:39:24.192210] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
+[2025-09-25T14:39:25.651520] Visitor: bdccbb24 | Session: 2bcbc855 | Action: page_visit | User visited Basketball Analytics Dashboard
+[2025-09-25T14:39:25.654957] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Changed Your Player from 'All Players' to '4'
+[2025-09-25T14:39:25.814548] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Efficiency Distribution (box_plot)
+[2025-09-25T14:39:25.913948] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
+[2025-09-25T14:39:26.051218] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
+[2025-09-25T14:39:31.779704] Visitor: bdccbb24 | Session: 2bcbc855 | Action: page_visit | User visited Basketball Analytics Dashboard
+[2025-09-25T14:39:31.790841] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Changed Opponent Team from 'No Opponent' to 'Blue'
+[2025-09-25T14:39:31.791842] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Changed Opponent Player from 'No Opponent' to 'All Players'
+[2025-09-25T14:39:32.002665] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Efficiency Distribution (box_plot)
+[2025-09-25T14:39:32.112683] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
+[2025-09-25T14:39:32.264404] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
+[2025-09-25T14:39:33.777649] Visitor: bdccbb24 | Session: 2bcbc855 | Action: page_visit | User visited Basketball Analytics Dashboard
+[2025-09-25T14:39:33.792764] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Changed Opponent Player from 'All Players' to '4'
+[2025-09-25T14:39:33.991694] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Efficiency Distribution (box_plot)
+[2025-09-25T14:39:34.128040] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
+[2025-09-25T14:39:34.266955] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
+[2025-09-25T14:39:47.546233] Visitor: bdccbb24 | Session: 2bcbc855 | Action: page_visit | User visited Basketball Analytics Dashboard
+[2025-09-25T14:39:47.735875] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Efficiency Distribution (box_plot)
+[2025-09-25T14:39:47.867054] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
+[2025-09-25T14:39:48.005380] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
+[2025-09-25T14:39:55.841086] Visitor: bdccbb24 | Session: 2bcbc855 | Action: page_visit | User visited Basketball Analytics Dashboard
+[2025-09-25T14:39:56.011592] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Efficiency Distribution (box_plot)
+[2025-09-25T14:39:56.142655] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
+[2025-09-25T14:39:56.291035] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
+[2025-09-25T14:45:46.834253] Visitor: bdccbb24 | Session: 9ed85a6b | Action: page_visit | User visited Basketball Analytics Dashboard
+[2025-09-25T14:45:47.000374] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Efficiency Distribution (box_plot)
+[2025-09-25T14:45:47.187363] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
+[2025-09-25T14:45:47.343394] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
+[2025-09-25T14:45:55.729494] Visitor: bdccbb24 | Session: 9ed85a6b | Action: page_visit | User visited Basketball Analytics Dashboard
+[2025-09-25T14:45:55.734945] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Opponent Team from 'No Opponent' to 'Beige'
+[2025-09-25T14:45:55.736871] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Opponent Player from 'No Opponent' to 'All Players'
+[2025-09-25T14:45:55.863507] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Efficiency Distribution (box_plot)
+[2025-09-25T14:45:56.080456] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
+[2025-09-25T14:45:56.253226] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
+[2025-09-25T14:45:57.379400] Visitor: bdccbb24 | Session: 9ed85a6b | Action: page_visit | User visited Basketball Analytics Dashboard
+[2025-09-25T14:45:57.387533] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Opponent Player from 'All Players' to '2'
+[2025-09-25T14:45:57.438019] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Efficiency Distribution (box_plot)
+[2025-09-25T14:45:57.569606] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
+[2025-09-25T14:45:57.714328] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
+[2025-09-25T14:46:00.222382] Visitor: bdccbb24 | Session: 9ed85a6b | Action: page_visit | User visited Basketball Analytics Dashboard
+[2025-09-25T14:46:00.243282] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Your Team from 'All Teams' to 'White'
+[2025-09-25T14:46:00.430332] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Opponent Team from 'Beige' to 'No Opponent'
+[2025-09-25T14:46:00.440037] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Opponent Player from '2' to 'No Opponent'
+[2025-09-25T14:46:00.968568] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Efficiency Distribution (box_plot)
+[2025-09-25T14:46:01.133306] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
+[2025-09-25T14:46:01.296599] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
+[2025-09-25T14:46:03.134758] Visitor: bdccbb24 | Session: 9ed85a6b | Action: page_visit | User visited Basketball Analytics Dashboard
+[2025-09-25T14:46:03.139909] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Your Player from 'All Players' to '6'
+[2025-09-25T14:46:03.334572] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Efficiency Distribution (box_plot)
+[2025-09-25T14:46:03.456492] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
+[2025-09-25T14:46:03.638143] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
+[2025-09-25T14:46:10.268236] Visitor: bdccbb24 | Session: 9ed85a6b | Action: page_visit | User visited Basketball Analytics Dashboard
+[2025-09-25T14:46:10.271874] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Opponent Team from 'No Opponent' to 'Beige'
+[2025-09-25T14:46:10.273033] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Opponent Player from 'No Opponent' to 'All Players'
+[2025-09-25T14:46:10.465161] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Efficiency Distribution (box_plot)
+[2025-09-25T14:46:10.571628] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
+[2025-09-25T14:46:10.718511] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
+[2025-09-25T14:46:12.117274] Visitor: bdccbb24 | Session: 9ed85a6b | Action: page_visit | User visited Basketball Analytics Dashboard
+[2025-09-25T14:46:12.125285] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Opponent Player from 'All Players' to '14'
+[2025-09-25T14:46:12.294770] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Efficiency Distribution (box_plot)
+[2025-09-25T14:46:12.422365] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
+[2025-09-25T14:46:12.575007] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
