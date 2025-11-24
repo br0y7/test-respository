@@ -5,22 +5,33 @@ import time
 
 def run_gamechanger_and_dashboard():
     """
-    Executes gamechanger.py to process data and generate plots,
+    Executes gamechanger.py to process data and generate plots for both leagues,
     then launches the Streamlit dashboard app.
     """
     print("--- Starting GameChanger ETL & EDA Process ---")
     print("This may take a moment as data is processed and plots are generated...")
-
-    # Define the command to run gamechanger.py
-    gamechanger_command = [sys.executable, "gamechanger.py"]
-
+    
+    # Define leagues to process
+    leagues = ["Rising Stars S1", "Rising Stars S2"]
+    
     try:
-        # Run gamechanger.py
-        # capture_output=False means stdout/stderr of gamechanger.py will be streamed to the console
-        # check=True means if gamechanger.py returns a non-zero exit code (an error), it will raise an exception
-        process_gamechanger = subprocess.run(gamechanger_command, check=True, capture_output=False, text=True)
+        # Process each league
+        for league in leagues:
+            print(f"\n{'='*60}")
+            print(f"Processing {league}...")
+            print(f"{'='*60}")
+            
+            # Define the command to run gamechanger.py with league argument
+            gamechanger_command = [sys.executable, "gamechanger.py", league]
+            
+            # Run gamechanger.py for this league
+            # capture_output=False means stdout/stderr of gamechanger.py will be streamed to the console
+            # check=True means if gamechanger.py returns a non-zero exit code (an error), it will raise an exception
+            process_gamechanger = subprocess.run(gamechanger_command, check=True, capture_output=False, text=True)
+            print(f"\n✅ {league} processing completed successfully!")
+        
         print("\n--- GameChanger ETL & EDA Process Finished Successfully! ---")
-        print("Data processed and plots saved. Preparing to launch dashboard...")
+        print("Data processed and plots saved for all leagues. Preparing to launch dashboard...")
 
         # Give a small delay to ensure files are written to disk before Streamlit tries to read them
         time.sleep(2) 

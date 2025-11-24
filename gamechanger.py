@@ -14,12 +14,43 @@ import seaborn as sns  # Advanced visualization
 import os  # File path management
 import re # Regular expressions for robust string matching
 import requests # For downloading files from URLs
+import sys  # For command-line arguments
 
 # --- Global Variables & Configuration ---
-# ✅ Define the Google Sheets URL for the spreadsheet and local file name
-google_sheet_id = "1ou7oCpd6QNe4STDPpzMpuv08V15eZJy4ERSVItf_T64" 
+# ✅ League configuration: Map league names to Google Sheet IDs and output file names
+LEAGUE_CONFIG = {
+    "Rising Stars S1": {
+        "google_sheet_id": "1ou7oCpd6QNe4STDPpzMpuv08V15eZJy4ERSVItf_T64",
+        "cleaned_data_file": "Final_Cleaned_Data.csv",
+        "advanced_stats_file": "Final_Player_Advanced_Stats.csv",
+        "local_file_name": "Box Scores Rising Star.xlsx"
+    },
+    "Rising Stars S2": {
+        "google_sheet_id": "1UCAvB_iS0Mi5j5CNErAsS2-aKjGJTBTOFpEVQpQ8ZzY",
+        "cleaned_data_file": "Final_Cleaned_Data_Unknown_League.csv",
+        "advanced_stats_file": "Final_Player_Advanced_Stats_Unknown_League.csv",
+        "local_file_name": "Box Scores Rising Star S2.xlsx"
+    }
+}
+
+# ✅ Get league from command-line argument or default to "Rising Stars S1"
+selected_league = sys.argv[1] if len(sys.argv) > 1 else "Rising Stars S1"
+
+# Validate league name
+if selected_league not in LEAGUE_CONFIG:
+    print(f"⚠️ Warning: Unknown league '{selected_league}'. Defaulting to 'Rising Stars S1'.")
+    selected_league = "Rising Stars S1"
+
+# ✅ Set global variables based on selected league
+league_config = LEAGUE_CONFIG[selected_league]
+google_sheet_id = league_config["google_sheet_id"]
 google_sheet_download_url = f"https://docs.google.com/spreadsheets/d/{google_sheet_id}/export?format=xlsx"
-local_file_name = "Box Scores Rising Star.xlsx"
+local_file_name = league_config["local_file_name"]
+cleaned_data_file = league_config["cleaned_data_file"]
+advanced_stats_file = league_config["advanced_stats_file"]
+
+print(f"📊 Processing league: {selected_league}")
+print(f"📁 Output files: {cleaned_data_file}, {advanced_stats_file}")
 
 # Define the standard stats columns expected in the box score data *after* cleaning and parsing.
 # These are the target column names for the combined DataFrame.
@@ -30,7 +61,9 @@ stats_cols_excel_headers = [
 ]
 
 # Define known base team labels (these are keywords to look for if direct extraction fails)
-team_labels = ["Blue", "White", "Beige", "Black", "Grey"]
+# Note: Teams are also automatically extracted from sheet names (e.g., "Purple vs U11" -> Purple, U11)
+# Also include variations like "14U" which appears in data but sheet name has "U14"
+team_labels = ["Blue", "White", "Beige", "Black", "Grey", "Purple", "U11", "U14", "14U"]
 
 # Regex pattern for box score sheet names (e.g., "Team1 vs Team2", "Team1 vs Team2 2")
 # This pattern will match any two words separated by " vs " or " Vs ", followed by an optional suffix.
@@ -231,6 +264,8 @@ def process_box_scores():
         header_row_idx = None
         team_header_locations = []
         base_team_names_lower = {t.lower(): t.title() for t in team_labels}
+        # Normalize team name variations: "14U" -> "U14" for consistency
+        base_team_names_lower["14u"] = "U14"
 
         for i in range(len(df)):
             row_values = df.iloc[i].astype(str).str.lower().values
@@ -421,8 +456,21 @@ def process_box_scores():
                 print(f"Skipping unexpected sheet: '{sheet_name}' (does not match box score pattern).")
                 continue
 
-            # Pass only team_labels, stats_cols_excel_headers is now global
-            cleaned_df = clean_single_box_score_sheet(pd.read_excel(xls, sheet_name=sheet_name), sheet_name, team_labels)
+            # Extract team names from sheet name and combine with default team_labels
+            match_vs = re.match(r'(\w+)\s+vs\s+(\w+)', sheet_name, re.IGNORECASE)
+            sheet_team_labels = team_labels.copy()  # Start with default team labels
+            if match_vs:
+                team1 = match_vs.group(1).title()
+                team2 = match_vs.group(2).title()
+                # Add teams from sheet name if not already in the list
+                if team1 not in sheet_team_labels:
+                    sheet_team_labels.append(team1)
+                if team2 not in sheet_team_labels:
+                    sheet_team_labels.append(team2)
+                print(f"📋 Processing '{sheet_name}' with teams: {team1}, {team2}")
+
+            # Pass sheet-specific team_labels that include teams from the sheet name
+            cleaned_df = clean_single_box_score_sheet(pd.read_excel(xls, sheet_name=sheet_name), sheet_name, sheet_team_labels)
             if cleaned_df is not None and not cleaned_df.empty:
                 cleaned_dfs[sheet_name] = cleaned_df
             elif cleaned_df is not None and cleaned_df.empty:
@@ -478,10 +526,10 @@ def process_box_scores():
 
     # Save cleaned dataset
     if not df_combined.empty:
-        df_combined.to_csv("Final_Cleaned_Data.csv", index=False)
-        print("✅ Final_Cleaned_Data.csv saved.")
+        df_combined.to_csv(cleaned_data_file, index=False)
+        print(f"✅ {cleaned_data_file} saved.")
     else:
-        print("No data to save to Final_Cleaned_Data.csv as df_combined is empty.")
+        print(f"No data to save to {cleaned_data_file} as df_combined is empty.")
 
     print("--- ETL Process Complete ---")
 
@@ -788,10 +836,10 @@ def generate_final_visualizations():
             if 'player_advanced_stats_avg' not in globals() or player_advanced_stats_avg.empty:
                 print("Debug: player_advanced_stats_avg not found/empty for final visualizations, attempting to load from CSV.")
                 try:
-                    player_advanced_stats_avg = pd.read_csv("Final_Player_Advanced_Stats.csv")
-                    print("Debug: Loaded player_advanced_stats_avg from Final_Player_Advanced_Stats.csv.")
+                    player_advanced_stats_avg = pd.read_csv(advanced_stats_file)
+                    print(f"Debug: Loaded player_advanced_stats_avg from {advanced_stats_file}.")
                 except FileNotFoundError:
-                    print("⚠️ Final_Player_Advanced_Stats.csv not found for final visualizations. Skipping this plot.")
+                    print(f"⚠️ {advanced_stats_file} not found for final visualizations. Skipping this plot.")
                     player_advanced_stats_avg = pd.DataFrame() # Ensure it's empty to prevent further errors
 
             if not player_advanced_stats_avg.empty and 'Player No.' in player_advanced_stats_avg.columns and 'Team' in player_advanced_stats_avg.columns and 'Avg_Efficiency' in player_advanced_stats_avg.columns:
@@ -1027,8 +1075,8 @@ def generate_advanced_summary_statistics():
         print(team_advanced_stats_avg.sort_values(by='Avg_Team_Efficiency', ascending=False))
 
         # Save player_advanced_stats_avg for potential use in Cell 11 for independent execution
-        player_advanced_stats_avg.to_csv("Final_Player_Advanced_Stats.csv", index=False)
-        print("✅ Player advanced statistics saved to Final_Player_Advanced_Stats.csv")
+        player_advanced_stats_avg.to_csv(advanced_stats_file, index=False)
+        print(f"✅ Player advanced statistics saved to {advanced_stats_file}")
 
 
     print("--- Advanced Summary Statistics Generation Complete ---")
@@ -1052,10 +1100,10 @@ def generate_new_visualizations():
         except NameError:
             print("\n--- Debug: Re-calculating player_advanced_stats_avg for visualizations (in generate_new_visualizations) ---")
             try:
-                player_advanced_stats_avg = pd.read_csv("Final_Player_Advanced_Stats.csv")
-                print("Loaded player_advanced_stats_avg from Final_Player_Advanced_Stats.csv.")
+                player_advanced_stats_avg = pd.read_csv(advanced_stats_file)
+                print(f"Loaded player_advanced_stats_avg from {advanced_stats_file}.")
             except FileNotFoundError:
-                print("⚠️ Final_Player_Advanced_Stats.csv not found for final visualizations. Re-calculating.")
+                print(f"⚠️ {advanced_stats_file} not found for final visualizations. Re-calculating.")
                 # Recalculate if Cell 10 wasn't run or file not found
                 if not df_combined.empty:
                     # --- Debug: Check for Player_Team_Label before re-grouping ---
