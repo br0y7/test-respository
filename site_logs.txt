@@ -343,3 +343,11 @@
 [2025-11-17T15:22:53.451698] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Efficiency Distribution (box_plot)
 [2025-11-17T15:22:53.635368] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
 [2025-11-17T15:22:53.822338] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
+[2025-11-25T11:49:36.805349] Visitor: bed8bcad | Session: 5a76ab5c | Action: page_visit | User visited Basketball Analytics Dashboard
+[2025-11-25T11:49:37.501630] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Efficiency Distribution (box_plot)
+[2025-11-25T11:49:38.010759] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
+[2025-11-25T11:49:38.219423] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
+[2025-11-25T11:54:59.300465] Visitor: c6453f85 | Session: 0f166dad | Action: page_visit | User visited Basketball Analytics Dashboard
+[2025-11-25T11:54:59.589296] Visitor: c6453f85 | Session: 0f166dad | Action: interaction | Viewed Efficiency Distribution (box_plot)
+[2025-11-25T11:54:59.888814] Visitor: c6453f85 | Session: 0f166dad | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
+[2025-11-25T11:55:00.101447] Visitor: c6453f85 | Session: 0f166dad | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
