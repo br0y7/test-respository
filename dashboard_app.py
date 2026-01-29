@@ -45,7 +45,7 @@ selection_comparison_palette = {
 
 
 # --- Data Loading Function ---
-@st.cache_data
+st.cache_data
 def load_data(league_name):
     """Loads the cleaned and advanced statistics data for the specified league."""
     try:
