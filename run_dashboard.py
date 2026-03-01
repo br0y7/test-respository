@@ -22,7 +22,7 @@ def run_gamechanger_and_dashboard():
             print(f"{'='*60}")
             
             # Define the command to run gamechanger.py with league argument
-            gamechanger_command = [sys.executable, "gamechanger.py", league]
+            gamechanger_command = [sys.executable, "gamechanger (1).py", league]
             
             # Run gamechanger.py for this league
             # capture_output=False means stdout/stderr of gamechanger.py will be streamed to the console
@@ -38,7 +38,7 @@ def run_gamechanger_and_dashboard():
 
         # Define the command to run the Streamlit dashboard
         # Assuming streamlit is installed and dashboard_app.py is in the same directory
-        streamlit_command = [sys.executable, "-m", "streamlit", "run", "dashboard_app.py"]
+        streamlit_command = [sys.executable, "-m", "streamlit", "run", "dashboard_app (1).py"]
 
         print("\n--- Launching Streamlit Dashboard ---")
         print("Please wait for the browser to open or follow the URL provided by Streamlit.")
@@ -61,13 +61,14 @@ def run_gamechanger_and_dashboard():
 
 if __name__ == "__main__":
     # Check if gamechanger.py and dashboard_app.py exist in the current directory
-    if not os.path.exists("gamechanger.py"):
-        print("Error: 'gamechanger.py' not found in the current directory. Please ensure it's there.")
+    if not os.path.exists("gamechanger (1).py"):
+        print("Error: 'gamechanger (1).py' not found in the current directory. Please ensure it's there.")
         sys.exit(1)
-    if not os.path.exists("dashboard_app.py"):
-        print("Error: 'dashboard_app.py' not found in the current directory. Please ensure it's there.")
+    if not os.path.exists("dashboard_app (1).py"):
+        print("Error: 'dashboard_app (1).py' not found in the current directory. Please ensure it's there.")
         sys.exit(1)
         
     run_gamechanger_and_dashboard()
     print("\n--- Orchestration script finished. Dashboard should be running or an error occurred. ---")
+
 
