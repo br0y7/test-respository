@@ -15,7 +15,6 @@ st.set_page_config(
 
 import os
 import pandas as pd
-import plotly.express as px
 from data_manager import data_manager
 from site_logger import logger
 from ai_dashboard_integration import render_ai_chat_interface
@@ -321,18 +320,22 @@ def show_live_dashboard():
     column_config = {col: st.column_config.Column(col, help=STAT_TOOLTIPS.get(col, "")) for col in display_df.columns if STAT_TOOLTIPS.get(col)}
     st.dataframe(display_df, use_container_width=True, hide_index=True, column_config=column_config)
 
-    # Optional bar chart
+    # Optional bar chart (plotly optional for environments where it fails to import, e.g. some hosts)
     if st.checkbox("Show player comparison chart", value=False):
-        fig = px.bar(
-            display_df.sort_values("Impact Score", ascending=True).tail(12),
-            x="Name",
-            y="Impact Score",
-            title="Impact Score by Player",
-            color="Impact Score",
-            color_continuous_scale="Blues",
-        )
-        fig.update_layout(showlegend=False, height=400, xaxis_tickangle=-45)
-        st.plotly_chart(fig, use_container_width=True)
+        try:
+            import plotly.express as px
+            fig = px.bar(
+                display_df.sort_values("Impact Score", ascending=True).tail(12),
+                x="Name",
+                y="Impact Score",
+                title="Impact Score by Player",
+                color="Impact Score",
+                color_continuous_scale="Blues",
+            )
+            fig.update_layout(showlegend=False, height=400, xaxis_tickangle=-45)
+            st.plotly_chart(fig, use_container_width=True)
+        except Exception:
+            st.info("Chart is unavailable in this environment. The stats table above has the same data.")
 
     st.markdown("---")
     st.subheader("💡 AI Assistant")
