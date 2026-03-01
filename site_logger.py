@@ -16,8 +16,22 @@ class SiteLogger:
     
     def __init__(self, log_file: str = "site_logs.txt"):
         self.log_file = log_file
-        self.session_id = self._get_or_create_session_id()
-        self.visitor_id = self._get_or_create_visitor_id()
+        self._session_id = None
+        self._visitor_id = None
+    
+    @property
+    def session_id(self):
+        """Lazy initialization of session_id"""
+        if self._session_id is None:
+            self._session_id = self._get_or_create_session_id()
+        return self._session_id
+    
+    @property
+    def visitor_id(self):
+        """Lazy initialization of visitor_id"""
+        if self._visitor_id is None:
+            self._visitor_id = self._get_or_create_visitor_id()
+        return self._visitor_id
         
     def _get_or_create_session_id(self) -> str:
         """Get or create a unique session ID"""
@@ -232,3 +246,4 @@ def get_visitor_stats():
 def get_interaction_summary():
     """Convenience function to get interaction summary"""
     return logger.get_interaction_summary()
+
