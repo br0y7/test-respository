@@ -280,6 +280,10 @@ def show_live_dashboard():
             STL=("STL", "sum"),
         )
     )
+    # Coerce to numeric in case CSV read as object (e.g. on some hosts)
+    for col in ["Games", "PTS", "REB", "AST", "ThreePTM", "FGM", "BLK", "OREB", "DREB", "PF", "TOV", "FGA", "ThreePA", "FTM", "FTA", "STL"]:
+        if col in totals.columns:
+            totals[col] = pd.to_numeric(totals[col], errors="coerce")
     games = totals["Games"].replace(0, pd.NA)
     totals["Points"] = (totals["PTS"] / games).round(1)
     totals["Rebounds"] = (totals["REB"] / games).round(1)
@@ -291,9 +295,9 @@ def show_live_dashboard():
     totals["DREB"] = (totals["DREB"] / games).round(1)
     totals["Personal Fouls"] = (totals["PF"] / games).round(1)
     totals["Turnovers"] = (totals["TOV"] / games).round(1)
-    totals["FG%"] = (totals["FGM"] / totals["FGA"].replace(0, pd.NA) * 100).round(1)
-    totals["3PT%"] = (totals["ThreePTM"] / totals["ThreePA"].replace(0, pd.NA) * 100).round(1)
-    totals["FT%"] = (totals["FTM"] / totals["FTA"].replace(0, pd.NA) * 100).round(1)
+    totals["FG%"] = pd.to_numeric(totals["FGM"] / totals["FGA"].replace(0, pd.NA) * 100, errors="coerce").round(1)
+    totals["3PT%"] = pd.to_numeric(totals["ThreePTM"] / totals["ThreePA"].replace(0, pd.NA) * 100, errors="coerce").round(1)
+    totals["FT%"] = pd.to_numeric(totals["FTM"] / totals["FTA"].replace(0, pd.NA) * 100, errors="coerce").round(1)
     totals["Impact_Score"] = (
         totals["Points"] + totals["Assists"] + totals["Rebounds"]
         + (totals["STL"] / games).fillna(0) + (totals["BLK"] / games).fillna(0)
