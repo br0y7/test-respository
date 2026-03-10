@@ -24,11 +24,28 @@ class DataManager:
         # Season 2 (Unknown League / S2 - same data, different label)
         self.cleaned_data_s2_file = os.path.join(data_dir, "Final_Cleaned_Data_Unknown_League.csv")
         self.advanced_stats_s2_file = os.path.join(data_dir, "Final_Player_Advanced_Stats_Unknown_League.csv")
-        
+        # Season 3 (3 on 3 basketball tournament)
+        self.cleaned_data_3on3_file = os.path.join(data_dir, "Final_Cleaned_Data_3on3.csv")
+        self.advanced_stats_3on3_file = os.path.join(data_dir, "Final_Player_Advanced_Stats_3on3.csv")
+
+    def _ensure_3on3_csvs(self) -> None:
+        """If 3on3 CSVs are missing, run the converter from the tournament xlsx."""
+        if os.path.exists(self.cleaned_data_3on3_file) and os.path.exists(self.advanced_stats_3on3_file):
+            return
+        try:
+            from convert_3on3_tournament import convert_to_csv
+            convert_to_csv(self.data_dir)
+        except Exception as e:
+            raise FileNotFoundError(
+                f"3 on 3 tournament data not found. Either add Final_Cleaned_Data_3on3.csv and "
+                f"Final_Player_Advanced_Stats_3on3.csv, or place '3 on 3 basketball tournament.xlsx' "
+                f"in the data folder. Converter error: {e}"
+            ) from e
+
     def load_player_data(self, season: Optional[int] = None) -> pd.DataFrame:
         """
-        Load cleaned player game data. If season is 1 use Final_Cleaned_Data.csv;
-        if season is 2 use Final_Cleaned_Data_Unknown_League.csv (S2 / Unknown League).
+        Load cleaned player game data. Season 1/2 use Rising Stars CSVs;
+        season 3 uses 3on3 tournament CSVs (generated from xlsx if missing).
         Default season=1 if None.
         """
         s = 1 if season is None else season
@@ -36,15 +53,18 @@ class DataManager:
             if not os.path.exists(self.cleaned_data_file):
                 raise FileNotFoundError(f"Player data file not found: {self.cleaned_data_file}")
             return pd.read_csv(self.cleaned_data_file)
-        else:
+        elif s == 2:
             if not os.path.exists(self.cleaned_data_s2_file):
                 raise FileNotFoundError(f"Season 2 player data file not found: {self.cleaned_data_s2_file}")
             return pd.read_csv(self.cleaned_data_s2_file)
-    
+        else:
+            self._ensure_3on3_csvs()
+            return pd.read_csv(self.cleaned_data_3on3_file)
+
     def load_advanced_stats(self, season: Optional[int] = None) -> pd.DataFrame:
         """
-        Load player advanced statistics. If season is 1 use Final_Player_Advanced_Stats.csv;
-        if season is 2 use Final_Player_Advanced_Stats_Unknown_League.csv (S2 / Unknown League).
+        Load player advanced statistics. Season 1/2 use Rising Stars CSVs;
+        season 3 uses 3on3 tournament CSVs (generated from xlsx if missing).
         Default season=1 if None.
         """
         s = 1 if season is None else season
@@ -52,18 +72,21 @@ class DataManager:
             if not os.path.exists(self.advanced_stats_file):
                 raise FileNotFoundError(f"Advanced stats file not found: {self.advanced_stats_file}")
             return pd.read_csv(self.advanced_stats_file)
-        else:
+        elif s == 2:
             if not os.path.exists(self.advanced_stats_s2_file):
                 raise FileNotFoundError(f"Season 2 advanced stats file not found: {self.advanced_stats_s2_file}")
             return pd.read_csv(self.advanced_stats_s2_file)
+        else:
+            self._ensure_3on3_csvs()
+            return pd.read_csv(self.advanced_stats_3on3_file)
     
     def get_player_profile(self, player_no: int, team: str, season: Optional[int] = None) -> Dict[str, Any]:
         """
-        Get comprehensive player profile with all stats for the given season.
+        Get comprehensive player profile with all stats for the given season (1, 2, or 3).
         Returns structured data ready for AI prompt generation.
         """
         try:
-            s = 1 if season is None else season
+            s = 1 if season is None else int(season)
             game_data = self.load_player_data(season=s)
             advanced_stats = self.load_advanced_stats(season=s)
             
@@ -213,9 +236,9 @@ class DataManager:
         return weaknesses
     
     def get_all_players(self, season: Optional[int] = None) -> List[Dict[str, Any]]:
-        """Get list of all players for the given season (1 or 2). Default season=1."""
+        """Get list of all players for the given season (1, 2, or 3). Default season=1."""
         try:
-            s = 1 if season is None else season
+            s = 1 if season is None else int(season)
             advanced_stats = self.load_advanced_stats(season=s)
             players = []
             for _, row in advanced_stats.iterrows():

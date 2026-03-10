@@ -82,18 +82,22 @@ def _set_page(page: str):
 
 
 def _get_season_num():
-    """Get current season (1 or 2) from session state."""
+    """Get current season (1 or 2) from session state. 3on3 has its own page."""
     sel = st.session_state.get("season_rising_stars", "Season 1 Rising Stars")
-    return 1 if sel == "Season 1 Rising Stars" else 2
+    if sel == "Season 1 Rising Stars":
+        return 1
+    if sel == "Season 2 Rising Stars":
+        return 2
+    return 1
 
 
 def _render_nav_buttons():
-    """Render navigation at top, season switcher in right corner (only on Dashboard and Player Performance Report)."""
+    """Render navigation at top, season switcher in right corner (only on Player Dashboard and Player Performance Report)."""
     page = _get_page()
     show_season = page in ("dashboard", "sample_report")
     left_cols, right_col = st.columns([4, 1])
     with left_cols:
-        c1, c2, c3, _ = st.columns(4)
+        c1, c2, c3, c4 = st.columns(4)
         with c1:
             if st.button("🏠 Home", use_container_width=True) and page != "home":
                 _set_page("home")
@@ -103,11 +107,14 @@ def _render_nav_buttons():
         with c3:
             if st.button("📋 Player Performance Report", use_container_width=True) and page != "sample_report":
                 _set_page("sample_report")
+        with c4:
+            if st.button("🏀 3 on 3 Tournament Dashboard", use_container_width=True) and page != "dashboard_3on3":
+                _set_page("dashboard_3on3")
     with right_col:
         if show_season:
             st.selectbox(
                 "Season",
-                ["Season 1 Rising Stars", "Season 2 Rising Stars"],
+                ["Season 1 Rising Stars", "Season 2 Rising Stars"],                         
                 key="season_rising_stars",
                 label_visibility="collapsed"
             )
@@ -140,11 +147,14 @@ def show_homepage():
     st.markdown('<p class="hero-subtext">Making performance data accessible to community leagues.</p>', unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
     with col1:
+        if st.button("🏀 3 on 3 Basketball Tournament Player Dashboard", use_container_width=True, type="primary"):
+            _set_page("dashboard_3on3")
+    with col2:
         if st.button("📊 View Dashboard", use_container_width=True, type="primary"):
             _set_page("dashboard")
-    with col2:
+    with col3:
         if st.button("📋 See Player Performance Report", use_container_width=True, type="primary"):
             _set_page("sample_report")
     st.markdown("---")
@@ -170,14 +180,14 @@ def show_homepage():
     st.markdown("- **Personal Fouls**")
     st.markdown("- **Shooting Percentages** (FT%, 3PT%, FG%)")
     st.markdown(
-        "*Impact Score combines positive contributions and subtracts negative plays to measure overall game performance.*"
+        "*GCIR (GameChanger Impact Rating) combines scoring efficiency (PPS), stats, and negative plays to measure overall game performance.*"
     )
 
     st.markdown("---")
     st.subheader("🧠 How It Works")
     st.markdown("1️⃣ Game stats are recorded live")
     st.markdown("2️⃣ Performance metrics are calculated")
-    st.markdown("3️⃣ An Impact Score is generated")
+    st.markdown("3️⃣ A GCIR (GameChanger Impact Rating) is generated")
     st.markdown("4️⃣ A player development report is created")
     st.markdown("*GameChanger turns raw statistics into meaningful insights.*")
 
@@ -224,9 +234,54 @@ def show_homepage():
     _render_footer()
 
 
+# 3 on 3 tournament: (Team, Player No.) -> display name (overrides "Player 1" etc.)
+PLAYER_NAMES_3ON3 = {
+    ("Oppahsnee", 1): "Reid",
+    ("Oppahsnee", 2): "Tsering",
+    ("Oppahsnee", 3): "Niko",
+    ("Oppahsnee", 4): "Ethan K.",
+    ("Oppahsnee", 5): "Jeesh",
+    ("Los Blancos", 1): "Gurfateh",
+    ("Los Blancos", 2): "Aashman",
+    ("Los Blancos", 3): "Gurshan",
+    ("Los Blancos", 4): "Jayelle",
+    ("Swaggers", 8): "James",
+    ("Swaggers", 10): "Mehtab",
+    ("Swaggers", 11): "Archer",
+    ("Swaggers", 4): "Mason",
+    ("Bau Bau", 1): "Javier",
+    ("Bau Bau", 12): "Ethan M.",
+    ("Bau Bau", 7): "Kade",
+    ("Bau Bau", 4): "Sacha",
+    ("Bau Bau", 3): "Yohann",
+    ("Basketball Bandits", 2): "Julian",
+    ("Basketball Bandits", 4): "Ben",
+    ("Basketball Bandits", 5): "Dorian",
+    ("Basketball Bandits", 1): "Corban",
+    ("DD", 1): "Kyle",
+    ("DD", 2): "Dom",
+    ("DD", 3): "Kirby",
+    ("DD", 67): "Replacement Player",
+    ("Uncs", 1): "Nathan",
+    ("Uncs", 2): "Stan",
+    ("Uncs", 3): "Cohen",
+    ("Uncs", 4): "Dom (Replacement Player)",
+}
+
+
+def _get_3on3_display_name(team: str, player_no, fallback: str) -> str:
+    """Return mapped name for 3on3 (Team, Player No.) or fallback."""
+    try:
+        key = (str(team).strip(), int(player_no))
+        return PLAYER_NAMES_3ON3.get(key, fallback)
+    except (ValueError, TypeError):
+        return fallback
+
+
 # Stat column tooltips for Player Dashboard (shown on hover)
 STAT_TOOLTIPS = {
     "Name": "Player name and team",
+    "Games": "Number of games played.",
     "Points": "Total points you scored in the game.",
     "Rebounds": "How many times you gained possession after a missed shot.",
     "Assists": "Passes that directly led to a teammate scoring.",
@@ -240,7 +295,8 @@ STAT_TOOLTIPS = {
     "FG%": "How efficient you are at making your shots overall.",
     "3PT%": "How often you make shots from long range.",
     "FT%": "How often you make uncontested free throw shots.",
-    "Impact Score": "A performance rating that measures your total positive contribution (points, assists, rebounds, defense) minus negative plays (turnovers and fouls).",
+    "GCIR": "GameChanger Impact Rating: (PTS×PPS) + 1.3(REB) + 1.5(AST) + 3(STL) + 2.5(BLK) + 0.7(OREB) − 1.5(TOV) − 0.8(PF). PPS = PTS/FGA (points per shot).",
+    "GCMVP": "GameChanger MVP (Total games only, per-game avg): (4×PTS×(PTS/(FGA+0.44×FTA))) + 0.7(REB) + 1.2(AST) + 1.8(STL) + 1.5(BLK) − 2(TOV) − 0.7(PF).",
 }
 
 
@@ -298,11 +354,16 @@ def show_live_dashboard():
     totals["FG%"] = pd.to_numeric(totals["FGM"] / totals["FGA"].replace(0, pd.NA) * 100, errors="coerce").round(1)
     totals["3PT%"] = pd.to_numeric(totals["ThreePTM"] / totals["ThreePA"].replace(0, pd.NA) * 100, errors="coerce").round(1)
     totals["FT%"] = pd.to_numeric(totals["FTM"] / totals["FTA"].replace(0, pd.NA) * 100, errors="coerce").round(1)
-    totals["Impact_Score"] = (
-        totals["Points"] + totals["Assists"] + totals["Rebounds"]
-        + (totals["STL"] / games).fillna(0) + (totals["BLK"] / games).fillna(0)
-        - totals["Turnovers"] - totals["Personal Fouls"]
-    ).round(1)
+    # PPS = PTS/FGA (points per shot, when FGA > 0); GCIR = (PTS×PPS) + 1.3(REB) + 1.5(AST) + 3(STL) + 2.5(BLK) + 0.7(OREB) − 1.5(TOV) − 0.8(PF)
+    _pps = totals["PTS"] / totals["FGA"].replace(0, pd.NA)
+    _pps = _pps.fillna(0).astype(float)
+    _gcir_total = (
+        totals["PTS"] * _pps
+        + 1.3 * totals["REB"] + 1.5 * totals["AST"]
+        + 3 * totals["STL"] + 2.5 * totals["BLK"] + 0.7 * totals["OREB"]
+        - 1.5 * totals["TOV"] - 0.8 * totals["PF"]
+    )
+    totals["GCIR"] = (_gcir_total / games).fillna(0).round(1)
 
     labels = advanced_stats[["Player No.", "Team", "Player_Team_Label"]].drop_duplicates()
     totals = totals.merge(labels, on=["Player No.", "Team"], how="left")
@@ -313,9 +374,8 @@ def show_live_dashboard():
     display_df = totals[[
         "Name", "Points", "Rebounds", "Assists", "3PM", "FG Made", "Blocks",
         "OREB", "DREB", "Personal Fouls", "Turnovers",
-        "FG%", "3PT%", "FT%", "Impact_Score"
+        "FG%", "3PT%", "FT%", "GCIR"
     ]].copy()
-    display_df = display_df.rename(columns={"Impact_Score": "Impact Score"})
     # Format percentages to 1 decimal
     for pct_col in ["FG%", "3PT%", "FT%"]:
         if pct_col in display_df.columns:
@@ -329,11 +389,11 @@ def show_live_dashboard():
         try:
             import plotly.express as px
             fig = px.bar(
-                display_df.sort_values("Impact Score", ascending=True).tail(12),
+                display_df.sort_values("GCIR", ascending=True).tail(12),
                 x="Name",
-                y="Impact Score",
-                title="Impact Score by Player",
-                color="Impact Score",
+                y="GCIR",
+                title="GCIR by Player",
+                color="GCIR",
                 color_continuous_scale="Blues",
             )
             fig.update_layout(showlegend=False, height=400, xaxis_tickangle=-45)
@@ -345,6 +405,642 @@ def show_live_dashboard():
     st.subheader("💡 AI Assistant")
     st.caption("Ask questions about performance, training, or game strategy.")
     render_ai_chat_interface(player_profile=None)
+
+    _render_footer()
+
+
+def _build_3on3_player_table(game_data: pd.DataFrame, advanced_stats: pd.DataFrame, include_gcmvp: bool = False) -> pd.DataFrame:
+    """Build the standard player stats display table from game_data and advanced_stats. If include_gcmvp=True, add GCMVP column (for Total games only)."""
+    totals = (
+        game_data.groupby(["Player No.", "Team"], as_index=False)
+        .agg(
+            Games=("Game", "nunique"),
+            PTS=("PTS", "sum"),
+            REB=("REB", "sum"),
+            AST=("AST", "sum"),
+            ThreePTM=("3PTM", "sum"),
+            FGM=("FGM", "sum"),
+            BLK=("BLK", "sum"),
+            OREB=("OREB", "sum"),
+            DREB=("DREB", "sum"),
+            PF=("PF", "sum"),
+            TOV=("TOV", "sum"),
+            FGA=("FGA", "sum"),
+            ThreePA=("3PA", "sum"),
+            FTM=("FTM", "sum"),
+            FTA=("FTA", "sum"),
+            STL=("STL", "sum"),
+        )
+    )
+    for col in ["Games", "PTS", "REB", "AST", "ThreePTM", "FGM", "BLK", "OREB", "DREB", "PF", "TOV", "FGA", "ThreePA", "FTM", "FTA", "STL"]:
+        if col in totals.columns:
+            totals[col] = pd.to_numeric(totals[col], errors="coerce")
+    games = totals["Games"].replace(0, pd.NA)
+    totals["Points"] = (totals["PTS"] / games).round(1)
+    totals["Rebounds"] = (totals["REB"] / games).round(1)
+    totals["Assists"] = (totals["AST"] / games).round(1)
+    totals["3PM"] = (totals["ThreePTM"] / games).round(1)
+    totals["FG Made"] = (totals["FGM"] / games).round(1)
+    totals["Blocks"] = (totals["BLK"] / games).round(1)
+    totals["OREB"] = (totals["OREB"] / games).round(1)
+    totals["DREB"] = (totals["DREB"] / games).round(1)
+    totals["Personal Fouls"] = (totals["PF"] / games).round(1)
+    totals["Turnovers"] = (totals["TOV"] / games).round(1)
+    totals["FG%"] = pd.to_numeric(totals["FGM"] / totals["FGA"].replace(0, pd.NA) * 100, errors="coerce").round(1)
+    totals["3PT%"] = pd.to_numeric(totals["ThreePTM"] / totals["ThreePA"].replace(0, pd.NA) * 100, errors="coerce").round(1)
+    totals["FT%"] = pd.to_numeric(totals["FTM"] / totals["FTA"].replace(0, pd.NA) * 100, errors="coerce").round(1)
+    # PPS = PTS/FGA (points per shot, when FGA > 0); GCIR = (PTS×PPS) + 1.3(REB) + 1.5(AST) + 3(STL) + 2.5(BLK) + 0.7(OREB) − 1.5(TOV) − 0.8(PF)
+    _pps = totals["PTS"] / totals["FGA"].replace(0, pd.NA)
+    _pps = _pps.fillna(0).astype(float)
+    _gcir_total = (
+        totals["PTS"] * _pps
+        + 1.3 * totals["REB"] + 1.5 * totals["AST"]
+        + 3 * totals["STL"] + 2.5 * totals["BLK"] + 0.7 * totals["OREB"]
+        - 1.5 * totals["TOV"] - 0.8 * totals["PF"]
+    )
+    totals["GCIR"] = (_gcir_total / games).fillna(0).round(1)
+    if include_gcmvp:
+        # GCMVP numerator per player: ((4 × PTS × (PTS / (FGA + 0.44 × FTA))) + 0.7 × REB + 1.2 × AST
+        # + 1.8 × STL + 1.5 × BLK − 2 × TOV − 0.7 × PF)
+        _tsa = totals["FGA"] + 0.44 * totals["FTA"]
+        _pps_mvp = (totals["PTS"] / _tsa.replace(0, pd.NA)).fillna(0).astype(float)
+        _gcmvp_num = (
+            4 * totals["PTS"] * _pps_mvp
+            + 0.7 * totals["REB"]
+            + 1.2 * totals["AST"]
+            + 1.8 * totals["STL"]
+            + 1.5 * totals["BLK"]
+            - 2.0 * totals["TOV"]
+            - 0.7 * totals["PF"]
+        )
+        totals["GCMVP"] = (_gcmvp_num / games).fillna(0).round(1)
+    labels = advanced_stats[["Player No.", "Team", "Player_Team_Label"]].drop_duplicates()
+    totals = totals.merge(labels, on=["Player No.", "Team"], how="left")
+    totals["Name"] = totals["Player_Team_Label"].fillna(
+        "Player " + totals["Player No."].astype(str)
+    )
+    totals["Name"] = totals.apply(
+        lambda r: _get_3on3_display_name(r["Team"], r["Player No."], r["Name"]), axis=1
+    )
+    totals["Name"] = totals["Name"] + " (" + totals["Team"].astype(str) + ")"
+    base_cols = [
+        "Name", "Games", "Points", "Rebounds", "Assists", "3PM", "FG Made", "Blocks",
+        "OREB", "DREB", "Personal Fouls", "Turnovers",
+        "FG%", "3PT%", "FT%", "GCIR"
+    ]
+    if include_gcmvp:
+        base_cols.append("GCMVP")
+    display_df = totals[base_cols].copy()
+    for pct_col in ["FG%", "3PT%", "FT%"]:
+        if pct_col in display_df.columns:
+            display_df[pct_col] = display_df[pct_col].apply(lambda x: f"{x:.1f}" if pd.notna(x) else "N/A")
+    return display_df
+
+
+def _playoff_game_sort_key(game_name: str) -> int:
+    """Return sort order for playoff games: 1=Round 1, 2=Round 2, 3=Losers R1, 4=Semis, 5=Finals, 6=Third place, 7=Championship."""
+    s = str(game_name).strip().lower()
+    if "championship" in s:
+        return 7
+    if "third place" in s:
+        return 6
+    if "final" in s and "semi" not in s:
+        return 5
+    if "semi" in s:
+        return 4
+    if "losers" in s and ("round 1" in s or "r1" in s):
+        return 3
+    if "round 2" in s or "r2" in s:
+        return 2
+    if "round 1" in s or "r1" in s:
+        return 1
+    return 0
+
+
+def _render_3on3_playoffs_box_page(game_data: pd.DataFrame, advanced_stats: pd.DataFrame):
+    """Render playoff games + box scores in round order (R1 → R2 → Losers R1 → Semis → Finals → Third place → Championship)."""
+    if st.button("← Back to 3 on 3 Dashboard", type="primary", key="back_3on3_po"):
+        st.session_state["view_3on3"] = "main"
+        st.rerun()
+
+    st.subheader("📋 View all playoff games and box scores")
+    st.caption("Rankings table below. Games in order: Round 1 → Round 2 → Losers bracket R1 → Semis → Finals → Third place → Championship.")
+
+    game_type_norm = game_data["Game_Type"].astype(str).str.replace(r"\s+", " ", regex=True).str.strip().str.lower()
+    game_data = game_data[game_type_norm == "playoffs"].copy()
+    if game_data.empty:
+        st.info("No playoff games in the data.")
+        _render_footer()
+        return
+
+    game_data = game_data.copy()
+    _pts = pd.to_numeric(game_data["PTS"], errors="coerce").fillna(0)
+    _fga = pd.to_numeric(game_data["FGA"], errors="coerce").fillna(0)
+    _pps = (_pts / _fga.replace(0, pd.NA)).fillna(0).astype(float)
+    game_data["_impact"] = (
+        _pts * _pps
+        + 1.3 * pd.to_numeric(game_data["REB"], errors="coerce").fillna(0)
+        + 1.5 * pd.to_numeric(game_data["AST"], errors="coerce").fillna(0)
+        + 3 * pd.to_numeric(game_data["STL"], errors="coerce").fillna(0)
+        + 2.5 * pd.to_numeric(game_data["BLK"], errors="coerce").fillna(0)
+        + 0.7 * pd.to_numeric(game_data["OREB"], errors="coerce").fillna(0)
+        - 1.5 * pd.to_numeric(game_data["TOV"], errors="coerce").fillna(0)
+        - 0.8 * pd.to_numeric(game_data["PF"], errors="coerce").fillna(0)
+    ).astype(float)
+    idx_best = game_data.groupby(["Game", "Game_Type"])["_impact"].idxmax()
+    best_per_game = game_data.loc[idx_best, ["Game", "Game_Type", "Player No.", "Team", "_impact"]].copy()
+    best_per_game = best_per_game.merge(
+        advanced_stats[["Player No.", "Team", "Player_Team_Label"]].drop_duplicates(),
+        on=["Player No.", "Team"], how="left"
+    )
+    best_per_game["Player_Team_Label"] = best_per_game["Player_Team_Label"].fillna(
+        "Player " + best_per_game["Player No."].astype(str) + " (" + best_per_game["Team"].astype(str) + ")"
+    )
+    best_per_game["Display_Name"] = best_per_game.apply(
+        lambda r: _get_3on3_display_name(r["Team"], r["Player No."], r["Player_Team_Label"]), axis=1
+    )
+    best_per_game["Display_Name"] = best_per_game["Display_Name"] + " (" + best_per_game["Team"].astype(str) + ")"
+    pog_lookup = best_per_game.set_index(["Game", "Game_Type"])["Display_Name"].to_dict()
+
+    game_team_pts = game_data.groupby(["Game", "Game_Type", "Team"], as_index=False)["PTS"].sum()
+    games_list = []
+    for (game_name, game_type), grp in game_team_pts.groupby(["Game", "Game_Type"]):
+        teams = grp["Team"].tolist()
+        scores = grp["PTS"].tolist()
+        pog = pog_lookup.get((game_name, game_type), "")
+        if len(teams) >= 2:
+            t1, t2 = teams[0], teams[1]
+            s1, s2 = int(round(scores[0])), int(round(scores[1]))
+            winner = t1 if s1 > s2 else (t2 if s2 > s1 else "Tie")
+            margin = abs(s1 - s2)
+            games_list.append({
+                "Game": game_name, "Game Type": game_type, "Team 1": t1, "Team 2": t2,
+                "Score 1": s1, "Score 2": s2, "Winner": winner,
+                "Won by": margin if winner != "Tie" else 0, "Player of the Game": pog,
+            })
+        else:
+            games_list.append({
+                "Game": game_name, "Game Type": game_type,
+                "Team 1": teams[0] if teams else "", "Team 2": "",
+                "Score 1": int(round(scores[0])) if scores else 0, "Score 2": 0,
+                "Winner": teams[0] if teams else "", "Won by": 0, "Player of the Game": pog,
+            })
+    games_df = pd.DataFrame(games_list)
+    if not games_df.empty:
+        games_df["_order"] = games_df["Game"].map(_playoff_game_sort_key)
+        games_df = games_df.sort_values("_order").drop(columns=["_order"])
+    st.markdown("**Rankings**")
+    st.dataframe(games_df, use_container_width=True, hide_index=True)
+    st.markdown("---")
+
+    game_data = game_data.merge(
+        advanced_stats[["Player No.", "Team", "Player_Team_Label"]].drop_duplicates(),
+        on=["Player No.", "Team"], how="left"
+    )
+    game_data["Player_Team_Label"] = game_data["Player_Team_Label"].fillna(
+        "Player " + game_data["Player No."].astype(str) + " (" + game_data["Team"].astype(str) + ")"
+    )
+    game_data["Name"] = game_data.apply(
+        lambda r: _get_3on3_display_name(r["Team"], r["Player No."], r["Player_Team_Label"]), axis=1
+    )
+    _col_3pt = "3PTM" if "3PTM" in game_data.columns else "3PM"
+    game_groups = list(game_data.groupby(["Game", "Game_Type"]))
+    game_groups.sort(key=lambda x: (_playoff_game_sort_key(x[0][0]), x[0][0]))
+    for (game_name, game_type), grp in game_groups:
+        teams = grp["Team"].unique().tolist()
+        if len(teams) < 2:
+            continue
+        t1, t2 = teams[0], teams[1]
+        t1_score = int(round(grp[grp["Team"] == t1]["PTS"].sum()))
+        t2_score = int(round(grp[grp["Team"] == t2]["PTS"].sum()))
+        st.markdown("---")
+        st.markdown(f"### {game_name}")
+        st.caption(f"**{t1}** {t1_score} — {t2_score} **{t2}**")
+        tab1, tab2, tab3 = st.tabs([t1.upper(), t2.upper(), "TEAM STATS"])
+        for tab, team in [(tab1, t1), (tab2, t2)]:
+            with tab:
+                team_grp = grp[grp["Team"] == team].copy()
+                team_grp["Player"] = team_grp["Player No."].astype(str) + " " + team_grp["Name"]
+                team_grp["FG"] = team_grp["FGM"].astype(int).astype(str) + "-" + team_grp["FGA"].astype(int).astype(str)
+                team_grp["3PT"] = team_grp[_col_3pt].astype(int).astype(str) + "-" + team_grp["3PA"].astype(int).astype(str)
+                team_grp["FT"] = team_grp["FTM"].astype(int).astype(str) + "-" + team_grp["FTA"].astype(int).astype(str)
+                team_grp["TO"] = team_grp["TOV"]
+                box_df = team_grp[["Player", "MIN", "PTS", "FG", "3PT", "FT", "REB", "AST", "STL", "BLK", "TO", "PF"]].copy()
+                st.dataframe(box_df, use_container_width=True, hide_index=True)
+        with tab3:
+            tg1 = grp[grp["Team"] == t1]
+            tg2 = grp[grp["Team"] == t2]
+            def _pct(made, att): return f"{round(100 * made / att, 1)}" if att else "0"
+            fg1, fga1 = tg1["FGM"].sum(), tg1["FGA"].sum()
+            fg2, fga2 = tg2["FGM"].sum(), tg2["FGA"].sum()
+            t31, t3a1 = tg1[_col_3pt].sum(), tg1["3PA"].sum()
+            t32, t3a2 = tg2[_col_3pt].sum(), tg2["3PA"].sum()
+            ft1, fta1 = tg1["FTM"].sum(), tg1["FTA"].sum()
+            ft2, fta2 = tg2["FTM"].sum(), tg2["FTA"].sum()
+            stats_rows = [
+                ("Field goals", f"{int(fg1)}/{int(fga1)}", f"{int(fg2)}/{int(fga2)}"),
+                ("FG %", _pct(fg1, fga1), _pct(fg2, fga2)),
+                ("3-pointers", f"{int(t31)}/{int(t3a1)}", f"{int(t32)}/{int(t3a2)}"),
+                ("3PT %", _pct(t31, t3a1), _pct(t32, t3a2)),
+                ("Free throws", f"{int(ft1)}/{int(fta1)}", f"{int(ft2)}/{int(fta2)}"),
+                ("FT %", _pct(ft1, fta1), _pct(ft2, fta2)),
+                ("Total rebounds", str(int(tg1["REB"].sum())), str(int(tg2["REB"].sum()))),
+                ("Offensive rebounds", str(int(tg1["OREB"].sum())), str(int(tg2["OREB"].sum()))),
+                ("Defensive rebounds", str(int(tg1["DREB"].sum())), str(int(tg2["DREB"].sum()))),
+                ("Assists", str(int(tg1["AST"].sum())), str(int(tg2["AST"].sum()))),
+                ("Blocks", str(int(tg1["BLK"].sum())), str(int(tg2["BLK"].sum()))),
+                ("Steals", str(int(tg1["STL"].sum())), str(int(tg2["STL"].sum()))),
+                ("Turnovers", str(int(tg1["TOV"].sum())), str(int(tg2["TOV"].sum()))),
+            ]
+            sc1, sc2 = st.columns(2)
+            with sc1:
+                st.markdown(f"**{t1}**")
+                for label, v1, _ in stats_rows:
+                    st.markdown(f"{label}: **{v1}**")
+            with sc2:
+                st.markdown(f"**{t2}**")
+                for label, _, v2 in stats_rows:
+                    st.markdown(f"{label}: **{v2}**")
+        pog = pog_lookup.get((game_name, game_type), "")
+        if pog:
+            st.markdown(f"**Player of the Game:** {pog}")
+    _render_footer()
+
+
+def _render_3on3_games_box_page(game_data: pd.DataFrame, advanced_stats: pd.DataFrame):
+    """Render the 'All games played + box scores' sub-page (Round Robin only) in traditional box score format."""
+    if st.button("← Back to 3 on 3 Dashboard", type="primary", key="back_3on3"):
+        st.session_state["view_3on3"] = "main"
+        st.rerun()
+
+    st.subheader("📋 View all round robin games and box scores")
+    st.caption("Rankings table below. Traditional box score for each game; Player of the Game under each box score.")
+
+    game_type_norm = game_data["Game_Type"].astype(str).str.replace(r"\s+", " ", regex=True).str.strip().str.lower()
+    game_data = game_data[game_type_norm == "round robin"].copy()
+    if game_data.empty:
+        st.info("No Round Robin games in the data.")
+        _render_footer()
+        return
+
+    game_data = game_data.copy()
+    _pts = pd.to_numeric(game_data["PTS"], errors="coerce").fillna(0)
+    _fga = pd.to_numeric(game_data["FGA"], errors="coerce").fillna(0)
+    _pps = (_pts / _fga.replace(0, pd.NA)).fillna(0).astype(float)
+    game_data["_impact"] = (
+        _pts * _pps
+        + 1.3 * pd.to_numeric(game_data["REB"], errors="coerce").fillna(0)
+        + 1.5 * pd.to_numeric(game_data["AST"], errors="coerce").fillna(0)
+        + 3 * pd.to_numeric(game_data["STL"], errors="coerce").fillna(0)
+        + 2.5 * pd.to_numeric(game_data["BLK"], errors="coerce").fillna(0)
+        + 0.7 * pd.to_numeric(game_data["OREB"], errors="coerce").fillna(0)
+        - 1.5 * pd.to_numeric(game_data["TOV"], errors="coerce").fillna(0)
+        - 0.8 * pd.to_numeric(game_data["PF"], errors="coerce").fillna(0)
+    ).astype(float)
+    idx_best = game_data.groupby(["Game", "Game_Type"])["_impact"].idxmax()
+    best_per_game = game_data.loc[idx_best, ["Game", "Game_Type", "Player No.", "Team", "_impact"]].copy()
+    best_per_game = best_per_game.merge(
+        advanced_stats[["Player No.", "Team", "Player_Team_Label"]].drop_duplicates(),
+        on=["Player No.", "Team"], how="left"
+    )
+    best_per_game["Player_Team_Label"] = best_per_game["Player_Team_Label"].fillna(
+        "Player " + best_per_game["Player No."].astype(str) + " (" + best_per_game["Team"].astype(str) + ")"
+    )
+    best_per_game["Display_Name"] = best_per_game.apply(
+        lambda r: _get_3on3_display_name(r["Team"], r["Player No."], r["Player_Team_Label"]), axis=1
+    )
+    best_per_game["Display_Name"] = best_per_game["Display_Name"] + " (" + best_per_game["Team"].astype(str) + ")"
+    pog_lookup = best_per_game.set_index(["Game", "Game_Type"])["Display_Name"].to_dict()
+
+    game_team_pts = game_data.groupby(["Game", "Game_Type", "Team"], as_index=False)["PTS"].sum()
+    games_list = []
+    for (game_name, game_type), grp in game_team_pts.groupby(["Game", "Game_Type"]):
+        teams = grp["Team"].tolist()
+        scores = grp["PTS"].tolist()
+        pog = pog_lookup.get((game_name, game_type), "")
+        if len(teams) >= 2:
+            t1, t2 = teams[0], teams[1]
+            s1, s2 = int(round(scores[0])), int(round(scores[1]))
+            winner = t1 if s1 > s2 else (t2 if s2 > s1 else "Tie")
+            margin = abs(s1 - s2)
+            games_list.append({
+                "Game": game_name, "Game Type": game_type, "Team 1": t1, "Team 2": t2,
+                "Score 1": s1, "Score 2": s2, "Winner": winner,
+                "Won by": margin if winner != "Tie" else 0, "Player of the Game": pog,
+            })
+        else:
+            games_list.append({
+                "Game": game_name, "Game Type": game_type,
+                "Team 1": teams[0] if teams else "", "Team 2": "",
+                "Score 1": int(round(scores[0])) if scores else 0, "Score 2": 0,
+                "Winner": teams[0] if teams else "", "Won by": 0, "Player of the Game": pog,
+            })
+    games_df = pd.DataFrame(games_list)
+    st.dataframe(games_df, use_container_width=True, hide_index=True)
+
+    # Add display name for traditional box score
+    game_data = game_data.merge(
+        advanced_stats[["Player No.", "Team", "Player_Team_Label"]].drop_duplicates(),
+        on=["Player No.", "Team"], how="left"
+    )
+    game_data["Player_Team_Label"] = game_data["Player_Team_Label"].fillna(
+        "Player " + game_data["Player No."].astype(str) + " (" + game_data["Team"].astype(str) + ")"
+    )
+    game_data["Name"] = game_data.apply(
+        lambda r: _get_3on3_display_name(r["Team"], r["Player No."], r["Player_Team_Label"]), axis=1
+    )
+
+    # Traditional box score: Player (No. Name), MIN, PTS, FG, 3PT, FT, REB, AST, STL, BLK, TO, PF
+    _col_3pt = "3PTM" if "3PTM" in game_data.columns else "3PM"
+    for (game_name, game_type), grp in game_data.groupby(["Game", "Game_Type"]):
+        teams = grp["Team"].unique().tolist()
+        if len(teams) < 2:
+            continue
+        t1, t2 = teams[0], teams[1]
+        t1_score = int(round(grp[grp["Team"] == t1]["PTS"].sum()))
+        t2_score = int(round(grp[grp["Team"] == t2]["PTS"].sum()))
+
+        st.markdown("---")
+        st.markdown(f"### {game_name}")
+        st.caption(f"**{t1}** {t1_score} — {t2_score} **{t2}**")
+
+        tab1, tab2, tab3 = st.tabs([t1.upper(), t2.upper(), "TEAM STATS"])
+        for tab, team in [(tab1, t1), (tab2, t2)]:
+            with tab:
+                team_grp = grp[grp["Team"] == team].copy()
+                team_grp["Player"] = team_grp["Player No."].astype(str) + " " + team_grp["Name"]
+                team_grp["FG"] = team_grp["FGM"].astype(int).astype(str) + "-" + team_grp["FGA"].astype(int).astype(str)
+                team_grp["3PT"] = team_grp[_col_3pt].astype(int).astype(str) + "-" + team_grp["3PA"].astype(int).astype(str)
+                team_grp["FT"] = team_grp["FTM"].astype(int).astype(str) + "-" + team_grp["FTA"].astype(int).astype(str)
+                team_grp["TO"] = team_grp["TOV"]
+                box_df = team_grp[["Player", "MIN", "PTS", "FG", "3PT", "FT", "REB", "AST", "STL", "BLK", "TO", "PF"]].copy()
+                box_df = box_df.rename(columns={"MIN": "MIN", "TO": "TO"})
+                st.dataframe(box_df, use_container_width=True, hide_index=True)
+
+        with tab3:
+            tg1 = grp[grp["Team"] == t1]
+            tg2 = grp[grp["Team"] == t2]
+            def _pct(made, att): return f"{round(100 * made / att, 1)}" if att else "0"
+            fg1, fga1 = tg1["FGM"].sum(), tg1["FGA"].sum()
+            fg2, fga2 = tg2["FGM"].sum(), tg2["FGA"].sum()
+            t31, t3a1 = tg1[_col_3pt].sum(), tg1["3PA"].sum()
+            t32, t3a2 = tg2[_col_3pt].sum(), tg2["3PA"].sum()
+            ft1, fta1 = tg1["FTM"].sum(), tg1["FTA"].sum()
+            ft2, fta2 = tg2["FTM"].sum(), tg2["FTA"].sum()
+            stats_rows = [
+                ("Field goals", f"{int(fg1)}/{int(fga1)}", f"{int(fg2)}/{int(fga2)}"),
+                ("FG %", _pct(fg1, fga1), _pct(fg2, fga2)),
+                ("3-pointers", f"{int(t31)}/{int(t3a1)}", f"{int(t32)}/{int(t3a2)}"),
+                ("3PT %", _pct(t31, t3a1), _pct(t32, t3a2)),
+                ("Free throws", f"{int(ft1)}/{int(fta1)}", f"{int(ft2)}/{int(fta2)}"),
+                ("FT %", _pct(ft1, fta1), _pct(ft2, fta2)),
+                ("Total rebounds", str(int(tg1["REB"].sum())), str(int(tg2["REB"].sum()))),
+                ("Offensive rebounds", str(int(tg1["OREB"].sum())), str(int(tg2["OREB"].sum()))),
+                ("Defensive rebounds", str(int(tg1["DREB"].sum())), str(int(tg2["DREB"].sum()))),
+                ("Assists", str(int(tg1["AST"].sum())), str(int(tg2["AST"].sum()))),
+                ("Blocks", str(int(tg1["BLK"].sum())), str(int(tg2["BLK"].sum()))),
+                ("Steals", str(int(tg1["STL"].sum())), str(int(tg2["STL"].sum()))),
+                ("Turnovers", str(int(tg1["TOV"].sum())), str(int(tg2["TOV"].sum()))),
+            ]
+            sc1, sc2 = st.columns(2)
+            with sc1:
+                st.markdown(f"**{t1}**")
+                for label, v1, _ in stats_rows:
+                    st.markdown(f"{label}: **{v1}**")
+            with sc2:
+                st.markdown(f"**{t2}**")
+                for label, _, v2 in stats_rows:
+                    st.markdown(f"{label}: **{v2}**")
+        pog = pog_lookup.get((game_name, game_type), "")
+        if pog:
+            st.markdown(f"**Player of the Game:** {pog}")
+
+    _render_footer()
+
+
+def show_3on3_dashboard():
+    """3 on 3 Basketball Tournament Player Dashboard – Round Robin overview first, then games played (who won, by how much)."""
+    st.header("🏀 3 on 3 Basketball Tournament Player Dashboard")
+    st.caption("Round Robin and Playoffs stats for the 3 on 3 basketball tournament.")
+
+    try:
+        game_data = data_manager.load_player_data(season=3)
+        advanced_stats = data_manager.load_advanced_stats(season=3)
+    except Exception as e:
+        st.error(f"Error loading tournament data: {str(e)}")
+        _render_footer()
+        return
+
+    # Ensure Game_Type exists (old CSVs may not have it – treat all as Round Robin)
+    if "Game_Type" not in game_data.columns:
+        game_data = game_data.copy()
+        game_data["Game_Type"] = "Round Robin"
+
+    # Sub-pages: Round Robin or Playoffs games + box scores (Back to return)
+    if st.session_state.get("view_3on3") == "games_box":
+        _render_3on3_games_box_page(game_data, advanced_stats)
+        return
+    if st.session_state.get("view_3on3") == "playoffs_box":
+        _render_3on3_playoffs_box_page(game_data, advanced_stats)
+        return
+
+    # ------ 1) Round Robin overview (first thing) ------
+    st.subheader("📊 Round Robin Overview")
+    # Filter by Game_Type set by convert_3on3_tournament.py (uses your playoff keywords there)
+    game_type_norm = game_data["Game_Type"].astype(str).str.replace(r"\s+", " ", regex=True).str.strip().str.lower()
+    round_robin = game_data[game_type_norm == "round robin"].copy()
+    if round_robin.empty:
+        st.info("No Round Robin games in the data. All games may be marked as Playoffs, or Game_Type is missing.")
+    else:
+        # Total games and team records (wins / losses) — from Round Robin games only
+        rr_team_pts = round_robin.groupby(["Game", "Team"], as_index=False)["PTS"].sum()
+        rr_games_total = rr_team_pts["Game"].nunique()
+        # Winner per game = team with higher total PTS in that game
+        winners = []
+        for game_name, grp in rr_team_pts.groupby("Game"):
+            grp = grp.sort_values("PTS", ascending=False)
+            if len(grp) >= 2 and grp.iloc[0]["PTS"] > grp.iloc[1]["PTS"]:
+                winners.append(grp.iloc[0]["Team"])
+        wins_per_team = pd.Series(winners).value_counts() if winners else pd.Series(dtype=int)
+        # Games played per team = number of Round Robin games that team appeared in
+        games_per_team = rr_team_pts.groupby("Team")["Game"].nunique()
+        records = []
+        for team in games_per_team.index:
+            played = int(games_per_team[team])
+            w = int(wins_per_team.get(team, 0))
+            l = played - w
+            records.append({"Team": team, "Wins": w, "Losses": l, "Round Robin Record": f"{w}-{l}"})
+        records_df = pd.DataFrame(records).sort_values("Wins", ascending=False)[["Team", "Wins", "Losses", "Round Robin Record"]]
+        st.caption(f"**Total Round Robin games played:** {rr_games_total}")
+        st.caption("Team records below are **Round Robin only** (only games with Game Type = Round Robin; playoffs excluded).")
+        st.dataframe(records_df, use_container_width=True, hide_index=True)
+        st.markdown("")  # small spacing
+        display_rr = _build_3on3_player_table(round_robin, advanced_stats)
+        column_config = {col: st.column_config.Column(col, help=STAT_TOOLTIPS.get(col, "")) for col in display_rr.columns if STAT_TOOLTIPS.get(col)}
+        st.dataframe(display_rr, use_container_width=True, hide_index=True, column_config=column_config)
+    st.markdown("")
+    if st.button("📋 View all round robin games and box scores", type="secondary", key="go_games_box"):
+        st.session_state["view_3on3"] = "games_box"
+        st.rerun()
+
+    # ------ 2) Playoffs overview (when present) ------
+    playoffs = game_data[game_type_norm == "playoffs"].copy()
+    if not playoffs.empty:
+        st.markdown("---")
+        st.subheader("🏆 Playoffs Overview")
+        display_po = _build_3on3_player_table(playoffs, advanced_stats)
+        column_config_po = {col: st.column_config.Column(col, help=STAT_TOOLTIPS.get(col, "")) for col in display_po.columns if STAT_TOOLTIPS.get(col)}
+        st.dataframe(display_po, use_container_width=True, hide_index=True, column_config=column_config_po)
+        st.markdown("")
+        if st.button("📋 View all playoff games and box scores", type="secondary", key="go_playoffs_box"):
+            st.session_state["view_3on3"] = "playoffs_box"
+            st.rerun()
+    else:
+        st.markdown("---")
+        st.subheader("🏆 Playoffs Overview")
+        st.info(
+            "No playoff games detected. In your Excel workbook (**3 on 3  basketball tournament .xlsx**), "
+            "rename the **sheet tab** for each playoff game so the name includes the word **Playoffs** "
+            "(e.g. \"Playoffs - Round 1\", \"Playoffs - Third Place Game\"). Then run: **python convert_3on3_tournament.py** "
+            "and refresh this page."
+        )
+
+    # ------ Total games overview (player stats for all games: Round Robin + Playoffs) ------
+    rr_games_total = round_robin["Game"].nunique() if not round_robin.empty else 0
+    po_games_total = playoffs["Game"].nunique() if not playoffs.empty else 0
+    st.markdown("---")
+    st.subheader("📋 Total games overview")
+    st.caption(f"**Round Robin:** {rr_games_total} games  |  **Playoffs:** {po_games_total} games  |  **Total:** {rr_games_total + po_games_total} games")
+    display_all = _build_3on3_player_table(game_data, advanced_stats, include_gcmvp=True)
+    column_config_all = {col: st.column_config.Column(col, help=STAT_TOOLTIPS.get(col, "")) for col in display_all.columns if STAT_TOOLTIPS.get(col)}
+    st.dataframe(display_all, use_container_width=True, hide_index=True, column_config=column_config_all)
+
+    # Team totals (all games): one row per team, season totals
+    _col_3pm = "3PM" if "3PM" in game_data.columns else "3PTM"
+    team_per_game = game_data.groupby(["Game", "Team"], as_index=False).agg(
+        PTS=("PTS", "sum"),
+        REB=("REB", "sum"),
+        AST=("AST", "sum"),
+        ThreePTM=(_col_3pm, "sum"),
+        FGM=("FGM", "sum"),
+        BLK=("BLK", "sum"),
+        OREB=("OREB", "sum"),
+        DREB=("DREB", "sum"),
+        PF=("PF", "sum"),
+        TOV=("TOV", "sum"),
+        STL=("STL", "sum"),
+    )
+    team_totals = team_per_game.groupby("Team", as_index=False).agg(
+        Games=("Game", "nunique"),
+        PTS=("PTS", "sum"),
+        REB=("REB", "sum"),
+        AST=("AST", "sum"),
+        ThreePTM=("ThreePTM", "sum"),
+        FGM=("FGM", "sum"),
+        BLK=("BLK", "sum"),
+        OREB=("OREB", "sum"),
+        DREB=("DREB", "sum"),
+        PF=("PF", "sum"),
+        TOV=("TOV", "sum"),
+        STL=("STL", "sum"),
+    )
+    team_totals = team_totals.rename(columns={
+        "ThreePTM": "3PM", "FGM": "FG Made", "BLK": "Blocks",
+        "PF": "Personal Fouls", "TOV": "Turnovers",
+    })
+    st.caption("**Team totals** (sum of all games for each team)")
+    st.dataframe(team_totals, use_container_width=True, hide_index=True)
+
+    st.markdown("---")
+    # ------ 3) Games played: game type, who won, by how much, player of the game ------
+    st.subheader("📋 Games Played")
+    # Per-game GCIR for Player of the Game: PPS = PTS/FGA; GCIR = (PTS×PPS) + 1.3(REB) + 1.5(AST) + 3(STL) + 2.5(BLK) + 0.7(OREB) − 1.5(TOV) − 0.8(PF)
+    game_data = game_data.copy()
+    _pts = pd.to_numeric(game_data["PTS"], errors="coerce").fillna(0)
+    _fga = pd.to_numeric(game_data["FGA"], errors="coerce").fillna(0)
+    _pps = (_pts / _fga.replace(0, pd.NA)).fillna(0).astype(float)
+    game_data["_impact"] = (
+        _pts * _pps
+        + 1.3 * pd.to_numeric(game_data["REB"], errors="coerce").fillna(0)
+        + 1.5 * pd.to_numeric(game_data["AST"], errors="coerce").fillna(0)
+        + 3 * pd.to_numeric(game_data["STL"], errors="coerce").fillna(0)
+        + 2.5 * pd.to_numeric(game_data["BLK"], errors="coerce").fillna(0)
+        + 0.7 * pd.to_numeric(game_data["OREB"], errors="coerce").fillna(0)
+        - 1.5 * pd.to_numeric(game_data["TOV"], errors="coerce").fillna(0)
+        - 0.8 * pd.to_numeric(game_data["PF"], errors="coerce").fillna(0)
+    ).astype(float)
+    # Best player per game (max GCIR)
+    idx_best = game_data.groupby(["Game", "Game_Type"])["_impact"].idxmax()
+    best_per_game = game_data.loc[idx_best, ["Game", "Game_Type", "Player No.", "Team", "_impact"]].copy()
+    best_per_game = best_per_game.merge(
+        advanced_stats[["Player No.", "Team", "Player_Team_Label"]].drop_duplicates(),
+        on=["Player No.", "Team"],
+        how="left"
+    )
+    best_per_game["Player_Team_Label"] = best_per_game["Player_Team_Label"].fillna(
+        "Player " + best_per_game["Player No."].astype(str) + " (" + best_per_game["Team"].astype(str) + ")"
+    )
+    best_per_game["Display_Name"] = best_per_game.apply(
+        lambda r: _get_3on3_display_name(r["Team"], r["Player No."], r["Player_Team_Label"]), axis=1
+    )
+    best_per_game["Display_Name"] = best_per_game["Display_Name"] + " (" + best_per_game["Team"].astype(str) + ")"
+    pog_lookup = best_per_game.set_index(["Game", "Game_Type"])["Display_Name"].to_dict()
+
+    # Per-game team totals (PTS)
+    game_team_pts = game_data.groupby(["Game", "Game_Type", "Team"], as_index=False)["PTS"].sum()
+    games_list = []
+    for (game_name, game_type), grp in game_team_pts.groupby(["Game", "Game_Type"]):
+        teams = grp["Team"].tolist()
+        scores = grp["PTS"].tolist()
+        pog = pog_lookup.get((game_name, game_type), "")
+        if len(teams) >= 2:
+            t1, t2 = teams[0], teams[1]
+            s1, s2 = int(round(scores[0])), int(round(scores[1]))
+            winner = t1 if s1 > s2 else (t2 if s2 > s1 else "Tie")
+            margin = abs(s1 - s2)
+            games_list.append({
+                "Game": game_name,
+                "Game Type": game_type,
+                 "Team 1": t1,
+                "Team 2": t2,
+                "Score 1": s1,
+                "Score 2": s2,
+                "Winner": winner,
+                "Won by": margin if winner != "Tie" else 0,
+                "Player of the Game": pog,
+            })
+        else:
+            games_list.append({
+                "Game": game_name,
+                "Game Type": game_type,
+                "Team 1": teams[0] if teams else "",
+                "Team 2": "",
+                "Score 1": int(round(scores[0])) if scores else 0,
+                "Score 2": 0,
+                "Winner": teams[0] if teams else "",
+                "Won by": 0,
+                "Player of the Game": pog,
+            })
+    games_df = pd.DataFrame(games_list)
+    st.dataframe(games_df, use_container_width=True, hide_index=True)
+
+    st.markdown("---")
+    if not round_robin.empty and st.checkbox("Show player comparison chart (Round Robin)", value=False, key="3on3_chart"):
+        try:
+            import plotly.express as px
+            display_rr = _build_3on3_player_table(round_robin, advanced_stats)
+            fig = px.bar(
+                display_rr.sort_values("GCIR", ascending=True).tail(12),
+                x="Name",
+                y="GCIR",
+                title="GCIR by Player (Round Robin)",
+                color="GCIR",
+                color_continuous_scale="Blues",
+            )
+            fig.update_layout(showlegend=False, height=400, xaxis_tickangle=-45)
+            st.plotly_chart(fig, use_container_width=True)
+        except Exception:
+            st.info("Chart is unavailable in this environment.")
 
     _render_footer()
 
@@ -374,7 +1070,7 @@ def show_sample_report():
         st.warning("No players found for selected season.")
         _render_footer()
         return
-
+    
     options = [p["label"] for p in players]
     selected = st.selectbox("Select a player", options, key="sample_report_player")
 
@@ -386,7 +1082,7 @@ def show_sample_report():
         st.error(profile["error"])
         _render_footer()
         return
-
+    
     st.markdown(f"### {player['label']}")
     st.markdown("#### Game Summary")
     st.markdown(f"**{profile['total_games']} games played** — Season averages below.")
@@ -463,9 +1159,10 @@ def main():
         show_homepage()
     elif page == "dashboard":
         show_live_dashboard()
+    elif page == "dashboard_3on3":
+        show_3on3_dashboard()
     elif page == "sample_report":
         show_sample_report()
-
     else:
         show_homepage()
 
