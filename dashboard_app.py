@@ -63,6 +63,12 @@ st.markdown("""
     .stCaptionContainer { font-size: 1.1rem !important; }
     /* Larger data (tables, metrics) */
     .stDataFrame td, .stDataFrame th, [data-testid="stDataFrame"] td, [data-testid="stDataFrame"] th { font-size: 1.25rem !important; }
+    /* 3on3 Player Dashboard - dark theme like NBA stats */
+    .player-dash-3on3 { background: #1e1e1e !important; color: #e0e0e0 !important; padding: 1rem; border-radius: 8px; }
+    .player-dash-3on3 table { width: 100%; border-collapse: collapse; background: #2d2d2d; }
+    .player-dash-3on3 th { color: #b0b0b0; font-weight: 600; padding: 0.75rem; text-align: left; border-bottom: 1px solid #444; }
+    .player-dash-3on3 td { padding: 0.75rem; border-bottom: 1px solid #3a3a3a; color: #e0e0e0; }
+    .player-dash-3on3 .player-name { color: #5dade2 !important; font-weight: 500; }
     [data-testid="stMetricValue"] { font-size: 1.75rem !important; }
     [data-testid="stMetricLabel"] { font-size: 1.15rem !important; }
     .stSelectbox label { font-size: 1.15rem !important; }
@@ -149,7 +155,7 @@ def show_homepage():
     st.markdown("<br>", unsafe_allow_html=True)
     col1, col2, col3 = st.columns(3)
     with col1:
-        if st.button("🏀 3 on 3 Basketball Tournament Player Dashboard", use_container_width=True, type="primary"):
+        if st.button("🏀 3 on 3 Basketball Tournament Dashboard", use_container_width=True, type="primary"):
             _set_page("dashboard_3on3")
     with col2:
         if st.button("📊 View Dashboard", use_container_width=True, type="primary"):
@@ -818,10 +824,50 @@ def _render_3on3_games_box_page(game_data: pd.DataFrame, advanced_stats: pd.Data
     _render_footer()
 
 
+def _render_3on3_player_dashboard(game_data: pd.DataFrame, advanced_stats: pd.DataFrame):
+    """Player Dashboard: overview of all players' stats (dark theme, like the reference image)."""
+    _col_3pt = "3PTM" if "3PTM" in game_data.columns else "3PM"
+    totals = game_data.groupby(["Player No.", "Team"], as_index=False).agg(
+        Games=("Game", "nunique"),
+        PTS=("PTS", "sum"), REB=("REB", "sum"), AST=("AST", "sum"),
+        FGM=("FGM", "sum"), FGA=("FGA", "sum"),
+        ThreePTM=(_col_3pt, "sum"),
+        ThreePA=("3PA", "sum"), FTM=("FTM", "sum"), FTA=("FTA", "sum"),
+        STL=("STL", "sum"), BLK=("BLK", "sum"), TOV=("TOV", "sum"),
+    )
+    for c in totals.columns:
+        if c != "Player No." and c != "Team":
+            totals[c] = pd.to_numeric(totals[c], errors="coerce").fillna(0)
+    games = totals["Games"].replace(0, 1)
+    totals = totals.merge(
+        advanced_stats[["Player No.", "Team", "Player_Team_Label"]].drop_duplicates(),
+        on=["Player No.", "Team"], how="left"
+    )
+    totals["Name"] = totals["Player_Team_Label"].fillna("Player " + totals["Player No."].astype(str))
+    totals["Name"] = totals.apply(lambda r: _get_3on3_display_name(r["Team"], r["Player No."], r["Name"]), axis=1)
+    totals["Name"] = totals["Name"] + " (" + totals["Team"].astype(str) + ")"
+    gp = totals["Games"].astype(int)
+    fg_pct = (100 * totals["FGM"] / totals["FGA"].replace(0, 1)).round(1)
+    t3_pct = (100 * totals["ThreePTM"] / totals["ThreePA"].replace(0, 1)).round(1)
+    ft_pct = (100 * totals["FTM"] / totals["FTA"].replace(0, 1)).round(1)
+    rows = []
+    for i in range(len(totals)):
+        r = totals.iloc[i]
+        name = r["Name"]
+        pts_avg = (r["PTS"] / games.iloc[i]).round(1)
+        reb_avg = (r["REB"] / games.iloc[i]).round(1)
+        ast_avg = (r["AST"] / games.iloc[i]).round(1)
+        stl_avg = (r["STL"] / games.iloc[i]).round(1)
+        blk_avg = (r["BLK"] / games.iloc[i]).round(1)
+        to_avg = (r["TOV"] / games.iloc[i]).round(1)
+        rows.append(f'<tr><td class="player-name">{name}</td><td>{int(gp.iloc[i])}</td><td>—</td><td>{pts_avg}</td><td>{fg_pct.iloc[i]:.1f}</td><td>{t3_pct.iloc[i]:.1f}</td><td>{ft_pct.iloc[i]:.1f}</td><td>{reb_avg}</td><td>{ast_avg}</td><td>{stl_avg}</td><td>{blk_avg}</td><td>{to_avg}</td></tr>')
+    html = '<div class="player-dash-3on3"><table><thead><tr><th>Player</th><th>GP</th><th>MIN</th><th>PTS</th><th>FG%</th><th>3PT%</th><th>FT%</th><th>REB</th><th>AST</th><th>STL</th><th>BLK</th><th>TO</th></tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div>'
+    st.markdown(html, unsafe_allow_html=True)
+
+
 def show_3on3_dashboard():
-    """3 on 3 Basketball Tournament Player Dashboard – Round Robin overview first, then games played (who won, by how much)."""
-    st.header("🏀 3 on 3 Basketball Tournament Player Dashboard")
-    st.caption("Round Robin and Playoffs stats for the 3 on 3 basketball tournament.")
+    """3 on 3 Basketball Tournament Dashboard – Team Dashboard or Player Dashboard."""
+    st.header("🏀 3 on 3 Basketball Tournament Dashboard")
 
     try:
         game_data = data_manager.load_player_data(season=3)
@@ -844,7 +890,24 @@ def show_3on3_dashboard():
         _render_3on3_playoffs_box_page(game_data, advanced_stats)
         return
 
-    # ------ 1) Round Robin overview (first thing) ------
+    # Two buttons: Team Dashboard | Player Dashboard
+    mode = st.session_state.get("3on3_mode", "team")
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("📊 Team Dashboard", type="primary" if mode == "team" else "secondary", use_container_width=True, key="3on3_team_btn"):
+            st.session_state["3on3_mode"] = "team"
+            st.rerun()
+    with col2:
+        if st.button("👤 Player Dashboard", type="primary" if mode == "player" else "secondary", use_container_width=True, key="3on3_player_btn"):
+            st.session_state["3on3_mode"] = "player"
+            st.rerun()
+
+    if mode == "player":
+        _render_3on3_player_dashboard(game_data, advanced_stats)
+        _render_footer()
+        return
+
+    # ------ Team Dashboard: Round Robin overview (first thing) ------
     st.subheader("📊 Round Robin Overview")
     # Filter by Game_Type set by convert_3on3_tournament.py (uses your playoff keywords there)
     game_type_norm = game_data["Game_Type"].astype(str).str.replace(r"\s+", " ", regex=True).str.strip().str.lower()
@@ -905,15 +968,61 @@ def show_3on3_dashboard():
             "and refresh this page."
         )
 
-    # ------ Total games overview (player stats for all games: Round Robin + Playoffs) ------
+    # ------ 3 on 3 Tournament Averages (per-game) and Totals (season sums) ------
     rr_games_total = round_robin["Game"].nunique() if not round_robin.empty else 0
     po_games_total = playoffs["Game"].nunique() if not playoffs.empty else 0
     st.markdown("---")
-    st.subheader("📋 Total games overview")
-    st.caption(f"**Round Robin:** {rr_games_total} games  |  **Playoffs:** {po_games_total} games  |  **Total:** {rr_games_total + po_games_total} games")
+    st.subheader("📋 3 on 3 Tournament Averages")
+    st.caption(f"**Round Robin:** {rr_games_total} games  |  **Playoffs:** {po_games_total} games  |  **Total:** {rr_games_total + po_games_total} games. Per-game averages below.")
     display_all = _build_3on3_player_table(game_data, advanced_stats, include_gcmvp=True)
     column_config_all = {col: st.column_config.Column(col, help=STAT_TOOLTIPS.get(col, "")) for col in display_all.columns if STAT_TOOLTIPS.get(col)}
     st.dataframe(display_all, use_container_width=True, hide_index=True, column_config=column_config_all)
+
+    # 3 on 3 Tournament Totals (season totals, not averages)
+    _col_3pt = "3PTM" if "3PTM" in game_data.columns else "3PM"
+    player_totals_raw = game_data.groupby(["Player No.", "Team"], as_index=False).agg(
+        Games=("Game", "nunique"),
+        PTS=("PTS", "sum"), REB=("REB", "sum"), AST=("AST", "sum"),
+        ThreePTM=(_col_3pt, "sum"), FGM=("FGM", "sum"), BLK=("BLK", "sum"),
+        OREB=("OREB", "sum"), DREB=("DREB", "sum"), PF=("PF", "sum"), TOV=("TOV", "sum"),
+        FGA=("FGA", "sum"), ThreePA=("3PA", "sum"), FTM=("FTM", "sum"), FTA=("FTA", "sum"),
+    )
+    for c in player_totals_raw.columns:
+        if c not in ["Player No.", "Team"]:
+            player_totals_raw[c] = pd.to_numeric(player_totals_raw[c], errors="coerce").fillna(0)
+    player_totals_raw = player_totals_raw.merge(
+        advanced_stats[["Player No.", "Team", "Player_Team_Label"]].drop_duplicates(),
+        on=["Player No.", "Team"], how="left"
+    )
+    player_totals_raw["Name"] = player_totals_raw["Player_Team_Label"].fillna(
+        "Player " + player_totals_raw["Player No."].astype(str)
+    )
+    player_totals_raw["Name"] = player_totals_raw.apply(
+        lambda r: _get_3on3_display_name(r["Team"], r["Player No."], r["Name"]), axis=1
+    )
+    player_totals_raw["Name"] = player_totals_raw["Name"] + " (" + player_totals_raw["Team"].astype(str) + ")"
+    player_totals_raw["Points"] = player_totals_raw["PTS"].astype(int)
+    player_totals_raw["Rebounds"] = player_totals_raw["REB"].astype(int)
+    player_totals_raw["Assists"] = player_totals_raw["AST"].astype(int)
+    player_totals_raw["3PM"] = player_totals_raw["ThreePTM"].astype(int)
+    player_totals_raw["FG Made"] = player_totals_raw["FGM"].astype(int)
+    player_totals_raw["Blocks"] = player_totals_raw["BLK"].astype(int)
+    player_totals_raw["OREB"] = player_totals_raw["OREB"].astype(int)
+    player_totals_raw["DREB"] = player_totals_raw["DREB"].astype(int)
+    player_totals_raw["Personal Fouls"] = player_totals_raw["PF"].astype(int)
+    player_totals_raw["Turnovers"] = player_totals_raw["TOV"].astype(int)
+    player_totals_raw["FG%"] = (100 * player_totals_raw["FGM"] / player_totals_raw["FGA"].replace(0, 1)).round(1)
+    player_totals_raw["3PT%"] = (100 * player_totals_raw["ThreePTM"] / player_totals_raw["ThreePA"].replace(0, 1)).round(1)
+    player_totals_raw["FT%"] = (100 * player_totals_raw["FTM"] / player_totals_raw["FTA"].replace(0, 1)).round(1)
+    totals_display = player_totals_raw[[
+        "Name", "Games", "Points", "Rebounds", "Assists", "3PM", "FG Made", "Blocks",
+        "OREB", "DREB", "Personal Fouls", "Turnovers", "FG%", "3PT%", "FT%"
+    ]].copy()
+    for pct_col in ["FG%", "3PT%", "FT%"]:
+        totals_display[pct_col] = totals_display[pct_col].apply(lambda x: f"{x:.1f}" if pd.notna(x) else "N/A")
+    st.subheader("📋 3 on 3 Tournament Totals")
+    st.caption("Season totals (not per-game).")
+    st.dataframe(totals_display, use_container_width=True, hide_index=True, column_config={col: st.column_config.Column(col, help=STAT_TOOLTIPS.get(col, "")) for col in totals_display.columns if STAT_TOOLTIPS.get(col)})
 
     # Team totals (all games): one row per team, season totals
     _col_3pm = "3PM" if "3PM" in game_data.columns else "3PTM"
