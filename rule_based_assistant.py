@@ -14,14 +14,23 @@ class RuleBasedAssistant:
     Free rule-based coaching assistant
     Provides personalized feedback using statistical analysis and templates
     """
-    
-    def __init__(self):
+
+    def __init__(self, season: Optional[int] = None):
+        """
+        season: data source — 1 = Rising Stars (default), 2 = Season 2 CSVs, 3 = 3 on 3 tournament.
+        None behaves like season 1.
+        """
         self.enabled = True  # Always enabled - no API key needed
+        self._season = season
+
+    @property
+    def _data_season(self) -> int:
+        return 1 if self._season is None else int(self._season)
 
     def _find_team_in_question(self, question_lower: str) -> Optional[str]:
         """Try to match a team name from the dataset inside the user's question."""
         try:
-            game_data = data_manager.load_player_data()
+            game_data = data_manager.load_player_data(season=self._data_season)
             teams = sorted({str(t) for t in game_data["Team"].dropna().unique()})
         except Exception:
             teams = []
@@ -35,7 +44,7 @@ class RuleBasedAssistant:
     def _team_scout_report(self, team: str) -> str:
         """Generate a simple strengths/weaknesses report for a team vs league averages."""
         try:
-            game_data = data_manager.load_player_data()
+            game_data = data_manager.load_player_data(season=self._data_season)
         except Exception:
             return f"Couldn't load data to scout {team}."
 
@@ -143,15 +152,15 @@ class RuleBasedAssistant:
     def _get_team_leaders(self, team: str, stat_category: str, top_n: int = 5) -> List[Dict[str, Any]]:
         """Get top performers within a team for a stat category."""
         try:
-            game_data = data_manager.load_player_data()
+            game_data = data_manager.load_player_data(season=self._data_season)
         except Exception:
             return []
 
-        team_players = [p for p in data_manager.get_all_players() if p.get("team") == team]
+        team_players = [p for p in data_manager.get_all_players(season=self._data_season) if p.get("team") == team]
         rows: List[Dict[str, Any]] = []
 
         for p in team_players:
-            prof = data_manager.get_player_profile(p["player_no"], p["team"])
+            prof = data_manager.get_player_profile(p["player_no"], p["team"], season=self._data_season)
             if "error" in prof:
                 continue
             stats = prof.get("stats", {})
@@ -184,10 +193,10 @@ class RuleBasedAssistant:
 
     def _best_player_on_team(self, team: str) -> Optional[Dict[str, Any]]:
         """Pick the best player on a team using efficiency per game as primary signal."""
-        players = [p for p in data_manager.get_all_players() if p.get("team") == team]
+        players = [p for p in data_manager.get_all_players(season=self._data_season) if p.get("team") == team]
         best = None
         for p in players:
-            profile = data_manager.get_player_profile(p["player_no"], p["team"])
+            profile = data_manager.get_player_profile(p["player_no"], p["team"], season=self._data_season)
             if "error" in profile:
                 continue
             eff = profile.get("stats", {}).get("efficiency", {}).get("average", 0.0)
@@ -250,13 +259,13 @@ class RuleBasedAssistant:
 
         if team:
             # Build within-team leaderboards using player profiles + game totals
-            game_data = data_manager.load_player_data()
-            team_players = [p for p in data_manager.get_all_players() if p.get("team") == team]
+            game_data = data_manager.load_player_data(season=self._data_season)
+            team_players = [p for p in data_manager.get_all_players(season=self._data_season) if p.get("team") == team]
 
             def team_rows(stat_cat: str) -> List[Dict[str, Any]]:
                 rows = []
                 for p in team_players:
-                    prof = data_manager.get_player_profile(p["player_no"], p["team"])
+                    prof = data_manager.get_player_profile(p["player_no"], p["team"], season=self._data_season)
                     if "error" in prof:
                         continue
                     stats = prof.get("stats", {})
@@ -298,7 +307,12 @@ class RuleBasedAssistant:
         """
         if "error" in player_profile:
             return "Player data not available."
-        
+
+        if self._data_season == 3:
+            header_3 = "\n\n*Context: recommendations are tailored for **3 on 3** (space, pace, quick decisions, and the tournament stats in this dashboard).*"
+        else:
+            header_3 = ""
+
         stats = player_profile.get("stats", {})
         strengths = player_profile.get("strengths", [])
         weaknesses = player_profile.get("weaknesses", [])
@@ -429,19 +443,21 @@ class RuleBasedAssistant:
             feedback_parts.append(f"- **True Shooting %**: {ts_pct:.1f}% - {'Efficient scorer!' if ts_pct >= 50 else 'Focus on shot quality'}")
             feedback_parts.append(f"- **Rebound %**: {reb_pct:.1f}% - {'Strong rebounder!' if reb_pct >= 10 else 'Work on positioning and timing'}")
         
+        if header_3:
+            feedback_parts.append(header_3.strip())
         return "\n".join(feedback_parts)
     
     def _get_league_leaders(self, stat_category: str, top_n: int = 5) -> List[Dict[str, Any]]:
         """Get top performers in a specific category across all players"""
         try:
-            game_data = data_manager.load_player_data()
-            advanced_stats = data_manager.load_advanced_stats()
-            players = data_manager.get_all_players()
+            game_data = data_manager.load_player_data(season=self._data_season)
+            advanced_stats = data_manager.load_advanced_stats(season=self._data_season)
+            players = data_manager.get_all_players(season=self._data_season)
             
             leader_data = []
             
             for player in players:
-                profile = data_manager.get_player_profile(player['player_no'], player['team'])
+                profile = data_manager.get_player_profile(player['player_no'], player['team'], season=self._data_season)
                 if "error" in profile:
                     continue
                 
@@ -850,24 +866,45 @@ class RuleBasedAssistant:
         
         # Default response
         else:
-            response_parts.append("I can help you with:")
-            response_parts.append("- **Shooting improvement** - Try asking 'shooting drills'")
-            response_parts.append("- **Rebounding tips** - Ask 'rebounding drills'")
-            response_parts.append("- **Ball control and turnovers** - Ask 'dribbling drills'")
-            response_parts.append("- **Specific drills** - Ask for drill names like 'Right Hand Dribbling'")
-            response_parts.append("- **Coach / scout questions (All Players)** - Ask things like 'best player on Black team' or 'Black team strengths and weaknesses'")
-            response_parts.append("- **Leaderboards (All Players)** - Ask 'best FG shooter', 'most 3PTs made', or 'top 5 in each category'")
-            response_parts.append("")
-            response_parts.append("**Try asking:**")
-            response_parts.append("- 'How can I improve my shooting?'")
-            response_parts.append("- 'What drills should I do?'")
-            response_parts.append("- 'Show me the Right Hand Dribbling drill'")
-            response_parts.append("- 'I need dribbling drills'")
-            response_parts.append("- 'Who's the best player on Black team?'")
-            response_parts.append("- 'Black team strengths and weaknesses'")
-            response_parts.append("- 'Top 5 in each category'")
+            if self._data_season == 3:
+                response_parts.append("I’m your **3 on 3 tournament** assistant. I use this dashboard’s tournament stats (Round Robin / Playoffs) and the same drill library.")
+                response_parts.append("")
+                response_parts.append("I can help with:")
+                response_parts.append("- **3 on 3 strategy** — spacing, ball screens, quick decisions, switching defense, offensive rebounds in a short shot clock")
+                response_parts.append("- **GCIR / GCMVP** — what they measure on this site (see tournament section tooltips)")
+                response_parts.append("- **Shooting, rebounding, turnovers** — ask for drills by topic")
+                response_parts.append("- **Team questions** — “*Team name* strengths and weaknesses”, “best player on *Team*”")
+                response_parts.append("- **Leaderboards** — “top scorers”, “most threes”, “top 5 in each category”")
+                response_parts.append("")
+                response_parts.append("**Try asking:**")
+                response_parts.append("- “How should we defend ball screens in 3 on 3?”")
+                response_parts.append("- “What’s a good warmup for a 3 on 3 tournament?”")
+                response_parts.append("- “Who leads the tournament in scoring?”")
+                response_parts.append("- “*Your team* strengths and weaknesses”")
+            else:
+                response_parts.append("I can help you with:")
+                response_parts.append("- **Shooting improvement** - Try asking 'shooting drills'")
+                response_parts.append("- **Rebounding tips** - Ask 'rebounding drills'")
+                response_parts.append("- **Ball control and turnovers** - Ask 'dribbling drills'")
+                response_parts.append("- **Specific drills** - Ask for drill names like 'Right Hand Dribbling'")
+                response_parts.append("- **Coach / scout questions (All Players)** - Ask things like 'best player on Black team' or 'Black team strengths and weaknesses'")
+                response_parts.append("- **Leaderboards (All Players)** - Ask 'best FG shooter', 'most 3PTs made', or 'top 5 in each category'")
+                response_parts.append("")
+                response_parts.append("**Try asking:**")
+                response_parts.append("- 'How can I improve my shooting?'")
+                response_parts.append("- 'What drills should I do?'")
+                response_parts.append("- 'Show me the Right Hand Dribbling drill'")
+                response_parts.append("- 'I need dribbling drills'")
+                response_parts.append("- 'Who's the best player on Black team?'")
+                response_parts.append("- 'Black team strengths and weaknesses'")
+                response_parts.append("- 'Top 5 in each category'")
         
-        return "\n".join(response_parts) if response_parts else "I'm here to help with your basketball training. What would you like to know?"
+        if response_parts:
+            return "\n".join(response_parts)
+        if self._data_season == 3:
+            return "Ask me anything about this **3 on 3 tournament** — strategy, drills, or who’s leading in the stats."
+        return "I'm here to help with your basketball training. What would you like to know?"
 
 # Global instance
 rule_based_assistant = RuleBasedAssistant()
+tournament_3on3_assistant = RuleBasedAssistant(season=3)

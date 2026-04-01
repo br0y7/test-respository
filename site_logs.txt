@@ -1,353 +1,803 @@
-[2025-09-25T14:39:16.487466] Visitor: bdccbb24 | Session: 2bcbc855 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-09-25T14:39:16.641960] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-09-25T14:39:16.843717] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-09-25T14:39:17.006394] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-09-25T14:39:23.803428] Visitor: bdccbb24 | Session: 2bcbc855 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-09-25T14:39:23.808517] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Changed Your Team from 'All Teams' to 'Black'
-[2025-09-25T14:39:23.895669] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-09-25T14:39:24.052761] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-09-25T14:39:24.192210] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-09-25T14:39:25.651520] Visitor: bdccbb24 | Session: 2bcbc855 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-09-25T14:39:25.654957] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Changed Your Player from 'All Players' to '4'
-[2025-09-25T14:39:25.814548] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-09-25T14:39:25.913948] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-09-25T14:39:26.051218] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-09-25T14:39:31.779704] Visitor: bdccbb24 | Session: 2bcbc855 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-09-25T14:39:31.790841] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Changed Opponent Team from 'No Opponent' to 'Blue'
-[2025-09-25T14:39:31.791842] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Changed Opponent Player from 'No Opponent' to 'All Players'
-[2025-09-25T14:39:32.002665] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-09-25T14:39:32.112683] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-09-25T14:39:32.264404] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-09-25T14:39:33.777649] Visitor: bdccbb24 | Session: 2bcbc855 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-09-25T14:39:33.792764] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Changed Opponent Player from 'All Players' to '4'
-[2025-09-25T14:39:33.991694] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-09-25T14:39:34.128040] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-09-25T14:39:34.266955] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-09-25T14:39:47.546233] Visitor: bdccbb24 | Session: 2bcbc855 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-09-25T14:39:47.735875] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-09-25T14:39:47.867054] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-09-25T14:39:48.005380] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-09-25T14:39:55.841086] Visitor: bdccbb24 | Session: 2bcbc855 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-09-25T14:39:56.011592] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-09-25T14:39:56.142655] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-09-25T14:39:56.291035] Visitor: bdccbb24 | Session: 2bcbc855 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-09-25T14:45:46.834253] Visitor: bdccbb24 | Session: 9ed85a6b | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-09-25T14:45:47.000374] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-09-25T14:45:47.187363] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-09-25T14:45:47.343394] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-09-25T14:45:55.729494] Visitor: bdccbb24 | Session: 9ed85a6b | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-09-25T14:45:55.734945] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Opponent Team from 'No Opponent' to 'Beige'
-[2025-09-25T14:45:55.736871] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Opponent Player from 'No Opponent' to 'All Players'
-[2025-09-25T14:45:55.863507] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-09-25T14:45:56.080456] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-09-25T14:45:56.253226] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-09-25T14:45:57.379400] Visitor: bdccbb24 | Session: 9ed85a6b | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-09-25T14:45:57.387533] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Opponent Player from 'All Players' to '2'
-[2025-09-25T14:45:57.438019] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-09-25T14:45:57.569606] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-09-25T14:45:57.714328] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-09-25T14:46:00.222382] Visitor: bdccbb24 | Session: 9ed85a6b | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-09-25T14:46:00.243282] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Your Team from 'All Teams' to 'White'
-[2025-09-25T14:46:00.430332] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Opponent Team from 'Beige' to 'No Opponent'
-[2025-09-25T14:46:00.440037] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Opponent Player from '2' to 'No Opponent'
-[2025-09-25T14:46:00.968568] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-09-25T14:46:01.133306] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-09-25T14:46:01.296599] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-09-25T14:46:03.134758] Visitor: bdccbb24 | Session: 9ed85a6b | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-09-25T14:46:03.139909] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Your Player from 'All Players' to '6'
-[2025-09-25T14:46:03.334572] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-09-25T14:46:03.456492] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-09-25T14:46:03.638143] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-09-25T14:46:10.268236] Visitor: bdccbb24 | Session: 9ed85a6b | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-09-25T14:46:10.271874] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Opponent Team from 'No Opponent' to 'Beige'
-[2025-09-25T14:46:10.273033] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Opponent Player from 'No Opponent' to 'All Players'
-[2025-09-25T14:46:10.465161] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-09-25T14:46:10.571628] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-09-25T14:46:10.718511] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-09-25T14:46:12.117274] Visitor: bdccbb24 | Session: 9ed85a6b | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-09-25T14:46:12.125285] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Changed Opponent Player from 'All Players' to '14'
-[2025-09-25T14:46:12.294770] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-09-25T14:46:12.422365] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-09-25T14:46:12.575007] Visitor: bdccbb24 | Session: 9ed85a6b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-10-11T21:54:03.507941] Visitor: 6bc3aa0f | Session: c9ccb30b | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-10-11T21:54:03.635469] Visitor: 6bc3aa0f | Session: c9ccb30b | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-10-11T21:54:03.821351] Visitor: 6bc3aa0f | Session: c9ccb30b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-10-11T21:54:04.002464] Visitor: 6bc3aa0f | Session: c9ccb30b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-10-11T21:55:40.036197] Visitor: 6bc3aa0f | Session: c9ccb30b | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-10-11T21:55:40.039608] Visitor: 6bc3aa0f | Session: c9ccb30b | Action: interaction | Changed League from 'Rising Star' to 'Unknown League'
-[2025-10-11T21:55:40.135939] Visitor: 6bc3aa0f | Session: c9ccb30b | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-10-11T21:55:40.358905] Visitor: 6bc3aa0f | Session: c9ccb30b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-10-11T21:55:40.533452] Visitor: 6bc3aa0f | Session: c9ccb30b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-10-11T21:55:45.511853] Visitor: 6bc3aa0f | Session: c9ccb30b | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-10-11T21:55:45.516310] Visitor: 6bc3aa0f | Session: c9ccb30b | Action: interaction | Changed Your Team from 'All Teams' to 'Beige'
-[2025-10-11T21:55:45.567907] Visitor: 6bc3aa0f | Session: c9ccb30b | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-10-11T21:55:45.692076] Visitor: 6bc3aa0f | Session: c9ccb30b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-10-11T21:55:45.825460] Visitor: 6bc3aa0f | Session: c9ccb30b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-10-11T22:20:12.545343] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-10-11T22:20:12.743476] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-10-11T22:20:12.953391] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-10-11T22:20:13.131853] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-10-11T22:20:16.934637] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-10-11T22:20:17.031293] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-10-11T22:20:17.232067] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-10-11T22:20:17.400948] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-10-11T22:20:19.493494] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-10-11T22:20:19.495927] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: interaction | Changed League from 'Rising Star' to 'Unknown League'
-[2025-10-11T22:20:19.563463] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-10-11T22:20:19.731710] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-10-11T22:20:19.904115] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-10-11T22:20:29.995900] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-10-11T22:20:30.011471] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: interaction | Changed Opponent Team from 'No Opponent' to 'Beige'
-[2025-10-11T22:20:30.013103] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: interaction | Changed Opponent Player from 'No Opponent' to 'All Players'
-[2025-10-11T22:20:30.068940] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-10-11T22:20:30.310841] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-10-11T22:20:30.496704] Visitor: 6bc3aa0f | Session: 1f04bc49 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-10-20T18:17:25.964042] Visitor: deed46ba | Session: b3a3fc98 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-10-20T18:17:26.461042] Visitor: deed46ba | Session: b3a3fc98 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-10-20T18:17:26.717194] Visitor: deed46ba | Session: b3a3fc98 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-10-20T18:17:26.965432] Visitor: deed46ba | Session: b3a3fc98 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-10-20T18:17:52.392524] Visitor: deed46ba | Session: b3a3fc98 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-10-20T18:17:52.396390] Visitor: deed46ba | Session: b3a3fc98 | Action: interaction | Changed League from 'Rising Star' to 'Unknown League'
-[2025-10-20T18:17:52.592166] Visitor: deed46ba | Session: b3a3fc98 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-10-20T18:17:52.823700] Visitor: deed46ba | Session: b3a3fc98 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-10-20T18:17:53.071599] Visitor: deed46ba | Session: b3a3fc98 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-10-20T18:17:56.327467] Visitor: deed46ba | Session: b3a3fc98 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-10-20T18:17:56.329480] Visitor: deed46ba | Session: b3a3fc98 | Action: interaction | Changed League from 'Unknown League' to 'Rising Star'
-[2025-10-20T18:17:56.493523] Visitor: deed46ba | Session: b3a3fc98 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-10-20T18:17:56.711330] Visitor: deed46ba | Session: b3a3fc98 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-10-20T18:17:56.960538] Visitor: deed46ba | Session: b3a3fc98 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-13T23:54:19.149273] Visitor: 5f53543c | Session: 575fb152 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-13T23:54:19.492493] Visitor: 5f53543c | Session: 575fb152 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-13T23:54:19.649877] Visitor: 5f53543c | Session: 575fb152 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-13T23:54:19.845347] Visitor: 5f53543c | Session: 575fb152 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-13T23:57:29.607633] Visitor: 5f53543c | Session: 7841457b | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-13T23:57:29.778122] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-13T23:57:29.939046] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-13T23:57:30.122449] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-13T23:57:34.549415] Visitor: 5f53543c | Session: 7841457b | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-13T23:57:34.566515] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Changed Your Team from 'All Teams' to 'Beige'
-[2025-11-13T23:57:34.642906] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-13T23:57:34.816861] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-13T23:57:34.936424] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-13T23:57:37.701442] Visitor: 5f53543c | Session: 7841457b | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-13T23:57:37.706936] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Changed League from 'Rising Stars S1' to 'Rising Stars S2'
-[2025-11-13T23:57:37.792408] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-13T23:57:37.901720] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-13T23:57:38.025569] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-13T23:57:40.767666] Visitor: 5f53543c | Session: 7841457b | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-13T23:57:40.774398] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Changed Your Team from 'Beige' to 'Black'
-[2025-11-13T23:57:40.833688] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-13T23:57:41.001188] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-13T23:57:41.140810] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-14T00:01:33.203748] Visitor: 5f53543c | Session: 7841457b | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:01:33.304076] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:01:33.508571] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-14T00:01:33.659147] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-14T00:01:36.024571] Visitor: 5f53543c | Session: 7841457b | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:01:36.026538] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Changed League from 'Rising Stars S1' to 'Rising Stars S2'
-[2025-11-14T00:01:36.092360] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:01:36.220258] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-14T00:01:36.372464] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-14T00:01:37.812180] Visitor: 5f53543c | Session: 7841457b | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:01:37.822591] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Changed Your Team from 'All Teams' to 'Black'
-[2025-11-14T00:01:37.869236] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:01:37.988695] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-14T00:01:38.111237] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-14T00:01:44.248806] Visitor: 5f53543c | Session: 7841457b | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:01:44.263712] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Changed Opponent Team from 'No Opponent' to 'Beige'
-[2025-11-14T00:01:44.264813] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Changed Opponent Player from 'No Opponent' to 'All Players'
-[2025-11-14T00:01:44.340757] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:01:44.505241] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-14T00:01:44.638242] Visitor: 5f53543c | Session: 7841457b | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-14T00:03:04.245659] Visitor: 3a52a378 | Session: 8bfa0530 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:03:04.403394] Visitor: 3a52a378 | Session: 8bfa0530 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:03:04.576739] Visitor: 3a52a378 | Session: 8bfa0530 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-14T00:03:04.761746] Visitor: 3a52a378 | Session: 8bfa0530 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-14T00:03:08.515967] Visitor: 3a52a378 | Session: 8bfa0530 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:03:08.541679] Visitor: 3a52a378 | Session: 8bfa0530 | Action: interaction | Changed Your Team from 'All Teams' to 'Black'
-[2025-11-14T00:03:08.637181] Visitor: 3a52a378 | Session: 8bfa0530 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:03:08.794204] Visitor: 3a52a378 | Session: 8bfa0530 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-14T00:03:08.928910] Visitor: 3a52a378 | Session: 8bfa0530 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-14T00:03:11.311468] Visitor: 3a52a378 | Session: 8bfa0530 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:03:11.316141] Visitor: 3a52a378 | Session: 8bfa0530 | Action: interaction | Changed League from 'Rising Stars S1' to 'Rising Stars S2'
-[2025-11-14T00:03:11.416099] Visitor: 3a52a378 | Session: 8bfa0530 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:03:11.538116] Visitor: 3a52a378 | Session: 8bfa0530 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-14T00:03:11.660681] Visitor: 3a52a378 | Session: 8bfa0530 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-14T00:03:15.479529] Visitor: 3a52a378 | Session: 8bfa0530 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:03:15.490152] Visitor: 3a52a378 | Session: 8bfa0530 | Action: interaction | Changed Your Team from 'Black' to 'Beige'
-[2025-11-14T00:03:15.536485] Visitor: 3a52a378 | Session: 8bfa0530 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:03:15.673490] Visitor: 3a52a378 | Session: 8bfa0530 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-14T00:03:15.796945] Visitor: 3a52a378 | Session: 8bfa0530 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-14T00:06:41.623801] Visitor: 3a52a378 | Session: c324e20c | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:06:41.787418] Visitor: 3a52a378 | Session: c324e20c | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:06:41.940421] Visitor: 3a52a378 | Session: c324e20c | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-14T00:06:42.118210] Visitor: 3a52a378 | Session: c324e20c | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-14T00:06:50.356593] Visitor: 3a52a378 | Session: c324e20c | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:06:50.362917] Visitor: 3a52a378 | Session: c324e20c | Action: interaction | Changed League from 'Rising Stars S1' to 'Rising Stars S2'
-[2025-11-14T00:06:50.464204] Visitor: 3a52a378 | Session: c324e20c | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:06:50.585006] Visitor: 3a52a378 | Session: c324e20c | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-14T00:06:50.724897] Visitor: 3a52a378 | Session: c324e20c | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-14T00:07:33.056269] Visitor: 3a52a378 | Session: c324e20c | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:07:33.093720] Visitor: 3a52a378 | Session: c324e20c | Action: interaction | Changed Your Team from 'All Teams' to 'Black'
-[2025-11-14T00:07:33.202227] Visitor: 3a52a378 | Session: c324e20c | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:07:33.368142] Visitor: 3a52a378 | Session: c324e20c | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-14T00:07:33.503869] Visitor: 3a52a378 | Session: c324e20c | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-14T00:11:38.243956] Visitor: 3a52a378 | Session: 487d030a | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:11:38.415673] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:11:38.584234] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-14T00:11:38.770113] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-14T00:11:42.091796] Visitor: 3a52a378 | Session: 487d030a | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:11:42.095570] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Changed League from 'Rising Stars S1' to 'Rising Stars S2'
-[2025-11-14T00:11:42.181830] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:11:46.708673] Visitor: 3a52a378 | Session: 487d030a | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:11:46.718449] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Changed Your Team from 'All Teams' to 'U11'
-[2025-11-14T00:11:46.783077] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:11:49.988400] Visitor: 3a52a378 | Session: 487d030a | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:11:49.998237] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Changed Your Team from 'U11' to 'Black'
-[2025-11-14T00:11:50.045118] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:11:50.156961] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-14T00:11:50.286229] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-14T00:11:52.386797] Visitor: 3a52a378 | Session: 487d030a | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:11:52.392792] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Changed Your Team from 'Black' to 'Purple'
-[2025-11-14T00:11:52.441658] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:12:18.598301] Visitor: 3a52a378 | Session: 487d030a | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:12:18.614807] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Changed Your Player from 'All Players' to '23'
-[2025-11-14T00:12:18.663374] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:12:32.107765] Visitor: 3a52a378 | Session: 487d030a | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:12:32.155425] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Changed Opponent Team from 'No Opponent' to 'U11'
-[2025-11-14T00:12:32.162739] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Changed Opponent Player from 'No Opponent' to 'All Players'
-[2025-11-14T00:12:32.269278] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:12:41.143351] Visitor: 3a52a378 | Session: 487d030a | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-14T00:12:41.157712] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Changed Opponent Player from 'All Players' to '3'
-[2025-11-14T00:12:41.208841] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-14T00:12:41.380842] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-14T00:12:41.515025] Visitor: 3a52a378 | Session: 487d030a | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:37:56.585364] Visitor: e6871d70 | Session: 96be0f77 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:37:56.765163] Visitor: e6871d70 | Session: 96be0f77 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:37:57.038815] Visitor: e6871d70 | Session: 96be0f77 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:37:57.452132] Visitor: e6871d70 | Session: 96be0f77 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:38:01.739456] Visitor: e6871d70 | Session: 96be0f77 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:38:01.743664] Visitor: e6871d70 | Session: 96be0f77 | Action: interaction | Changed League from 'Rising Stars S1' to 'Rising Stars S2'
-[2025-11-16T19:38:01.845627] Visitor: e6871d70 | Session: 96be0f77 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:38:02.061486] Visitor: e6871d70 | Session: 96be0f77 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:38:02.198906] Visitor: e6871d70 | Session: 96be0f77 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:39:33.828677] Visitor: e6871d70 | Session: 4c616afd | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:39:34.005836] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:39:34.158819] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:39:34.345495] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:39:40.258246] Visitor: e6871d70 | Session: 4c616afd | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:39:40.261156] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Changed League from 'Rising Stars S1' to 'Rising Stars S2'
-[2025-11-16T19:39:40.344612] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:39:40.499103] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:39:40.633423] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:43:17.693289] Visitor: e6871d70 | Session: 79fb6d4e | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:43:17.862690] Visitor: e6871d70 | Session: 79fb6d4e | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:43:18.074129] Visitor: e6871d70 | Session: 79fb6d4e | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:43:18.252959] Visitor: e6871d70 | Session: 79fb6d4e | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:43:20.850085] Visitor: e6871d70 | Session: 4c616afd | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:43:20.912206] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:43:21.063362] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:43:21.191703] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:43:23.324650] Visitor: e6871d70 | Session: 4c616afd | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:43:26.495370] Visitor: e6871d70 | Session: 4c616afd | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:43:26.538911] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:43:26.679443] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:43:26.825609] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:43:35.746882] Visitor: e6871d70 | Session: 4c616afd | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:43:35.750624] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Changed League from 'Rising Stars S2' to 'Rising Stars S1'
-[2025-11-16T19:43:35.813937] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:43:35.964923] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:43:36.121425] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:43:39.488602] Visitor: e6871d70 | Session: 4c616afd | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:43:39.490343] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Changed League from 'Rising Stars S1' to 'Rising Stars S2'
-[2025-11-16T19:43:39.552609] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:43:39.680046] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:43:39.816109] Visitor: e6871d70 | Session: 4c616afd | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:44:11.152660] Visitor: e6871d70 | Session: 79fb6d4e | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:44:11.158277] Visitor: e6871d70 | Session: 79fb6d4e | Action: interaction | Changed League from 'Rising Stars S1' to 'Rising Stars S2'
-[2025-11-16T19:44:11.233787] Visitor: e6871d70 | Session: 79fb6d4e | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:44:11.371982] Visitor: e6871d70 | Session: 79fb6d4e | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:44:11.512447] Visitor: e6871d70 | Session: 79fb6d4e | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:45:31.121597] Visitor: e6871d70 | Session: 79fb6d4e | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:45:31.267103] Visitor: e6871d70 | Session: 79fb6d4e | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:45:31.410556] Visitor: e6871d70 | Session: 79fb6d4e | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:45:31.542023] Visitor: e6871d70 | Session: 79fb6d4e | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:45:39.550630] Visitor: e6871d70 | Session: 79fb6d4e | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:45:39.554850] Visitor: e6871d70 | Session: 79fb6d4e | Action: interaction | Changed League from 'Rising Stars S2' to 'Rising Stars S1'
-[2025-11-16T19:45:39.666579] Visitor: e6871d70 | Session: 79fb6d4e | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:45:39.820147] Visitor: e6871d70 | Session: 79fb6d4e | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:45:39.967100] Visitor: e6871d70 | Session: 79fb6d4e | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:47:17.616848] Visitor: e6871d70 | Session: 658f3533 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:47:17.783297] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:47:17.962207] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:47:18.135610] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:47:21.721993] Visitor: e6871d70 | Session: 658f3533 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:47:21.724638] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Changed League from 'Rising Stars S1' to 'Rising Stars S2'
-[2025-11-16T19:47:21.818143] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:47:21.982594] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:47:22.113935] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:47:41.046721] Visitor: e6871d70 | Session: 658f3533 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:47:41.106244] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:47:41.301669] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:47:41.442442] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:47:44.809731] Visitor: e6871d70 | Session: 658f3533 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:47:44.813553] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Changed League from 'Rising Stars S1' to 'Rising Stars S2'
-[2025-11-16T19:47:44.873144] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:47:44.995680] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:47:45.125271] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:49:34.881090] Visitor: e6871d70 | Session: 658f3533 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:49:34.938637] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:49:35.144751] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:49:35.326158] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:49:37.708938] Visitor: e6871d70 | Session: 658f3533 | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:49:37.712233] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Changed League from 'Rising Stars S1' to 'Rising Stars S2'
-[2025-11-16T19:49:37.799641] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:49:37.925517] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:49:38.067098] Visitor: e6871d70 | Session: 658f3533 | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:50:05.650267] Visitor: e6871d70 | Session: 11a9c27e | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:50:05.788990] Visitor: e6871d70 | Session: 11a9c27e | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:50:05.955524] Visitor: e6871d70 | Session: 11a9c27e | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:50:06.150823] Visitor: e6871d70 | Session: 11a9c27e | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:50:09.500593] Visitor: e6871d70 | Session: 11a9c27e | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:50:09.504645] Visitor: e6871d70 | Session: 11a9c27e | Action: interaction | Changed League from 'Rising Stars S1' to 'Rising Stars S2'
-[2025-11-16T19:50:09.580018] Visitor: e6871d70 | Session: 11a9c27e | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:50:09.710379] Visitor: e6871d70 | Session: 11a9c27e | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:50:09.865163] Visitor: e6871d70 | Session: 11a9c27e | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:50:12.543936] Visitor: e6871d70 | Session: 11a9c27e | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:50:12.550108] Visitor: e6871d70 | Session: 11a9c27e | Action: interaction | Changed Your Team from 'All Teams' to 'U14'
-[2025-11-16T19:50:12.596484] Visitor: e6871d70 | Session: 11a9c27e | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:50:12.723632] Visitor: e6871d70 | Session: 11a9c27e | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:50:12.855534] Visitor: e6871d70 | Session: 11a9c27e | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-16T19:50:15.907071] Visitor: e6871d70 | Session: 11a9c27e | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-16T19:50:15.914359] Visitor: e6871d70 | Session: 11a9c27e | Action: interaction | Changed Your Team from 'U14' to 'All Teams'
-[2025-11-16T19:50:15.969252] Visitor: e6871d70 | Session: 11a9c27e | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-16T19:50:16.099399] Visitor: e6871d70 | Session: 11a9c27e | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-16T19:50:16.225865] Visitor: e6871d70 | Session: 11a9c27e | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-17T15:22:43.697872] Visitor: bed8bcad | Session: 5a76ab5c | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-17T15:22:43.960364] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-17T15:22:44.298892] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-17T15:22:44.526909] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-17T15:22:46.044726] Visitor: bed8bcad | Session: 5a76ab5c | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-17T15:22:46.045629] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Changed League from 'Rising Stars S1' to 'Rising Stars S2'
-[2025-11-17T15:22:46.166888] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-17T15:22:46.339687] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-17T15:22:46.498922] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-17T15:22:49.674336] Visitor: bed8bcad | Session: 5a76ab5c | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-17T15:22:49.690606] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Changed Your Team from 'All Teams' to 'Black'
-[2025-11-17T15:22:49.758446] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-17T15:22:49.935056] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-17T15:22:50.138303] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-17T15:22:53.382824] Visitor: bed8bcad | Session: 5a76ab5c | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-17T15:22:53.384004] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Changed League from 'Rising Stars S2' to 'Rising Stars S1'
-[2025-11-17T15:22:53.390716] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Changed Your Team from 'Black' to 'All Teams'
-[2025-11-17T15:22:53.451698] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-17T15:22:53.635368] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-17T15:22:53.822338] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-25T11:49:36.805349] Visitor: bed8bcad | Session: 5a76ab5c | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-25T11:49:37.501630] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-25T11:49:38.010759] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-25T11:49:38.219423] Visitor: bed8bcad | Session: 5a76ab5c | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
-[2025-11-25T11:54:59.300465] Visitor: c6453f85 | Session: 0f166dad | Action: page_visit | User visited Basketball Analytics Dashboard
-[2025-11-25T11:54:59.589296] Visitor: c6453f85 | Session: 0f166dad | Action: interaction | Viewed Efficiency Distribution (box_plot)
-[2025-11-25T11:54:59.888814] Visitor: c6453f85 | Session: 0f166dad | Action: interaction | Viewed Top Players by Average Efficiency (bar_chart)
-[2025-11-25T11:55:00.101447] Visitor: c6453f85 | Session: 0f166dad | Action: interaction | Viewed Top Players by True Shooting Percentage (bar_chart)
+[2025-12-22T16:19:53.702910] Visitor: 4062ad39 | Session: 822436dc | Action: page_visit | User visited Basketball Analytics Dashboard
+[2025-12-22T16:22:22.359745] Visitor: 4062ad39 | Session: 822436dc | Action: page_visit | User visited Basketball Analytics Dashboard
+[2025-12-22T16:22:29.948480] Visitor: 4062ad39 | Session: 822436dc | Action: page_visit | User visited Basketball Analytics Dashboard
+[2026-01-18T15:20:16.881355] Visitor: edf62d67 | Session: 084014fa | Action: page_visit | User visited Dashboard
+[2026-01-18T15:20:19.910659] Visitor: edf62d67 | Session: ae0b5d6d | Action: page_visit | User visited Dashboard
+[2026-01-18T15:20:22.625256] Visitor: edf62d67 | Session: ae0b5d6d | Action: page_visit | User visited Dashboard
+[2026-01-18T15:20:26.259527] Visitor: edf62d67 | Session: ae0b5d6d | Action: page_visit | User visited Dashboard
+[2026-01-18T15:20:26.287647] Visitor: edf62d67 | Session: ae0b5d6d | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:20:37.991534] Visitor: edf62d67 | Session: 084014fa | Action: page_visit | User visited Dashboard
+[2026-01-18T15:20:38.056291] Visitor: edf62d67 | Session: 084014fa | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-01-18T15:20:39.686280] Visitor: edf62d67 | Session: 084014fa | Action: page_visit | User visited Dashboard
+[2026-01-18T15:20:39.723838] Visitor: edf62d67 | Session: 084014fa | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:20:45.033223] Visitor: edf62d67 | Session: 084014fa | Action: page_visit | User visited Dashboard
+[2026-01-18T15:20:45.166125] Visitor: edf62d67 | Session: 084014fa | Action: page_visit | User visited Dashboard
+[2026-01-18T15:20:45.203605] Visitor: edf62d67 | Session: 084014fa | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:20:50.573593] Visitor: edf62d67 | Session: 084014fa | Action: page_visit | User visited Dashboard
+[2026-01-18T15:20:50.633944] Visitor: edf62d67 | Session: 084014fa | Action: interaction | Viewed analytics page
+[2026-01-18T15:20:54.869450] Visitor: edf62d67 | Session: 084014fa | Action: page_visit | User visited Dashboard
+[2026-01-18T15:20:54.953918] Visitor: edf62d67 | Session: 084014fa | Action: interaction | Viewed analytics page
+[2026-01-18T15:20:59.452925] Visitor: edf62d67 | Session: 084014fa | Action: page_visit | User visited Dashboard
+[2026-01-18T15:20:59.565231] Visitor: edf62d67 | Session: 084014fa | Action: interaction | Viewed analytics page
+[2026-01-18T15:21:04.265433] Visitor: edf62d67 | Session: 084014fa | Action: page_visit | User visited Dashboard
+[2026-01-18T15:21:13.709455] Visitor: edf62d67 | Session: 084014fa | Action: page_visit | User visited Dashboard
+[2026-01-18T15:21:13.767612] Visitor: edf62d67 | Session: 084014fa | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-01-18T15:24:03.654177] Visitor: edf62d67 | Session: 084014fa | Action: page_visit | User visited Dashboard
+[2026-01-18T15:24:05.043240] Visitor: edf62d67 | Session: 084014fa | Action: page_visit | User visited Dashboard
+[2026-01-18T15:24:05.258265] Visitor: edf62d67 | Session: 084014fa | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:24:17.218748] Visitor: edf62d67 | Session: 084014fa | Action: page_visit | User visited Dashboard
+[2026-01-18T15:24:17.268242] Visitor: edf62d67 | Session: 084014fa | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:24:24.895387] Visitor: edf62d67 | Session: 084014fa | Action: page_visit | User visited Dashboard
+[2026-01-18T15:24:24.956028] Visitor: edf62d67 | Session: 084014fa | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:26:38.572649] Visitor: edf62d67 | Session: c2b12c90 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:26:56.383058] Visitor: edf62d67 | Session: c2b12c90 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:26:56.445696] Visitor: edf62d67 | Session: c2b12c90 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-01-18T15:26:59.695121] Visitor: edf62d67 | Session: c2b12c90 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:26:59.768779] Visitor: edf62d67 | Session: c2b12c90 | Action: interaction | Viewed profile for Player 0 (White)
+[2026-01-18T15:27:05.952457] Visitor: edf62d67 | Session: c2b12c90 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:27:06.013878] Visitor: edf62d67 | Session: c2b12c90 | Action: interaction | Viewed profile for Player 1 (Beige)
+[2026-01-18T15:27:23.762607] Visitor: edf62d67 | Session: c2b12c90 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:27:23.823064] Visitor: edf62d67 | Session: c2b12c90 | Action: interaction | Viewed profile for Player 20 (Blue)
+[2026-01-18T15:28:03.440164] Visitor: edf62d67 | Session: c2b12c90 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:28:03.552663] Visitor: edf62d67 | Session: c2b12c90 | Action: interaction | Viewed profile for Player 0 (White)
+[2026-01-18T15:28:05.241956] Visitor: edf62d67 | Session: c2b12c90 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:28:11.303783] Visitor: edf62d67 | Session: c2b12c90 | Action: interaction | Viewed profile for Player 0 (White)
+[2026-01-18T15:28:40.547985] Visitor: edf62d67 | Session: c2b12c90 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:28:40.590243] Visitor: edf62d67 | Session: c2b12c90 | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:28:43.976973] Visitor: edf62d67 | Session: c2b12c90 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:28:44.041312] Visitor: edf62d67 | Session: c2b12c90 | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:28:48.735890] Visitor: edf62d67 | Session: c2b12c90 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:28:49.058122] Visitor: edf62d67 | Session: c2b12c90 | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:32:37.974697] Visitor: edf62d67 | Session: 5b770f5b | Action: page_visit | User visited Dashboard
+[2026-01-18T15:32:42.458066] Visitor: edf62d67 | Session: 5b770f5b | Action: page_visit | User visited Dashboard
+[2026-01-18T15:32:42.515480] Visitor: edf62d67 | Session: 5b770f5b | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:32:47.198390] Visitor: edf62d67 | Session: 5b770f5b | Action: page_visit | User visited Dashboard
+[2026-01-18T15:32:47.266706] Visitor: edf62d67 | Session: 5b770f5b | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-01-18T15:32:49.740642] Visitor: edf62d67 | Session: 5b770f5b | Action: page_visit | User visited Dashboard
+[2026-01-18T15:32:57.210518] Visitor: edf62d67 | Session: 5b770f5b | Action: page_visit | User visited Dashboard
+[2026-01-18T15:32:57.249722] Visitor: edf62d67 | Session: 5b770f5b | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:32:59.148123] Visitor: edf62d67 | Session: 5b770f5b | Action: page_visit | User visited Dashboard
+[2026-01-18T15:32:59.215504] Visitor: edf62d67 | Session: 5b770f5b | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:33:03.569091] Visitor: edf62d67 | Session: 5b770f5b | Action: page_visit | User visited Dashboard
+[2026-01-18T15:33:10.009437] Visitor: edf62d67 | Session: 5b770f5b | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:36:22.880911] Visitor: edf62d67 | Session: ae0b5d6d | Action: page_visit | User visited Dashboard
+[2026-01-18T15:36:27.075825] Visitor: edf62d67 | Session: 640f2717 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:36:33.876491] Visitor: edf62d67 | Session: 640f2717 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:36:33.917111] Visitor: edf62d67 | Session: 640f2717 | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:36:36.651671] Visitor: edf62d67 | Session: 640f2717 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:36:36.715822] Visitor: edf62d67 | Session: 640f2717 | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:36:41.672207] Visitor: edf62d67 | Session: 640f2717 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:36:45.880728] Visitor: edf62d67 | Session: 640f2717 | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:38:30.672318] Visitor: edf62d67 | Session: b48e0e02 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:38:35.892006] Visitor: edf62d67 | Session: b48e0e02 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:38:42.953800] Visitor: edf62d67 | Session: 00e969ac | Action: page_visit | User visited Dashboard
+[2026-01-18T15:38:45.389106] Visitor: edf62d67 | Session: 00e969ac | Action: page_visit | User visited Dashboard
+[2026-01-18T15:38:47.091823] Visitor: edf62d67 | Session: 00e969ac | Action: page_visit | User visited Dashboard
+[2026-01-18T15:38:47.138312] Visitor: edf62d67 | Session: 00e969ac | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:38:49.228865] Visitor: edf62d67 | Session: 00e969ac | Action: page_visit | User visited Dashboard
+[2026-01-18T15:38:49.295715] Visitor: edf62d67 | Session: 00e969ac | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:38:56.591936] Visitor: edf62d67 | Session: 00e969ac | Action: page_visit | User visited Dashboard
+[2026-01-18T15:38:56.654713] Visitor: edf62d67 | Session: 00e969ac | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:39:38.317939] Visitor: edf62d67 | Session: 00e969ac | Action: page_visit | User visited Dashboard
+[2026-01-18T15:39:40.924417] Visitor: edf62d67 | Session: 00e969ac | Action: page_visit | User visited Dashboard
+[2026-01-18T15:39:40.986449] Visitor: edf62d67 | Session: 00e969ac | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-01-18T15:39:44.404885] Visitor: edf62d67 | Session: 00e969ac | Action: page_visit | User visited Dashboard
+[2026-01-18T15:39:44.475504] Visitor: edf62d67 | Session: 00e969ac | Action: interaction | Viewed profile for Player 20 (Blue)
+[2026-01-18T15:44:43.448370] Visitor: edf62d67 | Session: 6d662fef | Action: page_visit | User visited Dashboard
+[2026-01-18T15:44:44.394960] Visitor: edf62d67 | Session: 6d662fef | Action: page_visit | User visited Dashboard
+[2026-01-18T15:45:00.944413] Visitor: edf62d67 | Session: c877f954 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:45:04.900420] Visitor: edf62d67 | Session: c877f954 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:45:09.118999] Visitor: edf62d67 | Session: c877f954 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:45:09.185409] Visitor: edf62d67 | Session: c877f954 | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:45:11.858128] Visitor: edf62d67 | Session: c877f954 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:45:11.944718] Visitor: edf62d67 | Session: c877f954 | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:45:16.787739] Visitor: edf62d67 | Session: c877f954 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:45:16.875197] Visitor: edf62d67 | Session: c877f954 | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:48:26.128053] Visitor: edf62d67 | Session: 646223ba | Action: page_visit | User visited Dashboard
+[2026-01-18T15:48:33.712806] Visitor: edf62d67 | Session: 646223ba | Action: page_visit | User visited Dashboard
+[2026-01-18T15:48:37.180636] Visitor: edf62d67 | Session: b4bcf06d | Action: page_visit | User visited Dashboard
+[2026-01-18T15:48:40.009762] Visitor: edf62d67 | Session: b4bcf06d | Action: page_visit | User visited Dashboard
+[2026-01-18T15:48:56.258939] Visitor: edf62d67 | Session: b4bcf06d | Action: page_visit | User visited Dashboard
+[2026-01-18T15:48:56.302912] Visitor: edf62d67 | Session: b4bcf06d | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:49:04.468281] Visitor: edf62d67 | Session: b4bcf06d | Action: page_visit | User visited Dashboard
+[2026-01-18T15:49:04.508177] Visitor: edf62d67 | Session: b4bcf06d | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:49:37.337185] Visitor: edf62d67 | Session: b4bcf06d | Action: page_visit | User visited Dashboard
+[2026-01-18T15:49:37.401882] Visitor: edf62d67 | Session: b4bcf06d | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:49:43.326946] Visitor: edf62d67 | Session: b4bcf06d | Action: page_visit | User visited Dashboard
+[2026-01-18T15:49:43.387123] Visitor: edf62d67 | Session: b4bcf06d | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:52:21.154716] Visitor: edf62d67 | Session: 183f1479 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:52:24.415538] Visitor: edf62d67 | Session: 183f1479 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:52:25.280692] Visitor: edf62d67 | Session: 183f1479 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:52:25.452813] Visitor: edf62d67 | Session: 183f1479 | Action: interaction | Accessed AI Assistant
+[2026-01-18T15:52:38.227371] Visitor: edf62d67 | Session: 183f1479 | Action: page_visit | User visited Dashboard
+[2026-01-18T15:52:38.287164] Visitor: edf62d67 | Session: 183f1479 | Action: interaction | Accessed AI Assistant
+[2026-01-18T16:17:14.344390] Visitor: edf62d67 | Session: 68adf1fe | Action: page_visit | User visited Dashboard
+[2026-01-18T16:17:16.382594] Visitor: edf62d67 | Session: 68adf1fe | Action: page_visit | User visited Dashboard
+[2026-01-18T16:17:18.386909] Visitor: edf62d67 | Session: 68adf1fe | Action: page_visit | User visited Dashboard
+[2026-01-18T16:17:18.408153] Visitor: edf62d67 | Session: 68adf1fe | Action: interaction | Accessed AI Assistant
+[2026-01-18T16:17:35.314342] Visitor: edf62d67 | Session: 68adf1fe | Action: page_visit | User visited Dashboard
+[2026-01-18T16:17:35.410489] Visitor: edf62d67 | Session: 68adf1fe | Action: interaction | Accessed AI Assistant
+[2026-01-18T16:17:40.630544] Visitor: edf62d67 | Session: 68adf1fe | Action: page_visit | User visited Dashboard
+[2026-01-18T16:17:40.697305] Visitor: edf62d67 | Session: 68adf1fe | Action: interaction | Accessed AI Assistant
+[2026-01-18T16:18:08.395780] Visitor: edf62d67 | Session: 68adf1fe | Action: page_visit | User visited Dashboard
+[2026-01-18T16:18:08.472822] Visitor: edf62d67 | Session: 68adf1fe | Action: interaction | Accessed AI Assistant
+[2026-01-18T16:18:11.701317] Visitor: edf62d67 | Session: 68adf1fe | Action: page_visit | User visited Dashboard
+[2026-01-18T16:18:12.467529] Visitor: edf62d67 | Session: 68adf1fe | Action: interaction | Accessed AI Assistant
+[2026-01-18T16:18:48.701493] Visitor: edf62d67 | Session: 68adf1fe | Action: page_visit | User visited Dashboard
+[2026-01-18T16:18:49.203044] Visitor: edf62d67 | Session: 68adf1fe | Action: interaction | Accessed AI Assistant
+[2026-01-18T16:19:14.237921] Visitor: edf62d67 | Session: 68adf1fe | Action: page_visit | User visited Dashboard
+[2026-01-18T16:19:14.273304] Visitor: edf62d67 | Session: 68adf1fe | Action: interaction | Accessed AI Assistant
+[2026-01-18T16:19:18.531318] Visitor: edf62d67 | Session: 68adf1fe | Action: page_visit | User visited Dashboard
+[2026-01-18T16:19:18.585419] Visitor: edf62d67 | Session: 68adf1fe | Action: interaction | Accessed AI Assistant
+[2026-01-18T16:19:23.050431] Visitor: edf62d67 | Session: 68adf1fe | Action: page_visit | User visited Dashboard
+[2026-01-18T16:19:23.203424] Visitor: edf62d67 | Session: 68adf1fe | Action: page_visit | User visited Dashboard
+[2026-01-18T16:19:23.250226] Visitor: edf62d67 | Session: 68adf1fe | Action: interaction | Accessed AI Assistant
+[2026-01-18T16:19:26.962057] Visitor: edf62d67 | Session: 68adf1fe | Action: page_visit | User visited Dashboard
+[2026-01-18T16:19:27.010892] Visitor: edf62d67 | Session: 68adf1fe | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:21:00.496016] Visitor: a348c0d7 | Session: 7ae13943 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:21:05.283773] Visitor: a348c0d7 | Session: 7ae13943 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:22:49.990583] Visitor: a348c0d7 | Session: 7ae13943 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:25:18.514145] Visitor: a348c0d7 | Session: 7ae13943 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:25:37.196481] Visitor: a348c0d7 | Session: 7ae13943 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:25:42.003162] Visitor: a348c0d7 | Session: 7ae13943 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:25:42.063526] Visitor: a348c0d7 | Session: 7ae13943 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-01-19T20:26:19.015317] Visitor: a348c0d7 | Session: 7ae13943 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:26:19.083507] Visitor: a348c0d7 | Session: 7ae13943 | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:26:21.831587] Visitor: a348c0d7 | Session: 7ae13943 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:26:21.885620] Visitor: a348c0d7 | Session: 7ae13943 | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:26:26.862646] Visitor: a348c0d7 | Session: 7ae13943 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:26:34.247969] Visitor: a348c0d7 | Session: 7ae13943 | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:26:48.035978] Visitor: a348c0d7 | Session: 7ae13943 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:26:48.120795] Visitor: a348c0d7 | Session: 7ae13943 | Action: interaction | Viewed analytics page
+[2026-01-19T20:26:55.391191] Visitor: a348c0d7 | Session: 7ae13943 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:26:55.484334] Visitor: a348c0d7 | Session: 7ae13943 | Action: interaction | Viewed analytics page
+[2026-01-19T20:26:59.558777] Visitor: a348c0d7 | Session: 7ae13943 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:29:28.959770] Visitor: a348c0d7 | Session: 7ae13943 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:29:38.391974] Visitor: a348c0d7 | Session: 7ae13943 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:31:02.734665] Visitor: a348c0d7 | Session: 43ab0f59 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:31:25.849686] Visitor: a348c0d7 | Session: 43ab0f59 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:31:27.644261] Visitor: a348c0d7 | Session: 43ab0f59 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:31:30.686943] Visitor: a348c0d7 | Session: 43ab0f59 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:31:34.243912] Visitor: a348c0d7 | Session: 43ab0f59 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:31:37.466058] Visitor: a348c0d7 | Session: 43ab0f59 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:31:40.460432] Visitor: a348c0d7 | Session: 43ab0f59 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:31:44.107190] Visitor: a348c0d7 | Session: 43ab0f59 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:31:46.946177] Visitor: a348c0d7 | Session: 43ab0f59 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:31:52.023406] Visitor: a348c0d7 | Session: 43ab0f59 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:33:38.668258] Visitor: a348c0d7 | Session: 2b67e986 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:33:48.559851] Visitor: a348c0d7 | Session: 2b67e986 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:33:50.706596] Visitor: a348c0d7 | Session: 2b67e986 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:33:53.592942] Visitor: a348c0d7 | Session: 2b67e986 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:34:00.048349] Visitor: a348c0d7 | Session: 2b67e986 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:34:04.820006] Visitor: a348c0d7 | Session: 2b67e986 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:34:04.847963] Visitor: a348c0d7 | Session: 2b67e986 | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:34:18.671246] Visitor: a348c0d7 | Session: 2b67e986 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:34:22.830051] Visitor: a348c0d7 | Session: 2b67e986 | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:37:00.572429] Visitor: a348c0d7 | Session: 2b67e986 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:37:00.611041] Visitor: a348c0d7 | Session: 2b67e986 | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:37:03.924880] Visitor: a348c0d7 | Session: 2b67e986 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:37:04.121112] Visitor: a348c0d7 | Session: 2b67e986 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:37:04.173409] Visitor: a348c0d7 | Session: 2b67e986 | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:37:09.710229] Visitor: a348c0d7 | Session: 2b67e986 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:37:09.750628] Visitor: a348c0d7 | Session: 2b67e986 | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:40:10.595439] Visitor: a348c0d7 | Session: b6cc6192 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:40:13.063572] Visitor: a348c0d7 | Session: b6cc6192 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:40:13.100505] Visitor: a348c0d7 | Session: b6cc6192 | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:40:19.884068] Visitor: a348c0d7 | Session: b6cc6192 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:40:20.817270] Visitor: a348c0d7 | Session: b6cc6192 | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:40:28.462264] Visitor: a348c0d7 | Session: b6cc6192 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:40:28.506013] Visitor: a348c0d7 | Session: b6cc6192 | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:40:53.273366] Visitor: a348c0d7 | Session: b6cc6192 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:40:53.454212] Visitor: a348c0d7 | Session: b6cc6192 | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:41:04.332079] Visitor: a348c0d7 | Session: b6cc6192 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:41:04.400776] Visitor: a348c0d7 | Session: b6cc6192 | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:41:06.859768] Visitor: a348c0d7 | Session: b6cc6192 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:41:07.047673] Visitor: a348c0d7 | Session: b6cc6192 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:41:07.095339] Visitor: a348c0d7 | Session: b6cc6192 | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:41:13.252144] Visitor: a348c0d7 | Session: b6cc6192 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:42:48.755888] Visitor: a348c0d7 | Session: 8d5688c2 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:42:50.921960] Visitor: a348c0d7 | Session: 8d5688c2 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:42:50.952837] Visitor: a348c0d7 | Session: 8d5688c2 | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:42:52.825254] Visitor: a348c0d7 | Session: 8d5688c2 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:42:52.873045] Visitor: a348c0d7 | Session: 8d5688c2 | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:43:06.305224] Visitor: a348c0d7 | Session: 8d5688c2 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:43:06.430771] Visitor: a348c0d7 | Session: 8d5688c2 | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:43:15.007628] Visitor: a348c0d7 | Session: 8d5688c2 | Action: page_visit | User visited Dashboard
+[2026-01-19T20:43:15.053676] Visitor: a348c0d7 | Session: 8d5688c2 | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:44:40.223398] Visitor: a348c0d7 | Session: ef67247d | Action: page_visit | User visited Dashboard
+[2026-01-19T20:44:44.192845] Visitor: a348c0d7 | Session: ef67247d | Action: page_visit | User visited Dashboard
+[2026-01-19T20:44:44.283215] Visitor: a348c0d7 | Session: ef67247d | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:44:49.559589] Visitor: a348c0d7 | Session: ef67247d | Action: page_visit | User visited Dashboard
+[2026-01-19T20:44:49.598747] Visitor: a348c0d7 | Session: ef67247d | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:44:57.615252] Visitor: a348c0d7 | Session: ef67247d | Action: page_visit | User visited Dashboard
+[2026-01-19T20:44:57.656042] Visitor: a348c0d7 | Session: ef67247d | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:45:13.005633] Visitor: a348c0d7 | Session: ef67247d | Action: page_visit | User visited Dashboard
+[2026-01-19T20:45:13.037474] Visitor: a348c0d7 | Session: ef67247d | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:45:15.265279] Visitor: a348c0d7 | Session: ef67247d | Action: page_visit | User visited Dashboard
+[2026-01-19T20:45:15.486404] Visitor: a348c0d7 | Session: ef67247d | Action: page_visit | User visited Dashboard
+[2026-01-19T20:45:15.513848] Visitor: a348c0d7 | Session: ef67247d | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:45:21.770682] Visitor: a348c0d7 | Session: ef67247d | Action: page_visit | User visited Dashboard
+[2026-01-19T20:45:21.814023] Visitor: a348c0d7 | Session: ef67247d | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:45:28.352453] Visitor: a348c0d7 | Session: ef67247d | Action: page_visit | User visited Dashboard
+[2026-01-19T20:45:28.392963] Visitor: a348c0d7 | Session: ef67247d | Action: interaction | Accessed AI Assistant
+[2026-01-19T20:53:39.622090] Visitor: a348c0d7 | Session: ef67247d | Action: page_visit | User visited Dashboard
+[2026-01-19T20:53:50.963051] Visitor: a348c0d7 | Session: ef67247d | Action: page_visit | User visited Dashboard
+[2026-01-19T20:53:55.048498] Visitor: a348c0d7 | Session: ef67247d | Action: page_visit | User visited Dashboard
+[2026-01-19T20:53:55.137000] Visitor: a348c0d7 | Session: ef67247d | Action: interaction | Accessed AI Assistant
+[2026-02-18T19:00:13.885520] Visitor: 66781352 | Session: 8249a51e | Action: page_visit | User visited Dashboard
+[2026-02-18T19:00:19.992545] Visitor: 66781352 | Session: 8249a51e | Action: page_visit | User visited Dashboard
+[2026-02-18T19:00:27.618097] Visitor: 66781352 | Session: 8249a51e | Action: page_visit | User visited Dashboard
+[2026-02-18T19:00:27.847876] Visitor: 66781352 | Session: 8249a51e | Action: page_visit | User visited Dashboard
+[2026-02-18T19:01:57.155928] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:02:43.583719] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:02:45.720535] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:02:49.559636] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:02:51.361609] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:02:55.850392] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:02:55.999029] Visitor: 66781352 | Session: be21fcb2 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-18T19:02:59.449368] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:02:59.488706] Visitor: 66781352 | Session: be21fcb2 | Action: interaction | Accessed AI Assistant
+[2026-02-18T19:03:02.902088] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:03:06.174973] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:03:06.333716] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:03:14.037516] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:03:14.315847] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:03:19.322952] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:03:24.028214] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:03:33.954120] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:03:36.419301] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:03:36.559945] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:03:43.607477] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:03:44.374485] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:03:48.814986] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:03:48.981979] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:03:50.478074] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:03:52.032931] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:03:53.448523] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:03:54.585513] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:03:54.723036] Visitor: 66781352 | Session: be21fcb2 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:08:00.797190] Visitor: 66781352 | Session: a8c0217a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:08:10.251254] Visitor: 66781352 | Session: a8c0217a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:08:15.195714] Visitor: 66781352 | Session: a8c0217a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:08:15.488560] Visitor: 66781352 | Session: a8c0217a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:08:19.071353] Visitor: 66781352 | Session: a8c0217a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:08:19.247515] Visitor: 66781352 | Session: a8c0217a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:08:21.333805] Visitor: 66781352 | Session: a8c0217a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:08:21.545737] Visitor: 66781352 | Session: a8c0217a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:08:22.221853] Visitor: 66781352 | Session: a8c0217a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:08:22.474896] Visitor: 66781352 | Session: a8c0217a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:08:24.437712] Visitor: 66781352 | Session: a8c0217a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:08:52.186854] Visitor: 66781352 | Session: a8c0217a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:08:54.138690] Visitor: 66781352 | Session: a8c0217a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:08:59.337296] Visitor: 66781352 | Session: a8c0217a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:09:00.602256] Visitor: 66781352 | Session: a8c0217a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:09:06.439997] Visitor: 66781352 | Session: a8c0217a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:12:58.750304] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:13:57.631056] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:04.717702] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:04.886096] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:06.920126] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:07.093209] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:09.646991] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:11.409698] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:11.758533] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:19.550926] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:19.769204] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:21.312024] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:22.317880] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:22.542266] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:23.405737] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:24.307073] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:24.504160] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:34.485928] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:34.856108] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:35.135844] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:40.478362] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:45.949461] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:46.162050] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:59.303508] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:14:59.534899] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:15:03.236303] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:15:07.728226] Visitor: 66781352 | Session: 7f45728a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:22:23.670865] Visitor: 66781352 | Session: fca4bdf6 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:22:37.643724] Visitor: 66781352 | Session: fca4bdf6 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:23:42.802898] Visitor: 66781352 | Session: fca4bdf6 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:23:42.935559] Visitor: 66781352 | Session: fca4bdf6 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:23:46.162496] Visitor: 66781352 | Session: fca4bdf6 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:23:46.348471] Visitor: 66781352 | Session: fca4bdf6 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:23:55.961410] Visitor: 66781352 | Session: fca4bdf6 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:23:56.111095] Visitor: 66781352 | Session: fca4bdf6 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:23:56.835618] Visitor: 66781352 | Session: fca4bdf6 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:23:57.041558] Visitor: 66781352 | Session: fca4bdf6 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:23:58.122139] Visitor: 66781352 | Session: fca4bdf6 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:23:58.286496] Visitor: 66781352 | Session: fca4bdf6 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:38:06.213590] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:40:23.030329] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:40:24.514640] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:40:24.625735] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:40:28.562064] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:40:28.696678] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:40:33.403288] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:40:33.538689] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:40:35.850636] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:40:35.978095] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:40:37.806971] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:40:37.925166] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:40:38.586887] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:40:38.707316] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:40:39.510492] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:40:39.630466] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:01.287982] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:01.422946] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:04.188958] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:04.305239] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:04.435563] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:07.893110] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:08.023300] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:08.782914] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:08.909959] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:09.651615] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:09.776307] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:10.499245] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:10.617423] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:11.375107] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:11.510293] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:12.947090] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:13.061710] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:19.007315] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:20.054034] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:20.184673] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:20.922021] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:21.056476] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:21.552831] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:41:21.709894] Visitor: 66781352 | Session: 62b1ba2f | Action: page_visit | User visited Dashboard
+[2026-02-18T19:42:51.676293] Visitor: 66781352 | Session: 3875aa86 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:44:04.627122] Visitor: 66781352 | Session: 3875aa86 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:44:05.907548] Visitor: 66781352 | Session: 3875aa86 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:44:06.040252] Visitor: 66781352 | Session: 3875aa86 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:44:07.369088] Visitor: 66781352 | Session: 3875aa86 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:44:07.482664] Visitor: 66781352 | Session: 3875aa86 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:44:11.848569] Visitor: 66781352 | Session: 3875aa86 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:44:11.974619] Visitor: 66781352 | Session: 3875aa86 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:44:12.720978] Visitor: 66781352 | Session: 3875aa86 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:44:12.840896] Visitor: 66781352 | Session: 3875aa86 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:44:14.657468] Visitor: 66781352 | Session: 3875aa86 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:44:14.786425] Visitor: 66781352 | Session: 3875aa86 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:44:15.840688] Visitor: 66781352 | Session: 3875aa86 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:44:15.970850] Visitor: 66781352 | Session: 3875aa86 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:44:31.143244] Visitor: 66781352 | Session: 3875aa86 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:44:31.246172] Visitor: 66781352 | Session: 3875aa86 | Action: page_visit | User visited Dashboard
+[2026-02-18T19:46:08.560074] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:46:51.767409] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:46:52.721854] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:46:52.802109] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:46:54.708425] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:46:54.788721] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:46:56.489637] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:46:56.605623] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:46:58.361949] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:46:58.443190] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:46:59.172836] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:46:59.270390] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:47:00.088849] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:47:00.204491] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:47:01.075771] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:47:01.155545] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:47:02.016528] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:47:02.097193] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:47:05.254907] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:47:05.375424] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:47:08.899245] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:47:08.973419] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:47:12.935193] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:47:13.491275] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:47:13.621010] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-18T19:47:16.827726] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-22T15:50:21.462019] Visitor: 22ac06d0 | Session: 29373e1c | Action: page_visit | User visited Dashboard
+[2026-02-22T15:50:53.248594] Visitor: 22ac06d0 | Session: 29373e1c | Action: page_visit | User visited Dashboard
+[2026-02-22T15:50:53.470543] Visitor: 22ac06d0 | Session: 29373e1c | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T15:51:02.494862] Visitor: 22ac06d0 | Session: 29373e1c | Action: page_visit | User visited Dashboard
+[2026-02-22T15:51:02.671222] Visitor: 22ac06d0 | Session: 29373e1c | Action: interaction | Viewed profile for Player 1 (Beige)
+[2026-02-22T15:53:27.303513] Visitor: 66781352 | Session: 26bc355a | Action: page_visit | User visited Dashboard
+[2026-02-22T15:53:27.442066] Visitor: 66781352 | Session: 26bc355a | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:01:23.273983] Visitor: 22ac06d0 | Session: 0031cfa6 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:01:38.592894] Visitor: 22ac06d0 | Session: 0031cfa6 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:01:39.004151] Visitor: 22ac06d0 | Session: 0031cfa6 | Action: interaction | Accessed AI Assistant
+[2026-02-22T16:01:40.216569] Visitor: 22ac06d0 | Session: 0031cfa6 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:01:40.536720] Visitor: 22ac06d0 | Session: 0031cfa6 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:02:28.828087] Visitor: 22ac06d0 | Session: 0031cfa6 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:02:29.114126] Visitor: 22ac06d0 | Session: 0031cfa6 | Action: interaction | Viewed profile for Player 20 (Blue)
+[2026-02-22T16:03:30.052939] Visitor: 22ac06d0 | Session: 0031cfa6 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:07:45.935236] Visitor: 22ac06d0 | Session: 9ed39f74 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:08:00.444109] Visitor: 22ac06d0 | Session: 9ed39f74 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:08:00.781087] Visitor: 22ac06d0 | Session: 9ed39f74 | Action: interaction | Accessed AI Assistant
+[2026-02-22T16:08:01.340700] Visitor: 22ac06d0 | Session: 9ed39f74 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:08:01.908082] Visitor: 22ac06d0 | Session: 9ed39f74 | Action: interaction | Viewed analytics page
+[2026-02-22T16:08:06.677172] Visitor: 22ac06d0 | Session: 9ed39f74 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:08:07.051588] Visitor: 22ac06d0 | Session: 9ed39f74 | Action: interaction | Viewed analytics page
+[2026-02-22T16:08:08.162500] Visitor: 22ac06d0 | Session: 9ed39f74 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:08:08.692504] Visitor: 22ac06d0 | Session: 9ed39f74 | Action: interaction | Viewed analytics page
+[2026-02-22T16:08:12.145793] Visitor: 22ac06d0 | Session: 9ed39f74 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:08:12.883925] Visitor: 22ac06d0 | Session: 9ed39f74 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:08:37.191903] Visitor: 22ac06d0 | Session: 9ed39f74 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:11:08.117208] Visitor: 22ac06d0 | Session: 96429723 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:11:18.478559] Visitor: 22ac06d0 | Session: 96429723 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:11:18.928631] Visitor: 22ac06d0 | Session: 96429723 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:11:22.550357] Visitor: 22ac06d0 | Session: 96429723 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:11:25.461894] Visitor: 22ac06d0 | Session: 96429723 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:11:26.200991] Visitor: 22ac06d0 | Session: 96429723 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:11:27.376338] Visitor: 22ac06d0 | Session: 96429723 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:11:28.692881] Visitor: 22ac06d0 | Session: 96429723 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:11:29.706618] Visitor: 22ac06d0 | Session: 96429723 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:11:29.827307] Visitor: 22ac06d0 | Session: 96429723 | Action: interaction | Accessed AI Assistant
+[2026-02-22T16:11:33.047207] Visitor: 22ac06d0 | Session: 96429723 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:14:30.087124] Visitor: 22ac06d0 | Session: 887cfb65 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:14:35.643299] Visitor: 22ac06d0 | Session: 887cfb65 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:14:57.900174] Visitor: 22ac06d0 | Session: 887cfb65 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:14:58.201660] Visitor: 22ac06d0 | Session: 887cfb65 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:15:07.078320] Visitor: 22ac06d0 | Session: 887cfb65 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:15:07.523855] Visitor: 22ac06d0 | Session: 887cfb65 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:15:29.231333] Visitor: 22ac06d0 | Session: 887cfb65 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:15:29.300580] Visitor: 22ac06d0 | Session: 887cfb65 | Action: interaction | Accessed AI Assistant
+[2026-02-22T16:15:31.704959] Visitor: 22ac06d0 | Session: 887cfb65 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:15:32.011443] Visitor: 22ac06d0 | Session: 887cfb65 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:15:42.875634] Visitor: 22ac06d0 | Session: 887cfb65 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:15:43.061812] Visitor: 22ac06d0 | Session: 887cfb65 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:15:46.116499] Visitor: 22ac06d0 | Session: 887cfb65 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:15:46.461401] Visitor: 22ac06d0 | Session: 887cfb65 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:15:48.264942] Visitor: 22ac06d0 | Session: 887cfb65 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:15:48.593991] Visitor: 22ac06d0 | Session: 887cfb65 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:17:02.777349] Visitor: 22ac06d0 | Session: 94340063 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:17:20.789562] Visitor: 22ac06d0 | Session: 94340063 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:17:21.018826] Visitor: 22ac06d0 | Session: 94340063 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:17:44.922293] Visitor: 22ac06d0 | Session: 94340063 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:17:45.420188] Visitor: 22ac06d0 | Session: 94340063 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:17:50.626849] Visitor: 22ac06d0 | Session: 94340063 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:17:50.955042] Visitor: 22ac06d0 | Session: 94340063 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:17:53.116780] Visitor: 22ac06d0 | Session: 94340063 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:17:53.565158] Visitor: 22ac06d0 | Session: 94340063 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:17:54.654811] Visitor: 22ac06d0 | Session: 94340063 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:17:54.942098] Visitor: 22ac06d0 | Session: 94340063 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:23:39.955805] Visitor: 22ac06d0 | Session: 969f893b | Action: page_visit | User visited Dashboard
+[2026-02-22T16:23:45.298553] Visitor: 22ac06d0 | Session: 969f893b | Action: page_visit | User visited Dashboard
+[2026-02-22T16:23:45.430630] Visitor: 22ac06d0 | Session: 969f893b | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:23:49.210629] Visitor: 22ac06d0 | Session: 969f893b | Action: page_visit | User visited Dashboard
+[2026-02-22T16:23:49.325234] Visitor: 22ac06d0 | Session: 969f893b | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:23:51.062041] Visitor: 22ac06d0 | Session: 969f893b | Action: page_visit | User visited Dashboard
+[2026-02-22T16:23:51.201438] Visitor: 22ac06d0 | Session: 969f893b | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:28:44.161965] Visitor: 22ac06d0 | Session: 81d1b7c2 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:30:10.309328] Visitor: 22ac06d0 | Session: 81d1b7c2 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:30:10.469435] Visitor: 22ac06d0 | Session: 81d1b7c2 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:30:12.724106] Visitor: 22ac06d0 | Session: 81d1b7c2 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:30:12.872098] Visitor: 22ac06d0 | Session: 81d1b7c2 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:30:14.188799] Visitor: 22ac06d0 | Session: 81d1b7c2 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:30:14.365665] Visitor: 22ac06d0 | Session: 81d1b7c2 | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-22T16:33:30.403363] Visitor: 22ac06d0 | Session: 4890bf16 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:38:09.732894] Visitor: 22ac06d0 | Session: 4890bf16 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:38:11.140893] Visitor: 22ac06d0 | Session: 4890bf16 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:38:12.164922] Visitor: 22ac06d0 | Session: 4890bf16 | Action: page_visit | User visited Dashboard
+[2026-02-22T16:38:13.994612] Visitor: 22ac06d0 | Session: 4890bf16 | Action: page_visit | User visited Dashboard
+[2026-02-25T19:30:06.999848] Visitor: f4b16eec | Session: b8df277b | Action: page_visit | User visited Dashboard
+[2026-02-25T19:30:07.755244] Visitor: f4b16eec | Session: b8df277b | Action: interaction | Viewed profile for Player 0 (Black)
+[2026-02-28T16:26:35.596728] Visitor: f96ac53a | Session: 1b10489f | Action: page_visit | User visited Dashboard
+[2026-02-28T16:27:31.337778] Visitor: f96ac53a | Session: 1b10489f | Action: page_visit | User visited Dashboard
+[2026-02-28T16:27:33.362619] Visitor: f96ac53a | Session: 1b10489f | Action: page_visit | User visited Dashboard
+[2026-02-28T16:27:33.992735] Visitor: f96ac53a | Session: 1b10489f | Action: page_visit | User visited Dashboard
+[2026-02-28T19:49:28.220108] Visitor: f96ac53a | Session: 42d7deba | Action: page_visit | User visited Dashboard
+[2026-02-28T19:50:31.901645] Visitor: f96ac53a | Session: 42d7deba | Action: page_visit | User visited Dashboard
+[2026-02-28T19:50:34.450461] Visitor: f96ac53a | Session: 42d7deba | Action: page_visit | User visited Dashboard
+[2026-02-28T19:50:35.786040] Visitor: f96ac53a | Session: 42d7deba | Action: page_visit | User visited Dashboard
+[2026-02-28T19:50:37.290162] Visitor: f96ac53a | Session: 42d7deba | Action: page_visit | User visited Dashboard
+[2026-02-28T19:50:37.389104] Visitor: f96ac53a | Session: 42d7deba | Action: interaction | Viewed profile for Player 0 (Grey)
+[2026-02-28T19:50:37.921712] Visitor: f96ac53a | Session: 42d7deba | Action: page_visit | User visited Dashboard
+[2026-02-28T19:50:38.012160] Visitor: f96ac53a | Session: 42d7deba | Action: interaction | Viewed analytics page
+[2026-02-28T19:50:38.605054] Visitor: f96ac53a | Session: 42d7deba | Action: page_visit | User visited Dashboard
+[2026-02-28T19:50:38.658350] Visitor: f96ac53a | Session: 42d7deba | Action: interaction | Accessed AI Assistant
+[2026-02-28T19:50:39.726784] Visitor: f96ac53a | Session: 42d7deba | Action: page_visit | User visited Dashboard
+[2026-02-28T19:50:39.769360] Visitor: f96ac53a | Session: 42d7deba | Action: interaction | Viewed analytics page
+[2026-02-28T20:15:35.133903] Visitor: f96ac53a | Session: 40ceffd6 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:16:01.778577] Visitor: f96ac53a | Session: 40ceffd6 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:16:02.650354] Visitor: f96ac53a | Session: 40ceffd6 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:16:02.714549] Visitor: f96ac53a | Session: 40ceffd6 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:16:09.649763] Visitor: f96ac53a | Session: 40ceffd6 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:16:11.623072] Visitor: f96ac53a | Session: 40ceffd6 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:16:13.059443] Visitor: f96ac53a | Session: 40ceffd6 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:16:13.194921] Visitor: f96ac53a | Session: 40ceffd6 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:18:39.801034] Visitor: f96ac53a | Session: 20b0469e | Action: page_visit | User visited Dashboard
+[2026-02-28T20:19:42.271824] Visitor: f96ac53a | Session: 20b0469e | Action: page_visit | User visited Dashboard
+[2026-02-28T20:19:42.449790] Visitor: f96ac53a | Session: 20b0469e | Action: page_visit | User visited Dashboard
+[2026-02-28T20:19:46.417583] Visitor: f96ac53a | Session: 20b0469e | Action: page_visit | User visited Dashboard
+[2026-02-28T20:19:46.642148] Visitor: f96ac53a | Session: 20b0469e | Action: page_visit | User visited Dashboard
+[2026-02-28T20:19:52.455542] Visitor: f96ac53a | Session: 20b0469e | Action: page_visit | User visited Dashboard
+[2026-02-28T20:19:53.038351] Visitor: f96ac53a | Session: 20b0469e | Action: page_visit | User visited Dashboard
+[2026-02-28T20:24:40.260840] Visitor: f96ac53a | Session: 41fb2180 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:25:12.223526] Visitor: f96ac53a | Session: 41fb2180 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:25:12.573911] Visitor: f96ac53a | Session: 41fb2180 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:25:29.192030] Visitor: f96ac53a | Session: 41fb2180 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:25:33.383849] Visitor: f96ac53a | Session: 41fb2180 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:26:19.282755] Visitor: f96ac53a | Session: 41fb2180 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:26:19.370524] Visitor: f96ac53a | Session: 41fb2180 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:26:37.886585] Visitor: f96ac53a | Session: 41fb2180 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:26:37.964899] Visitor: f96ac53a | Session: 41fb2180 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:26:41.003371] Visitor: f96ac53a | Session: 41fb2180 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:37:25.101239] Visitor: f96ac53a | Session: 836290c0 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:37:33.062400] Visitor: f96ac53a | Session: 836290c0 | Action: page_visit | User visited Dashboard
+[2026-02-28T20:37:33.172419] Visitor: f96ac53a | Session: 836290c0 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:00:26.476389] Visitor: f96ac53a | Session: 836290c0 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:00:26.588405] Visitor: f96ac53a | Session: 836290c0 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:03:27.796456] Visitor: f96ac53a | Session: 38f33156 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:03:40.405901] Visitor: f96ac53a | Session: 38f33156 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:03:40.525195] Visitor: f96ac53a | Session: 38f33156 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:03:58.997851] Visitor: f96ac53a | Session: 38f33156 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:03:59.104624] Visitor: f96ac53a | Session: 38f33156 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:06:48.447118] Visitor: f96ac53a | Session: 06fba0fe | Action: page_visit | User visited Dashboard
+[2026-02-28T21:07:07.762473] Visitor: f96ac53a | Session: 06fba0fe | Action: page_visit | User visited Dashboard
+[2026-02-28T21:07:07.851242] Visitor: f96ac53a | Session: 06fba0fe | Action: page_visit | User visited Dashboard
+[2026-02-28T21:07:19.349617] Visitor: f96ac53a | Session: 06fba0fe | Action: page_visit | User visited Dashboard
+[2026-02-28T21:07:19.447926] Visitor: f96ac53a | Session: 06fba0fe | Action: page_visit | User visited Dashboard
+[2026-02-28T21:07:31.311233] Visitor: f96ac53a | Session: 06fba0fe | Action: page_visit | User visited Dashboard
+[2026-02-28T21:18:04.346427] Visitor: f96ac53a | Session: 58a5ea99 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:19:50.937380] Visitor: f96ac53a | Session: d315ccde | Action: page_visit | User visited Dashboard
+[2026-02-28T21:23:36.613160] Visitor: f96ac53a | Session: bc542af2 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:27:14.171657] Visitor: f96ac53a | Session: bc542af2 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:27:14.238826] Visitor: f96ac53a | Session: bc542af2 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:27:17.553257] Visitor: f96ac53a | Session: bc542af2 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:27:17.620990] Visitor: f96ac53a | Session: bc542af2 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:27:18.970042] Visitor: f96ac53a | Session: bc542af2 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:27:19.056018] Visitor: f96ac53a | Session: bc542af2 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:27:19.712414] Visitor: f96ac53a | Session: bc542af2 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:27:19.798400] Visitor: f96ac53a | Session: bc542af2 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:27:55.519708] Visitor: f96ac53a | Session: bc542af2 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:28:12.190154] Visitor: f96ac53a | Session: bc542af2 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:28:32.051043] Visitor: f96ac53a | Session: bc542af2 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:28:32.145438] Visitor: f96ac53a | Session: bc542af2 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:28:35.089565] Visitor: f96ac53a | Session: bc542af2 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:29:07.292978] Visitor: f96ac53a | Session: bc542af2 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:29:12.061814] Visitor: f96ac53a | Session: bc542af2 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:32:43.209057] Visitor: f96ac53a | Session: 7feddac7 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:33:17.309051] Visitor: f96ac53a | Session: 7feddac7 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:33:17.417882] Visitor: f96ac53a | Session: 7feddac7 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:33:21.768381] Visitor: f96ac53a | Session: 7feddac7 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:33:21.868469] Visitor: f96ac53a | Session: 7feddac7 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:33:31.432498] Visitor: f96ac53a | Session: 7feddac7 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:33:31.536716] Visitor: f96ac53a | Session: 7feddac7 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:33:36.681142] Visitor: f96ac53a | Session: 7feddac7 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:33:36.784596] Visitor: f96ac53a | Session: 7feddac7 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:33:55.702865] Visitor: f96ac53a | Session: 7feddac7 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:34:06.901562] Visitor: f96ac53a | Session: 7feddac7 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:34:14.487033] Visitor: f96ac53a | Session: 7feddac7 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:39:49.516605] Visitor: f96ac53a | Session: 7feddac7 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:39:49.615264] Visitor: f96ac53a | Session: 7feddac7 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:39:57.024019] Visitor: f96ac53a | Session: 7feddac7 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:39:57.099432] Visitor: f96ac53a | Session: 7feddac7 | Action: page_visit | User visited Dashboard
+[2026-02-28T21:43:08.396234] Visitor: f96ac53a | Session: 6f2476cb | Action: page_visit | User visited Dashboard
+[2026-02-28T21:43:16.434763] Visitor: f96ac53a | Session: 6f2476cb | Action: page_visit | User visited Dashboard
+[2026-02-28T21:43:16.528828] Visitor: f96ac53a | Session: 6f2476cb | Action: page_visit | User visited Dashboard
+[2026-02-28T21:43:22.338858] Visitor: f96ac53a | Session: 6f2476cb | Action: page_visit | User visited Dashboard
+[2026-02-28T21:43:22.436786] Visitor: f96ac53a | Session: 6f2476cb | Action: page_visit | User visited Dashboard
+[2026-02-28T21:43:29.219071] Visitor: f96ac53a | Session: 6f2476cb | Action: page_visit | User visited Dashboard
+[2026-02-28T21:43:34.198925] Visitor: f96ac53a | Session: 6f2476cb | Action: page_visit | User visited Dashboard
+[2026-02-28T21:43:34.297998] Visitor: f96ac53a | Session: 6f2476cb | Action: page_visit | User visited Dashboard
+[2026-02-28T21:43:38.959667] Visitor: f96ac53a | Session: 6f2476cb | Action: page_visit | User visited Dashboard
+[2026-02-28T21:43:39.061411] Visitor: f96ac53a | Session: 6f2476cb | Action: page_visit | User visited Dashboard
+[2026-02-28T21:43:42.119072] Visitor: f96ac53a | Session: 6f2476cb | Action: page_visit | User visited Dashboard
+[2026-02-28T21:44:17.288092] Visitor: f96ac53a | Session: 6f2476cb | Action: page_visit | User visited Dashboard
+[2026-03-01T10:44:59.564339] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:45:28.442532] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:45:28.579245] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:45:54.973394] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:46:03.894630] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:46:04.071192] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:46:29.479662] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:46:30.988945] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:46:46.246098] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:46:51.119905] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:47:46.466236] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:48:07.189921] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:48:07.289100] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:48:28.676501] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:48:28.812985] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:48:31.943059] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:48:32.084819] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:49:29.470458] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:49:44.683374] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:49:53.897353] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:50:01.216165] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:50:01.460550] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-01T10:50:05.993113] Visitor: 75891440 | Session: 72805562 | Action: page_visit | User visited Dashboard
+[2026-03-08T21:50:06.815709] Visitor: 35cbce1c | Session: 996713eb | Action: page_visit | User visited Dashboard
+[2026-03-08T21:51:24.822968] Visitor: 35cbce1c | Session: 996713eb | Action: page_visit | User visited Dashboard
+[2026-03-08T21:51:24.927785] Visitor: 35cbce1c | Session: 996713eb | Action: page_visit | User visited Dashboard
+[2026-03-08T21:51:28.319651] Visitor: 35cbce1c | Session: 996713eb | Action: page_visit | User visited Dashboard
+[2026-03-08T21:51:54.495321] Visitor: 35cbce1c | Session: 996713eb | Action: page_visit | User visited Dashboard
+[2026-03-08T21:51:54.574681] Visitor: 35cbce1c | Session: 996713eb | Action: page_visit | User visited Dashboard
+[2026-03-09T21:31:44.884679] Visitor: 749516bb | Session: f38c813e | Action: page_visit | User visited Dashboard
+[2026-03-09T21:31:48.531824] Visitor: 749516bb | Session: f38c813e | Action: page_visit | User visited Dashboard
+[2026-03-09T21:31:48.630887] Visitor: 749516bb | Session: f38c813e | Action: page_visit | User visited Dashboard
+[2026-03-09T21:31:57.176523] Visitor: 749516bb | Session: f38c813e | Action: page_visit | User visited Dashboard
+[2026-03-09T21:49:59.614103] Visitor: 749516bb | Session: 482e1fda | Action: page_visit | User visited Dashboard
+[2026-03-09T21:50:10.763240] Visitor: 749516bb | Session: 482e1fda | Action: page_visit | User visited Dashboard
+[2026-03-09T21:50:10.917493] Visitor: 749516bb | Session: 482e1fda | Action: page_visit | User visited Dashboard
+[2026-03-09T21:58:28.111789] Visitor: 749516bb | Session: 2b034f3d | Action: page_visit | User visited Dashboard
+[2026-03-09T21:58:56.004552] Visitor: 749516bb | Session: 2b034f3d | Action: page_visit | User visited Dashboard
+[2026-03-09T21:58:56.174444] Visitor: 749516bb | Session: 2b034f3d | Action: page_visit | User visited Dashboard
+[2026-03-09T22:19:11.338828] Visitor: 749516bb | Session: d1b9ca9c | Action: page_visit | User visited Dashboard
+[2026-03-09T22:19:16.677777] Visitor: 749516bb | Session: d1b9ca9c | Action: page_visit | User visited Dashboard
+[2026-03-09T22:19:16.770389] Visitor: 749516bb | Session: d1b9ca9c | Action: page_visit | User visited Dashboard
+[2026-03-10T09:21:39.788831] Visitor: 243631a2 | Session: c43956dd | Action: page_visit | User visited Dashboard
+[2026-03-10T09:23:07.731829] Visitor: 243631a2 | Session: c43956dd | Action: page_visit | User visited Dashboard
+[2026-03-10T09:23:07.846896] Visitor: 243631a2 | Session: c43956dd | Action: page_visit | User visited Dashboard
+[2026-03-10T09:27:16.888594] Visitor: 243631a2 | Session: 4392d10d | Action: page_visit | User visited Dashboard
+[2026-03-10T09:28:02.401299] Visitor: 243631a2 | Session: 4392d10d | Action: page_visit | User visited Dashboard
+[2026-03-10T09:28:02.507857] Visitor: 243631a2 | Session: 4392d10d | Action: page_visit | User visited Dashboard
+[2026-03-10T09:32:31.787589] Visitor: 243631a2 | Session: 6a0e19a0 | Action: page_visit | User visited Dashboard
+[2026-03-10T09:33:07.153781] Visitor: 243631a2 | Session: 6a0e19a0 | Action: page_visit | User visited Dashboard
+[2026-03-10T09:33:07.240127] Visitor: 243631a2 | Session: 6a0e19a0 | Action: page_visit | User visited Dashboard
+[2026-03-10T09:36:24.145017] Visitor: 243631a2 | Session: c24ab964 | Action: page_visit | User visited Dashboard
+[2026-03-10T09:37:28.792328] Visitor: 243631a2 | Session: e8407b30 | Action: page_visit | User visited Dashboard
+[2026-03-10T09:37:31.071432] Visitor: 243631a2 | Session: e8407b30 | Action: page_visit | User visited Dashboard
+[2026-03-10T09:37:31.173687] Visitor: 243631a2 | Session: e8407b30 | Action: page_visit | User visited Dashboard
+[2026-03-10T09:38:03.989129] Visitor: 243631a2 | Session: fbf678e2 | Action: page_visit | User visited Dashboard
+[2026-03-10T09:38:06.322136] Visitor: 243631a2 | Session: fbf678e2 | Action: page_visit | User visited Dashboard
+[2026-03-10T09:38:06.419871] Visitor: 243631a2 | Session: fbf678e2 | Action: page_visit | User visited Dashboard
+[2026-03-10T09:47:02.411199] Visitor: 243631a2 | Session: 841b5b66 | Action: page_visit | User visited Dashboard
+[2026-03-10T09:48:38.716011] Visitor: 243631a2 | Session: 841b5b66 | Action: page_visit | User visited Dashboard
+[2026-03-10T09:48:38.804425] Visitor: 243631a2 | Session: 841b5b66 | Action: page_visit | User visited Dashboard
+[2026-03-10T09:52:56.475737] Visitor: 243631a2 | Session: 9010b6f0 | Action: page_visit | User visited Dashboard
+[2026-03-10T09:52:59.059312] Visitor: 243631a2 | Session: 9010b6f0 | Action: page_visit | User visited Dashboard
+[2026-03-10T09:52:59.162506] Visitor: 243631a2 | Session: 9010b6f0 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:01:45.077175] Visitor: 243631a2 | Session: cf20e0f1 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:03:13.148600] Visitor: 243631a2 | Session: cf20e0f1 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:03:13.217488] Visitor: 243631a2 | Session: cf20e0f1 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:07:05.210124] Visitor: 243631a2 | Session: a65234b6 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:07:07.921995] Visitor: 243631a2 | Session: a65234b6 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:07:08.041528] Visitor: 243631a2 | Session: a65234b6 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:09:27.402942] Visitor: 243631a2 | Session: 0446939d | Action: page_visit | User visited Dashboard
+[2026-03-10T10:09:30.183221] Visitor: 243631a2 | Session: 0446939d | Action: page_visit | User visited Dashboard
+[2026-03-10T10:09:30.263057] Visitor: 243631a2 | Session: 0446939d | Action: page_visit | User visited Dashboard
+[2026-03-10T10:20:27.520245] Visitor: 243631a2 | Session: 3bbffed2 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:20:30.055929] Visitor: 243631a2 | Session: 3bbffed2 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:20:30.170771] Visitor: 243631a2 | Session: 3bbffed2 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:32:46.628259] Visitor: 243631a2 | Session: 00ba8bc0 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:32:49.535518] Visitor: 243631a2 | Session: 00ba8bc0 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:32:49.655551] Visitor: 243631a2 | Session: 00ba8bc0 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:35:08.078051] Visitor: 243631a2 | Session: da905846 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:35:34.462323] Visitor: 243631a2 | Session: da905846 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:35:34.556363] Visitor: 243631a2 | Session: da905846 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:37:30.547877] Visitor: 243631a2 | Session: 8f330c53 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:38:19.701698] Visitor: 243631a2 | Session: 960c6317 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:38:22.427895] Visitor: 243631a2 | Session: 960c6317 | Action: page_visit | User visited Dashboard
+[2026-03-10T10:38:22.506882] Visitor: 243631a2 | Session: 960c6317 | Action: page_visit | User visited Dashboard
+[2026-03-10T11:03:05.273693] Visitor: 243631a2 | Session: 76db61d4 | Action: page_visit | User visited Dashboard
+[2026-03-10T11:03:08.891990] Visitor: 243631a2 | Session: 76db61d4 | Action: page_visit | User visited Dashboard
+[2026-03-10T11:03:08.982164] Visitor: 243631a2 | Session: 76db61d4 | Action: page_visit | User visited Dashboard
+[2026-03-10T11:18:43.226224] Visitor: 243631a2 | Session: 8a6583bd | Action: page_visit | User visited Dashboard
+[2026-03-10T11:19:06.010965] Visitor: 243631a2 | Session: 8a6583bd | Action: page_visit | User visited Dashboard
+[2026-03-10T11:19:06.095696] Visitor: 243631a2 | Session: 8a6583bd | Action: page_visit | User visited Dashboard
+[2026-03-10T11:29:14.023348] Visitor: 243631a2 | Session: 524ec55d | Action: page_visit | User visited Dashboard
+[2026-03-10T11:29:16.746899] Visitor: 243631a2 | Session: 524ec55d | Action: page_visit | User visited Dashboard
+[2026-03-10T11:29:16.827746] Visitor: 243631a2 | Session: 524ec55d | Action: page_visit | User visited Dashboard
+[2026-03-10T11:39:08.161154] Visitor: 243631a2 | Session: 8d862e23 | Action: page_visit | User visited Dashboard
+[2026-03-10T11:39:11.864991] Visitor: 243631a2 | Session: 8d862e23 | Action: page_visit | User visited Dashboard
+[2026-03-10T11:39:11.984381] Visitor: 243631a2 | Session: 8d862e23 | Action: page_visit | User visited Dashboard
+[2026-03-10T12:44:57.757802] Visitor: 243631a2 | Session: ea7e4d90 | Action: page_visit | User visited Dashboard
+[2026-03-10T12:45:07.054932] Visitor: 243631a2 | Session: ea7e4d90 | Action: page_visit | User visited Dashboard
+[2026-03-10T12:45:07.138892] Visitor: 243631a2 | Session: ea7e4d90 | Action: page_visit | User visited Dashboard
+[2026-03-10T12:52:12.317712] Visitor: 243631a2 | Session: cc6653c5 | Action: page_visit | User visited Dashboard
+[2026-03-10T12:52:25.924953] Visitor: 243631a2 | Session: cc6653c5 | Action: page_visit | User visited Dashboard
+[2026-03-10T12:52:25.988999] Visitor: 243631a2 | Session: cc6653c5 | Action: page_visit | User visited Dashboard
+[2026-03-10T13:42:08.893603] Visitor: 243631a2 | Session: 09937453 | Action: page_visit | User visited Dashboard
+[2026-03-10T13:42:55.306291] Visitor: 243631a2 | Session: 09937453 | Action: page_visit | User visited Dashboard
+[2026-03-10T13:42:55.392229] Visitor: 243631a2 | Session: 09937453 | Action: page_visit | User visited Dashboard
+[2026-03-10T13:46:07.591172] Visitor: 243631a2 | Session: 224a771b | Action: page_visit | User visited Dashboard
+[2026-03-10T13:46:45.033398] Visitor: 243631a2 | Session: 224a771b | Action: page_visit | User visited Dashboard
+[2026-03-10T13:46:45.145978] Visitor: 243631a2 | Session: 224a771b | Action: page_visit | User visited Dashboard
+[2026-03-10T13:51:13.296427] Visitor: 243631a2 | Session: c78cc0fe | Action: page_visit | User visited Dashboard
+[2026-03-10T13:52:38.004590] Visitor: 243631a2 | Session: c78cc0fe | Action: page_visit | User visited Dashboard
+[2026-03-10T13:52:38.082865] Visitor: 243631a2 | Session: c78cc0fe | Action: page_visit | User visited Dashboard
+[2026-03-10T13:58:35.588410] Visitor: 243631a2 | Session: 00277774 | Action: page_visit | User visited Dashboard
+[2026-03-10T13:59:32.047218] Visitor: 243631a2 | Session: 00277774 | Action: page_visit | User visited Dashboard
+[2026-03-10T13:59:32.150220] Visitor: 243631a2 | Session: 00277774 | Action: page_visit | User visited Dashboard
+[2026-03-10T14:08:04.026752] Visitor: 243631a2 | Session: 1b3c756f | Action: page_visit | User visited Dashboard
+[2026-03-10T14:08:06.602364] Visitor: 243631a2 | Session: 1b3c756f | Action: page_visit | User visited Dashboard
+[2026-03-10T14:08:06.707735] Visitor: 243631a2 | Session: 1b3c756f | Action: page_visit | User visited Dashboard
+[2026-03-10T14:12:57.638570] Visitor: 243631a2 | Session: 4d435bfa | Action: page_visit | User visited Dashboard
+[2026-03-10T14:13:02.251228] Visitor: 243631a2 | Session: 4d435bfa | Action: page_visit | User visited Dashboard
+[2026-03-10T14:13:02.324410] Visitor: 243631a2 | Session: 4d435bfa | Action: page_visit | User visited Dashboard
+[2026-03-10T14:15:42.492386] Visitor: 243631a2 | Session: 489693f1 | Action: page_visit | User visited Dashboard
+[2026-03-10T14:15:53.808993] Visitor: 243631a2 | Session: 489693f1 | Action: page_visit | User visited Dashboard
+[2026-03-10T14:15:53.888797] Visitor: 243631a2 | Session: 489693f1 | Action: page_visit | User visited Dashboard
+[2026-03-10T14:18:24.089025] Visitor: 243631a2 | Session: a82a32f9 | Action: page_visit | User visited Dashboard
+[2026-03-10T14:18:54.889028] Visitor: 243631a2 | Session: a82a32f9 | Action: page_visit | User visited Dashboard
+[2026-03-10T14:18:54.974834] Visitor: 243631a2 | Session: a82a32f9 | Action: page_visit | User visited Dashboard
+[2026-03-10T14:28:14.045716] Visitor: 243631a2 | Session: 7b2bc8fb | Action: page_visit | User visited Dashboard
+[2026-03-10T14:28:18.192477] Visitor: 243631a2 | Session: 7b2bc8fb | Action: page_visit | User visited Dashboard
+[2026-03-10T14:28:18.260738] Visitor: 243631a2 | Session: 7b2bc8fb | Action: page_visit | User visited Dashboard
+[2026-03-10T14:28:28.061143] Visitor: 243631a2 | Session: 7b2bc8fb | Action: page_visit | User visited Dashboard
+[2026-03-10T14:28:28.195874] Visitor: 243631a2 | Session: 7b2bc8fb | Action: page_visit | User visited Dashboard
+[2026-03-10T14:36:51.963220] Visitor: 243631a2 | Session: 6cdec328 | Action: page_visit | User visited Dashboard
+[2026-03-10T14:38:26.014137] Visitor: 243631a2 | Session: 6cdec328 | Action: page_visit | User visited Dashboard
+[2026-03-10T14:38:26.104563] Visitor: 243631a2 | Session: 6cdec328 | Action: page_visit | User visited Dashboard
+[2026-03-10T14:38:32.015997] Visitor: 243631a2 | Session: 6cdec328 | Action: page_visit | User visited Dashboard
+[2026-03-10T14:38:32.175149] Visitor: 243631a2 | Session: 6cdec328 | Action: page_visit | User visited Dashboard
+[2026-03-10T14:51:33.649146] Visitor: 243631a2 | Session: 8e6552a9 | Action: page_visit | User visited Dashboard
+[2026-03-10T14:51:40.104804] Visitor: 243631a2 | Session: 8e6552a9 | Action: page_visit | User visited Dashboard
+[2026-03-10T14:51:40.188949] Visitor: 243631a2 | Session: 8e6552a9 | Action: page_visit | User visited Dashboard
+[2026-03-10T14:51:45.139947] Visitor: 243631a2 | Session: 8e6552a9 | Action: page_visit | User visited Dashboard
+[2026-03-10T14:51:45.472147] Visitor: 243631a2 | Session: 8e6552a9 | Action: page_visit | User visited Dashboard
+[2026-03-10T14:54:51.005148] Visitor: 243631a2 | Session: ecfd80ae | Action: page_visit | User visited Dashboard
+[2026-03-10T14:54:53.717821] Visitor: 243631a2 | Session: ecfd80ae | Action: page_visit | User visited Dashboard
+[2026-03-10T14:54:53.793149] Visitor: 243631a2 | Session: ecfd80ae | Action: page_visit | User visited Dashboard
+[2026-03-10T14:54:58.246220] Visitor: 243631a2 | Session: ecfd80ae | Action: page_visit | User visited Dashboard
+[2026-03-10T14:54:58.454444] Visitor: 243631a2 | Session: ecfd80ae | Action: page_visit | User visited Dashboard
+[2026-03-10T14:55:13.646957] Visitor: 243631a2 | Session: ecfd80ae | Action: page_visit | User visited Dashboard
+[2026-03-10T14:55:13.731448] Visitor: 243631a2 | Session: ecfd80ae | Action: page_visit | User visited Dashboard
+[2026-03-10T14:55:31.903282] Visitor: 243631a2 | Session: ecfd80ae | Action: page_visit | User visited Dashboard
+[2026-03-10T14:55:32.048978] Visitor: 243631a2 | Session: ecfd80ae | Action: page_visit | User visited Dashboard
+[2026-03-10T14:55:35.724721] Visitor: 243631a2 | Session: ecfd80ae | Action: page_visit | User visited Dashboard
+[2026-03-10T14:55:35.802318] Visitor: 243631a2 | Session: ecfd80ae | Action: page_visit | User visited Dashboard
+[2026-03-10T14:55:44.636942] Visitor: 243631a2 | Session: ecfd80ae | Action: page_visit | User visited Dashboard
+[2026-03-10T14:55:44.835319] Visitor: 243631a2 | Session: ecfd80ae | Action: page_visit | User visited Dashboard
+[2026-03-11T10:25:31.556927] Visitor: 1f7b0656 | Session: 23c7e931 | Action: page_visit | User visited Dashboard
+[2026-03-11T10:25:38.786754] Visitor: 1f7b0656 | Session: 23c7e931 | Action: page_visit | User visited Dashboard
+[2026-03-11T10:25:38.930901] Visitor: 1f7b0656 | Session: 23c7e931 | Action: page_visit | User visited Dashboard
+[2026-03-11T10:25:41.471181] Visitor: 1f7b0656 | Session: 23c7e931 | Action: page_visit | User visited Dashboard
+[2026-03-11T10:25:41.626782] Visitor: 1f7b0656 | Session: 23c7e931 | Action: page_visit | User visited Dashboard
+[2026-03-11T10:27:06.561727] Visitor: 1f7b0656 | Session: 23c7e931 | Action: page_visit | User visited Dashboard
+[2026-03-11T10:27:52.703788] Visitor: 1f7b0656 | Session: 23c7e931 | Action: page_visit | User visited Dashboard
+[2026-03-11T10:27:52.907438] Visitor: 1f7b0656 | Session: 23c7e931 | Action: page_visit | User visited Dashboard
+[2026-03-11T10:28:03.966721] Visitor: 1f7b0656 | Session: 23c7e931 | Action: page_visit | User visited Dashboard
+[2026-03-11T10:28:04.251184] Visitor: 1f7b0656 | Session: 23c7e931 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:08:52.421328] Visitor: eeae11f1 | Session: d10b5b7c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:09:27.951880] Visitor: eeae11f1 | Session: d10b5b7c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:09:28.061393] Visitor: eeae11f1 | Session: d10b5b7c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:09:35.724413] Visitor: eeae11f1 | Session: d10b5b7c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:09:35.823944] Visitor: eeae11f1 | Session: d10b5b7c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:09:44.494149] Visitor: eeae11f1 | Session: d10b5b7c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:09:49.560139] Visitor: eeae11f1 | Session: d10b5b7c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:12:05.454466] Visitor: eeae11f1 | Session: d10b5b7c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:12:07.628005] Visitor: eeae11f1 | Session: d10b5b7c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:12:08.067859] Visitor: eeae11f1 | Session: d10b5b7c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:12:41.527531] Visitor: eeae11f1 | Session: d10b5b7c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:12:41.632991] Visitor: eeae11f1 | Session: d10b5b7c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:17:20.855238] Visitor: eeae11f1 | Session: 9f0bdea4 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:17:23.848880] Visitor: eeae11f1 | Session: 9f0bdea4 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:17:23.918144] Visitor: eeae11f1 | Session: 9f0bdea4 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:17:48.239053] Visitor: eeae11f1 | Session: 9f0bdea4 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:17:50.045902] Visitor: eeae11f1 | Session: 9f0bdea4 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:17:50.198264] Visitor: eeae11f1 | Session: 9f0bdea4 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:17:54.600259] Visitor: eeae11f1 | Session: 9f0bdea4 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:22:22.809553] Visitor: eeae11f1 | Session: 90979565 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:22:34.197132] Visitor: eeae11f1 | Session: 90979565 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:22:34.266864] Visitor: eeae11f1 | Session: 90979565 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:22:39.040011] Visitor: eeae11f1 | Session: 90979565 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:24:15.035561] Visitor: eeae11f1 | Session: 90979565 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:24:15.124973] Visitor: eeae11f1 | Session: 90979565 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:24:19.622640] Visitor: eeae11f1 | Session: 90979565 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:24:19.836308] Visitor: eeae11f1 | Session: 90979565 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:26:57.495039] Visitor: eeae11f1 | Session: bb7311b7 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:27:12.579633] Visitor: eeae11f1 | Session: bb7311b7 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:27:12.658973] Visitor: eeae11f1 | Session: bb7311b7 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:27:22.044179] Visitor: eeae11f1 | Session: bb7311b7 | Action: page_visit | User visited Dashboard
+[2026-03-18T20:53:43.651400] Visitor: eeae11f1 | Session: 1cd7f25c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:53:57.225182] Visitor: eeae11f1 | Session: 1cd7f25c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:53:57.288558] Visitor: eeae11f1 | Session: 1cd7f25c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:54:19.539599] Visitor: eeae11f1 | Session: 1cd7f25c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:54:22.148195] Visitor: eeae11f1 | Session: 1cd7f25c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:59:37.455228] Visitor: eeae11f1 | Session: 6fcbe01c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:59:41.355124] Visitor: eeae11f1 | Session: 6fcbe01c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:59:41.428505] Visitor: eeae11f1 | Session: 6fcbe01c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:59:48.132035] Visitor: eeae11f1 | Session: 6fcbe01c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:59:52.224768] Visitor: eeae11f1 | Session: 6fcbe01c | Action: page_visit | User visited Dashboard
+[2026-03-18T20:59:55.205394] Visitor: eeae11f1 | Session: 6fcbe01c | Action: page_visit | User visited Dashboard
+[2026-03-18T21:02:24.631026] Visitor: eeae11f1 | Session: 6fcbe01c | Action: page_visit | User visited Dashboard
+[2026-03-18T21:12:37.207864] Visitor: eeae11f1 | Session: d13908c6 | Action: page_visit | User visited Dashboard
+[2026-04-01T16:36:03.013349] Visitor: bcabe841 | Session: ffd6d0f9 | Action: page_visit | User visited Dashboard
+[2026-04-01T16:37:06.447187] Visitor: bcabe841 | Session: ffd6d0f9 | Action: page_visit | User visited Dashboard
+[2026-04-01T16:37:06.603862] Visitor: bcabe841 | Session: ffd6d0f9 | Action: page_visit | User visited Dashboard
+[2026-04-01T16:37:11.571303] Visitor: bcabe841 | Session: ffd6d0f9 | Action: page_visit | User visited Dashboard
+[2026-04-01T16:37:11.707349] Visitor: bcabe841 | Session: ffd6d0f9 | Action: page_visit | User visited Dashboard
+[2026-04-01T16:43:57.972605] Visitor: bcabe841 | Session: dd5e232b | Action: page_visit | User visited Dashboard
+[2026-04-01T16:44:00.979607] Visitor: bcabe841 | Session: dd5e232b | Action: page_visit | User visited Dashboard
+[2026-04-01T16:44:01.111700] Visitor: bcabe841 | Session: dd5e232b | Action: page_visit | User visited Dashboard
+[2026-04-01T16:44:11.043031] Visitor: bcabe841 | Session: dd5e232b | Action: page_visit | User visited Dashboard

@@ -17,7 +17,7 @@ import os
 import pandas as pd
 from data_manager import data_manager
 from site_logger import logger
-from ai_dashboard_integration import render_ai_chat_interface
+from ai_dashboard_integration import render_ai_chat_interface, render_3on3_ai_chat_interface
 from drill_library import drill_library
 
 # Custom CSS
@@ -98,7 +98,7 @@ def _get_season_num():
 
 
 def _render_nav_buttons():
-    """Render navigation at top, season switcher in right corner (only on Player Dashboard and Player Performance Report)."""
+    """Render navigation at top, season switcher in right corner (only on Team Dashboard and Player Performance Report)."""
     page = _get_page()
     show_season = page in ("dashboard", "sample_report")
     left_cols, right_col = st.columns([4, 1])
@@ -108,7 +108,7 @@ def _render_nav_buttons():
             if st.button("🏠 Home", use_container_width=True) and page != "home":
                 _set_page("home")
         with c2:
-            if st.button("📊 Player Dashboard", use_container_width=True) and page != "dashboard":
+            if st.button("📊 Team Dashboard", use_container_width=True) and page != "dashboard":
                 _set_page("dashboard")
         with c3:
             if st.button("📋 Player Performance Report", use_container_width=True) and page != "sample_report":
@@ -307,8 +307,8 @@ STAT_TOOLTIPS = {
 
 
 def show_live_dashboard():
-    """2️⃣ Live Dashboard - Player Stats Table"""
-    st.header("📊 Player Dashboard")
+    """2️⃣ Live Dashboard - Player Stats Table (Team Dashboard)"""
+    st.header("📊 Team Dashboard")
     st.caption("Click “View Dashboard” on the homepage to see how it works.")
 
     season_num = _get_season_num()
@@ -825,7 +825,7 @@ def _render_3on3_games_box_page(game_data: pd.DataFrame, advanced_stats: pd.Data
 
 
 def _render_3on3_player_dashboard(game_data: pd.DataFrame, advanced_stats: pd.DataFrame):
-    """Player Dashboard: overview of all players' stats (dark theme, like the reference image)."""
+    """Player Dashboard: select a player, see their averages and game-by-game box score."""
     _col_3pt = "3PTM" if "3PTM" in game_data.columns else "3PM"
     totals = game_data.groupby(["Player No.", "Team"], as_index=False).agg(
         Games=("Game", "nunique"),
@@ -838,7 +838,6 @@ def _render_3on3_player_dashboard(game_data: pd.DataFrame, advanced_stats: pd.Da
     for c in totals.columns:
         if c != "Player No." and c != "Team":
             totals[c] = pd.to_numeric(totals[c], errors="coerce").fillna(0)
-    games = totals["Games"].replace(0, 1)
     totals = totals.merge(
         advanced_stats[["Player No.", "Team", "Player_Team_Label"]].drop_duplicates(),
         on=["Player No.", "Team"], how="left"
@@ -846,23 +845,72 @@ def _render_3on3_player_dashboard(game_data: pd.DataFrame, advanced_stats: pd.Da
     totals["Name"] = totals["Player_Team_Label"].fillna("Player " + totals["Player No."].astype(str))
     totals["Name"] = totals.apply(lambda r: _get_3on3_display_name(r["Team"], r["Player No."], r["Name"]), axis=1)
     totals["Name"] = totals["Name"] + " (" + totals["Team"].astype(str) + ")"
-    gp = totals["Games"].astype(int)
-    fg_pct = (100 * totals["FGM"] / totals["FGA"].replace(0, 1)).round(1)
-    t3_pct = (100 * totals["ThreePTM"] / totals["ThreePA"].replace(0, 1)).round(1)
-    ft_pct = (100 * totals["FTM"] / totals["FTA"].replace(0, 1)).round(1)
-    rows = []
-    for i in range(len(totals)):
-        r = totals.iloc[i]
-        name = r["Name"]
-        pts_avg = (r["PTS"] / games.iloc[i]).round(1)
-        reb_avg = (r["REB"] / games.iloc[i]).round(1)
-        ast_avg = (r["AST"] / games.iloc[i]).round(1)
-        stl_avg = (r["STL"] / games.iloc[i]).round(1)
-        blk_avg = (r["BLK"] / games.iloc[i]).round(1)
-        to_avg = (r["TOV"] / games.iloc[i]).round(1)
-        rows.append(f'<tr><td class="player-name">{name}</td><td>{int(gp.iloc[i])}</td><td>—</td><td>{pts_avg}</td><td>{fg_pct.iloc[i]:.1f}</td><td>{t3_pct.iloc[i]:.1f}</td><td>{ft_pct.iloc[i]:.1f}</td><td>{reb_avg}</td><td>{ast_avg}</td><td>{stl_avg}</td><td>{blk_avg}</td><td>{to_avg}</td></tr>')
-    html = '<div class="player-dash-3on3"><table><thead><tr><th>Player</th><th>GP</th><th>MIN</th><th>PTS</th><th>FG%</th><th>3PT%</th><th>FT%</th><th>REB</th><th>AST</th><th>STL</th><th>BLK</th><th>TO</th></tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div>'
-    st.markdown(html, unsafe_allow_html=True)
+
+    # Select a player
+    st.subheader("👤 Player statistics")
+    player_options = sorted(totals["Name"].unique().tolist())
+    if not player_options:
+        st.caption("No players in data.")
+        return
+    selected_name = st.selectbox(
+        "Select a player to see their averages and game-by-game box score",
+        options=player_options,
+        key="3on3_player_box_select",
+    )
+    match = totals[totals["Name"] == selected_name]
+    if match.empty:
+        st.caption("Player not found.")
+        return
+    r = match.iloc[0]
+    pno, team = r["Player No."], r["Team"]
+    gp = int(r["Games"])
+    g = gp if gp else 1
+    # Per-game averages; shooting in FGM-FGA style (per-game avg rounded to 1 decimal)
+    fgm_avg = (r["FGM"] / g).round(1)
+    fga_avg = (r["FGA"] / g).round(1)
+    t3m_avg = (r["ThreePTM"] / g).round(1)
+    t3a_avg = (r["ThreePA"] / g).round(1)
+    ftm_avg = (r["FTM"] / g).round(1)
+    fta_avg = (r["FTA"] / g).round(1)
+    pts_avg = (r["PTS"] / g).round(1)
+    reb_avg = (r["REB"] / g).round(1)
+    ast_avg = (r["AST"] / g).round(1)
+    stl_avg = (r["STL"] / g).round(1)
+    blk_avg = (r["BLK"] / g).round(1)
+    to_avg = (r["TOV"] / g).round(1)
+    st.markdown(f"**{selected_name}**")
+    st.caption(f"**Averages (per game):** GP {gp} · PTS {pts_avg} · FG {fgm_avg:.1f}-{fga_avg:.1f} · 3PT {t3m_avg:.1f}-{t3a_avg:.1f} · FT {ftm_avg:.1f}-{fta_avg:.1f} · REB {reb_avg} · AST {ast_avg} · STL {stl_avg} · BLK {blk_avg} · TO {to_avg}**")
+
+    st.subheader("📋 Game-by-game box score")
+    player_games = game_data[(game_data["Player No."] == pno) & (game_data["Team"] == team)].copy()
+    for col in ["PTS", "FGM", "FGA", "REB", "OREB", "DREB", "AST", "STL", "BLK", "TOV", "PF"]:
+        if col in player_games.columns:
+            player_games[col] = pd.to_numeric(player_games[col], errors="coerce").fillna(0)
+    _col_3pm = "3PTM" if "3PTM" in player_games.columns else "3PM"
+    if "3PA" in player_games.columns:
+        player_games["3PA"] = pd.to_numeric(player_games["3PA"], errors="coerce").fillna(0)
+    if "FTM" in player_games.columns:
+        player_games["FTM"] = pd.to_numeric(player_games["FTM"], errors="coerce").fillna(0)
+    if "FTA" in player_games.columns:
+        player_games["FTA"] = pd.to_numeric(player_games["FTA"], errors="coerce").fillna(0)
+    player_games["FG%"] = (100 * player_games["FGM"] / player_games["FGA"].replace(0, 1)).round(1)
+    player_games["3PT%"] = (100 * player_games[_col_3pm] / player_games["3PA"].replace(0, 1)).round(1)
+    player_games["FT%"] = (100 * player_games["FTM"] / player_games["FTA"].replace(0, 1)).round(1)
+    box_cols = ["Game", "Game_Type", "PTS", "FGM", "FGA", "FG%", _col_3pm, "3PA", "3PT%", "FTM", "FTA", "FT%", "REB", "OREB", "DREB", "AST", "STL", "BLK", "TOV", "PF"]
+    box_cols = [c for c in box_cols if c in player_games.columns]
+    box_df = player_games[box_cols].copy()
+    box_df = box_df.rename(columns={_col_3pm: "3PM", "TOV": "TO"})
+    box_df = box_df.sort_values(["Game_Type", "Game"], ascending=[True, True])
+    st.caption(f"**{selected_name}** — each row is one game.")
+    st.dataframe(box_df, use_container_width=True, hide_index=True)
+
+    st.markdown("---")
+    st.subheader("💬 3 on 3 Tournament Assistant")
+    st.caption("Grounded in **this tournament’s** data. Use the sidebar for Rule-Based, Hybrid, or OpenAI.")
+    prof = data_manager.get_player_profile(int(pno), str(team), season=3)
+    render_3on3_ai_chat_interface(
+        player_profile=prof if "error" not in prof else None
+    )
 
 
 def show_3on3_dashboard():
@@ -1151,6 +1199,11 @@ def show_3on3_dashboard():
         except Exception:
             st.info("Chart is unavailable in this environment.")
 
+    st.markdown("---")
+    st.subheader("💬 3 on 3 Tournament Assistant")
+    st.caption("Ask about this tournament, strategy for 3 on 3, leaderboards, or team matchups.")
+    render_3on3_ai_chat_interface(player_profile=None)
+
     _render_footer()
 
 
@@ -1253,6 +1306,10 @@ def show_sample_report():
 
     st.markdown("---")
     st.caption("*Data → Analysis → Recommendation*")
+    st.markdown("---")
+    st.subheader("💡 AI Assistant")
+    st.caption("Ask questions about training, performance, or game strategy for this player.")
+    render_ai_chat_interface(player_profile=profile)
     _render_footer()
 
 
